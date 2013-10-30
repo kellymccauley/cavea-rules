@@ -39,7 +39,20 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
 
 1.  Install the required software that is listed above.
 
-2.  Launch a terminal or shell.
+2.  Get the project.
+
+    If you are wanting to just build the books and documents, then use your favorite git interface and clone the repository.  Command line example:
+
+        git clone https://github.com/kellymccauley/cavea-rules.git
+
+    If you are wanting to contribute to the project, then:
+
+    1. Read the [CONTRIBUTING](https://github.com/kellymccauley/cavea-rules/blob/master/CONTRIBUTING.md) document. 
+    2. Fork the [project](https://github.com/kellymccauley/cavea-rules). See [Fork A Repo](https://help.github.com/articles/fork-a-repo) for instructions.
+
+
+
+3.  Launch a terminal or shell.
     
     **Mac OS:**
     
@@ -53,7 +66,7 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
     
     Open Windows PowerShell as a normal user.
 
-3.  Update global Node packages.
+4.  Update global Node packages.
 
     Node packages are managed by the [npm](https://npmjs.org/doc/) command line application.
     
@@ -61,7 +74,7 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
     
         npm -g update
 
-4.  Install [Grunt](http://gruntjs.com/)
+5.  Install [Grunt](http://gruntjs.com/)
 
     Grunt is a JavaScript based task runner.  We use it for running taking all of the parts, doing stuff to the parts, make more parts, and assemble the final books and documents.
     
@@ -69,5 +82,7 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
 
         npm install -g grunt-cli
 
-    
+6.  Install the project's Node packages.
+
+
 
