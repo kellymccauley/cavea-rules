@@ -47,37 +47,37 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
 
     If you are wanting to contribute to the project, then:
 
-    1. Read the [CONTRIBUTING](https://github.com/kellymccauley/cavea-rules/blob/master/CONTRIBUTING.md) document. 
+    1. Read the [CONTRIBUTING](https://github.com/kellymccauley/cavea-rules/blob/master/CONTRIBUTING.md) document.
     2. Fork the [project](https://github.com/kellymccauley/cavea-rules). See [Fork A Repo](https://help.github.com/articles/fork-a-repo) for instructions.
 
 
 
 3.  Launch a terminal or shell.
-    
+
     **Mac OS:**
-    
+
     Launch the Terminal application or [iTerm2](http://www.iterm2.com/)
-        
+
     **Linux:**
-    
+
     Run your favorite terminal.
-        
+
     **Windows:**
-    
+
     Open Windows PowerShell as a normal user.
 
 4.  Update global Node packages.
 
     Node packages are managed by the [npm](https://npmjs.org/doc/) command line application.
-    
+
     Execute the following:
-    
+
         npm -g update
 
 5.  Install [Grunt](http://gruntjs.com/)
 
     Grunt is a JavaScript based task runner.  We use it for running taking all of the parts, doing stuff to the parts, make more parts, and assemble the final books and documents.
-    
+
     Execute the following:
 
         npm install -g grunt-cli
