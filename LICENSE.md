@@ -1,13 +1,11 @@
-Rules, Books, and Document License
-==================================
+# Rules, Books, Documents, and Media License
 
 Cavea: Rules of the Stage by Kelly A. McCauley is licensed under the Creative
 Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this
 license, visit http://creativecommons.org/licenses/by-sa/3.0/deed.en_US.
 
 
-Source Code License
-===================
+# Source Code License
 
 Apache License
                            Version 2.0, January 2004

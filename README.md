@@ -1,6 +1,6 @@
-# cavea-rules
+# Cavea: Rules of the Stage
 
-The rules for the Cavea pen and paper RPG.
+The content, templates, and source code to build the rules documents for the Cavea pen and paper RPG.
 
 
 -----
