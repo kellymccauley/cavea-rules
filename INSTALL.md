@@ -32,7 +32,7 @@ Either run `su -` or execute the command using the `--command` option.
 
 ##### Windows
 
-Not sure if any of the commands need to run as Administrator on windows.  If needed, run Windows Powershell as an Administrator.
+Not sure if any of the commands need to run as Administrator on windows.  If needed, run Windows PowerShell as an Administrator.
 
 
 ### Perform the Installation
@@ -43,7 +43,7 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
     
     **Mac OS:**
     
-    Launch the Terminal app or [iTerm2](http://www.iterm2.com/)
+    Launch the Terminal application or [iTerm2](http://www.iterm2.com/)
         
     **Linux:**
     
