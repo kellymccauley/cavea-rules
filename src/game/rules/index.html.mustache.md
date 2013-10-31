@@ -21,17 +21,17 @@ A Level Pool consists of one or more dice, where each die in the pool is either 
 
 Examples:
 
-<code class="LP">1:d20</code> -- A level pool consisting of a single *d20*.
+<code class="lp">1:d20</code> -- A level pool consisting of a single *d20*.
 
-<code class="LP">2:d10</code> -- A level pool consisting of two *d10*s.
+<code class="lp">2:d10</code> -- A level pool consisting of two *d10*s.
 
-<code class="LP">1:d8/1:d10</code> -- A level pool consisting of one *d8* and one *d10*.
+<code class="lp">1:d8/1:d10</code> -- A level pool consisting of one *d8* and one *d10*.
 
-<code class="LP">1:d4/2:d6/1:d8/3:d10/2:d12/1:d20</code> -- A level pool consisting of one *d4*, two *d6*s, one *d8*, three *d10*s, two *d12*s, and one *d20*.
+<code class="lp">1:d4/2:d6/1:d8/3:d10/2:d12/1:d20</code> -- A level pool consisting of one *d4*, two *d6*s, one *d8*, three *d10*s, two *d12*s, and one *d20*.
 
-<code class="LP">1:4/2:6/1:8/3:10/2:12/1:20</code> -- The same level pool as the previous example.
+<code class="lp">1:4/2:6/1:8/3:10/2:12/1:20</code> -- The same level pool as the previous example.
 
-<code class="LP">1:d6/4:d10/+2</code> -- A level pool consisting of one *d6*, four *d10*s, and a results modifier of *+2*.
+<code class="lp">1:d6/4:d10/+2</code> -- A level pool consisting of one *d6*, four *d10*s, and a results modifier of *+2*.
 
 (Technical: See [Level Pool Notation](#section-level-pool-notation) for the formal notation specification).
 
@@ -72,7 +72,7 @@ The Specific Advancement Points (SAP) can only be used to either increase the Le
 #### <span id="section-sap-gain-example">SAP Gain Example</span>
 [sap example]: #section-sap-gain-example
 
-Rayus the Swift has a <code class="LP">3:d8/2:d10/3:d20</code> LP in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: *7*, *8*, *2*, *6*, *9*, *2*, *14*, *11*.  Even though he stepped on a stick that snapped and gave his position away, he gained *1* SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.
+Rayus the Swift has a <code class="lp">3:d8/2:d10/3:d20</code> LP in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: *7*, *8*, *2*, *6*, *9*, *2*, *14*, *11*.  Even though he stepped on a stick that snapped and gave his position away, he gained *1* SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.
 
 
 
@@ -107,7 +107,7 @@ A skill's [Level Pool][lp] (LP) is the measurement of expertise of that skill.
 
 Example
 
-Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two *d4*s, three *d8*s, one *d10*, and four *d12*s (abbreviated as: <code class="LP">2:d4/3:d8/1:10/4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two *d20*s with a results modifier of *-1*, due to the arthritis  (abbreviated as: <code class="LP">2:d20/-1</code>) and her food preparation skill level pool is <code class="LP">4:d4/4:d6/2:d8/2:d10/1:d12</code>.
+Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two *d4*s, three *d8*s, one *d10*, and four *d12*s (abbreviated as: <code class="lp">2:d4/3:d8/1:10/4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two *d20*s with a results modifier of *-1*, due to the arthritis  (abbreviated as: <code class="lp">2:d20/-1</code>) and her food preparation skill level pool is <code class="lp">4:d4/4:d6/2:d8/2:d10/1:d12</code>.
 
 See [Level Pool Notation](#section-level-pool-notation).
 
@@ -231,7 +231,7 @@ See [Physical Attribute Level Pool Advancement](#section-physical-attributes-lp-
 ## <span id="section-physical-attributes-lp-advancement">Physical Attribute Level Pool Advancement</span>
 []: #
 
-All physical attributes start out with a <code class="LP">1:d20</code> LP.
+All physical attributes start out with a <code class="lp">1:d20</code> LP.
 
 <table id="table-related-physical-attribute-lp-die-ap-cost">
     <caption>Related Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
