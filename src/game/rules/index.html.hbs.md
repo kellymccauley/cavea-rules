@@ -1,9 +1,11 @@
 Cavea: Rules of the Stage
 
+Where the audience controls the stage....
+
 # <span id="chapter-basic-mechanics">Basic Mechanics</span>
 [basic mech]: #chapter-basic-mechanics
 
-## <span id="section-dice-requirements">Dice Requirments</span>
+## <span id="section-dice-requirements">Dice Requirements</span>
 [dice req]: #section-dice-requirements
 
 A lot of d4, d6, d8, d10, d12, and d20 dice.
@@ -33,7 +35,7 @@ Examples:
 
 <code class="lp">1:d6/4:d10/+2</code> -- A level pool consisting of one *d6*, four *d10*s, and a results modifier of *+2*.
 
-(Technical: See [Level Pool Notation](#section-level-pool-notation) for the formal notation specification).
+(Technical: See [Level Pool Notation][lp notation] for the formal notation specification).
 
 ### <span id="section-rolling-lp">Rolling a Level Pool</span>
 [roll lp]: #section-rolling-lp
@@ -48,7 +50,7 @@ The procedure for rolling a Level Pool is as follow:
 ### <span id="section-improving-lp">Improving a Level Pool</span>
 [improve lp]: #section-improving-lp
 
-See [Skill Level Pool Advancement](#section-skill-lp-progression), [Physical Attribute Level Pool Advancement](#section-physical-attributes-lp-advancement), [Advancement Points](#section-advancement-points)
+See [Skill Level Pool Advancement][skill lp advance], [Physical Attribute Level Pool Advancement][pattr lp advance], [Advancement Points][lp]
 
 
 
@@ -82,12 +84,12 @@ Rayus the Swift has a <code class="lp">3:d8/2:d10/3:d20</code> LP in Moving Sile
 
 
 ## <span id="section-skill-attributes">Skill Attributes</span>
-[skill attr]: #section-skill-attributes
+[sattr]: #section-skill-attributes
 
 * Name 
 * Description
 * [Level Pool][skill lp]
-* [Related Physical Attributes](#section-skill-related-physical-attributes)
+* [Related Physical Attributes][skill pattr]
 * [Specialization Requirements](#section-skill-specialization-requirements)
 * Prerequisites
 * Initial Advancement Cost
@@ -112,9 +114,9 @@ Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is t
 See [Level Pool Notation](#section-level-pool-notation).
 
 ### <span id="section-skill-related-physical-attributes">Related Physical Attributes</span>
-[skill phys attr]: #section-skill-related-physical-attributes
+[skill pattr]: #section-skill-related-physical-attributes
 
-Unlike other games, the [actor][]'s choice of skills for their character and spending of [Specific Advancement Points][sap] dictates the character's physical attributes.
+Unlike other games, the [gamer][]'s choice of skills for their character and spending of [Specific Advancement Points][sap] dictates the character's physical attributes.
 
 <span id="physical-attribute-mst">Mental Strength</span> (mSt) represents the character's intelligence, learning capacity, and overall mental capability.
 
@@ -154,7 +156,7 @@ Similar to skills, Level Pools are used as a measure of each of the above physic
 ## <span id="section-skill-attempt">Skill Attempt</span>
 [skill attempt]: #section-skill-attempt
 
-An actor [rolls the skill's Level Pool][roll lp] when attempting to use the skill.  The actor then adds up all of the *1*s, and adds and/or subtracts any relevant modifiers.  If every rolled die in the Level Pool results in a *1*, then *2* Specific Advancement Points are gained for that skill.
+A gamer [rolls the skill's Level Pool][roll lp] when attempting to use the skill.  The gamer then adds up all of the *1*s, and adds and/or subtracts any relevant modifiers.  If every rolled die in the Level Pool results in a *1*, then *2* Specific Advancement Points are gained for that skill.
 
 ### <span id="section-skill-attempt-opposed">Opposing/Opposed Skill Attempt</span>
 [opposed skill attempt]: #section-skill-attempt-opposed
@@ -174,7 +176,7 @@ The GM may decide that more the one skill is needed to accomplish a single task.
 ### <span id="section-skill-attempt-teamwork">Teamwork</span>
 [teamwork]: #section-skill-attempt-teamwork
 
-Similar to [combining skills](#section-skill-attempt-combining-skills), the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each actor rolls the Level Pool for their character's skill and all of the *1*s are added together forming a single result.
+Similar to [combining skills](#section-skill-attempt-combining-skills), the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the Level Pool for their character's skill and all of the *1*s are added together forming a single result.
 
 ## <span id="section-skill-acquirement">Skill Acquirement</span>
 [getting skills]: #section-skill-acquirement
@@ -196,7 +198,7 @@ Skills are acquired as the character is played.  General Advancement Points are 
 [skill improvement]: #section-skill-improvement
 
 ### <span id="section-skill-lp-advancement">Skill Level Pool Advancement</span>
-[skill lp advancement]: #section-skill-lp-advancement
+[skill lp advance]: #section-skill-lp-advancement
 
 <table id="table-normal-skill-lp-die-ap-cost">
     <caption>Normal Skill Level Pool Die Advancement Point Cost Table</caption>
@@ -216,7 +218,7 @@ Skills are acquired as the character is played.  General Advancement Points are 
 [tbl norm skill lp ap cost]: #table-normal-skill-lp-die-ap-cost
 
 ### <span id="section-related-physical-attributes-lp-advancement">Related Physical Attribute Level Pool Advancement</span>
-[]: #
+[skill related pattr]: #section-related-physical-attributes-lp-advancement
 
 See [Physical Attribute Level Pool Advancement](#section-physical-attributes-lp-advancement)
 
@@ -226,10 +228,10 @@ See [Physical Attribute Level Pool Advancement](#section-physical-attributes-lp-
 
 
 # <span id="chapter-physical-attribute-mechanics">Physical Attribute Mechanics</span>
-[]: #
+[pattr mech]: #chapter-physical-attribute-mechanics
 
 ## <span id="section-physical-attributes-lp-advancement">Physical Attribute Level Pool Advancement</span>
-[]: #
+[pattr lp advance]: #section-physical-attributes-lp-advancement
 
 All physical attributes start out with a <code class="lp">1:d20</code> LP.
 
@@ -248,15 +250,16 @@ All physical attributes start out with a <code class="lp">1:d20</code> LP.
     </tbody>
 </table>
 
-[]: #
+[tbl norm pattr lp ap cost]: #table-related-physical-attribute-lp-die-ap-cost
 
 ## <span id="section-health-and-damage-mechanics">Health and Damage Mechanics</span>
-[]: #
+[hnd mech]: #section-health-and-damage-mechanics
 
 
 For each die in the mSt, mEn, mAg, bSt, bEn, and bAg Level Pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.
 
-<table>
+<table id="table-lp-die-to-hp">
+    <caption>Level Pool Die to Health Points Table</caption>
     <thead>
         <tr><th>Die</th> <th>Health Points</th></tr>
     </thead>
@@ -270,7 +273,7 @@ For each die in the mSt, mEn, mAg, bSt, bEn, and bAg Level Pools, look up the He
     </tbody>
 </table>
 
-[tbl lp die to hp]: #
+[tbl lp die to hp]: #table-lp-die-to-hp
 
 Example:
 
@@ -291,10 +294,10 @@ Example:
 
 
 # <span id="appendix-notations-and-conventions">Notations and Conventions</span>
-[]: #
+[notation and conventions]: #appendix-notations-and-conventions
 
 ## <span id="section-level-pool-notation">Level Pool Notation</span>
-[]: #
+[lp notation]: #section-level-pool-notation
 
 Formal specification:
 
@@ -312,20 +315,22 @@ Formal specification:
     
 
 # <span id="glossary">Glossary</span>
-[]: #
+[glossary]: #glossary
 
-<div id="glossary-entry-acting" class="glossary-entry">
-  <span class="glossary-term">Acting</span>
+<div id="glossary-entry-game-master" class="glossary-entry">
+  <span class="glossary-term">Game Master</span>
   
-  <p class="glossary-definition">The act of playing the role of a character.  Also called role playing.</p>
+  <p class="glossary-definition">The person that directs and advances story.</p>
 </div>
+[game master]: #glossary-entry-game-master
+ 
 
-
-<div id="glossary-entry-actor" class="glossary-entry">
-  <span class="glossary-term">Actor</span>
+<div id="glossary-entry-gamer" class="glossary-entry">
+  <span class="glossary-term">Gamer</span>
   
-  <p class="glossary-definition">A person that plays the role of one or more characters.  Game Masters (GM) and Players are actors.</p>
+  <p class="glossary-definition">A person that plays the role of one or more characters.  Game Masters are gamers, too.</p>
 </div>
+[gamer]: #glossary-entry-gamer
   
 
 <div id="glossary-entry-health-points" class="glossary-entry">
@@ -333,6 +338,7 @@ Formal specification:
   
   <p class="glossary-definition">A measure of a character's health, where <i>0</i> indicates that the character is dead.</p>
 </div>
+[health points]: #glossary-entry-health-points
 
 
 <!--
@@ -343,10 +349,5 @@ Formal specification:
 </div>
 -->
 
-[actor]: #glossary-entry-actor
-[acting]: #glossary-entry-acting
-[health points]: #glossary-entry-health-points
 
-{{!
-vim: filetype=markdown.mustache.html:
-}}
+{{!  vim: filetype=markdown.mustache: }}
