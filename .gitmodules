@@ -1,0 +1,3 @@
+[submodule "cavea-bootstrap"]
+	path = cavea-bootstrap
+	url = https://github.com/kellymccauley/cavea-bootstrap.git
