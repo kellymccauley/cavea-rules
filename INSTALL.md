@@ -44,6 +44,9 @@ Not sure if any of the commands need to run as Administrator on windows.  If nee
     If you are wanting to just build the books and documents, then use your favorite git interface and clone the repository.  Command line example:
 
         git clone https://github.com/kellymccauley/cavea-rules.git
+        cd cavea-rules
+        git submodule init
+        git submodule update
 
     If you are wanting to contribute to the project, then:
 
