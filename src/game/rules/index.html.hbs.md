@@ -350,4 +350,4 @@ Formal specification:
 -->
 
 
-{{!  vim: filetype=markdown.mustache: }}
+{{! vim: set filetype=markdown.mustache : }}
