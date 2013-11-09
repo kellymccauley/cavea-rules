@@ -4,7 +4,7 @@ var
     u = require('util'),
     fse = require('fs-extra'),
     _ = require('lodash'),
-    debug = require('debug')('clean'),
+    debug = require('debug')('build:clean'),
     clean;
 
 
