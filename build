@@ -1,0 +1,196 @@
+#!/usr/bin/env node
+'use strict';
+
+var 
+    path = require('path'),
+    u = require('util'),
+    fse = require('fs-extra'),
+    _ = require('lodash'),
+    program = require('commander'),
+    debug = require('debug')('build'),
+    clean = require('./build_lib/clean'),
+    distclean = require('./build_lib/distclean'),
+    build = require('./build_lib/build'),
+    dist = require('./build_lib/dist'),
+
+    baseDir = process.cwd(),
+    config,
+    srcDirs,
+    tmpDirs,
+    distDirs,
+    slash_re = /\//g;
+
+_.str = require('underscore.string');
+_.mixin(_.str.exports());
+
+config = {
+  debug: false,
+  actions: [],
+  baseDir: baseDir,
+  bootstrapDir: path.join(baseDir, 'cavea-bootstrap'),
+
+  tmpDir: path.join(baseDir, 'tmp'),
+  tmp: {
+    dirs: {}
+  },
+
+  srcDir: path.join(baseDir, 'src'),
+  src: {
+    dirs: {}
+  },
+
+
+  distDir: path.join(baseDir, 'dist'),
+  dist: {
+    dirs: {}
+  },
+
+  less: {},
+  css: {}
+
+};
+
+srcDirs = [
+  'src/web',
+  'src/web/_partials',
+  'src/web/assets',
+  'src/web/assets/lib',
+  'src/web/rules'
+];
+
+_.each(srcDirs, function(dir) {
+  'use strict';
+  var key = dir.replace(slash_re, '_').replace(/^src_/, '');
+  config.src.dirs[key] = path.join(config.baseDir, dir);
+});
+
+tmpDirs = [
+  'tmp/web',
+  'tmp/web/assets',
+  'tmp/web/assets/lib',
+  'tmp/web/assets/css',
+  'tmp/web/assets/less',
+  'tmp/web/rules'
+]
+
+_.each(tmpDirs, function(dir) {
+  'use strict';
+  var key = dir.replace(slash_re, '_').replace(/^tmp_/, '');
+  config.tmp.dirs[key] = path.join(config.baseDir, dir);
+});
+
+
+distDirs = [
+  'dist/web',
+  'dist/web/assets',
+  'dist/web/assets/lib',
+  'dist/web/assets/css',
+  'dist/web/rules'
+]
+
+_.each(distDirs, function(dir) {
+  'use strict';
+  var key = dir.replace(slash_re, '_').replace(/^dist_/, '');
+  config.dist.dirs[key] = path.join(config.baseDir, dir);
+});
+
+
+config.less.srcFileName = 'cavea.less';
+config.less.srcFile = path.join(
+  config.bootstrapDir, 
+  'less', 
+  config.less.srcFileName
+);
+
+config.less.tmpFile = path.join(
+  config.tmp.dirs.web_assets_less,
+  config.less.srcFileName
+);
+
+
+config.css.distFileName = 'cavea.css';
+config.css.distFile = path.join(
+  config.dist.dirs.web_assets_css,
+  config.css.distFileName
+);
+
+config.css.tmpFile = path.join(
+  config.tmp.dirs.web_assets_css,
+  config.css.distFileName
+);
+
+
+
+
+
+program
+  .option('-d, --debug')
+
+program.command('clean')
+  .description('Cleans the tmp directory.')
+  .action(function() {
+    config.actions.push('clean');
+  });
+
+program.command('distclean')
+  .description('Cleans both the tmp and dist directories.')
+  .action(function() {
+    config.actions.push('clean');
+    config.actions.push('distclean');
+  });
+ 
+program.command('build')
+  .description('Builds the documents.')
+  .action(function() {
+    config.actions.push('build');
+  });
+
+program.command('dist')
+  .description('Creates the distribution.')
+  .action(function() {
+    config.actions.push('dist');
+  });
+
+
+program.parse(process.argv);
+
+if (program.debug) {
+  console.log('Enabling debugging output.');
+  config.debug = true;
+}
+
+
+if (config.actions.length === 0) {
+  config.actions.push('build');
+  config.actions.push('dist');
+}
+
+console.log(u.inspect(config, {depth: 4}));
+
+_.each(config.actions, function(action) {
+  switch (action) {
+    case 'clean':
+      clean(config);
+      break;
+
+    case 'distclean':
+      distclean(config);
+      break;
+
+    case 'build':
+      build(config, function(err, result) {
+        'use strict';
+        if (err) throw err;
+      });
+      break;
+
+    case 'dist':
+      dist(config);
+      break;
+  }
+});
+
+
+
+
+// vim: set filetype=javascript :
