@@ -27,19 +27,6 @@
 
     <div class="container">
 
-
-<pre>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FIXME
-
-  - increase the line spacing.
-  - remove borders for lp and die code elements.
-  - increase font size on tablet.
-
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-</pre>
-
       <!--
         #
         # Title
@@ -49,23 +36,77 @@ FIXME
         <div class="col-md-8">
           <div class="page-header">
             <h1>Cavea: <small>Rules of the stage</small></h1>
+            
           </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-8">
+          <p>Written and developed by Kelly A. McCauley.</p>
+          
+          <p>Copyright &copy; 2013 Kelly A. McCauley</p>
+          
+          <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+          
         </div>
       </div>
 
 
       <div class="row">
         <div class="col-md-8">
+        
+          <section id="front-matter" class="front-matter">
+
+            <section id="introduction">
+              <h1>Introduction</h1>
+              
+              <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
+              
+              <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
+              
+              <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
+              
+              <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
+              
+              <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>  
+              
+              <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
+              
+            </section> <!-- introduction -->
+          
+          </section> <!-- front-matter -->
+          
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="col-md-8">  
 
           <section id="basic-mech" class="chapter">
             <h1>Basic Mechanics</h1>
 
-            <section id="dice-req">
-              <h1>Dice Requirements</h1>
+            <section id="dice">
+              <h1>Dice</h1>
+              
+              <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
+              
+              <p>The following types of die are required during game play:</p>
+              
+              <ul class="list-unstyled">
+                <li><span class="d">d4</span></li>
+                <li><span class="d">d6</span></li>
+                <li><span class="d">d8</span></li>
+                <li><span class="d">d10</span></li>
+                <li><span class="d">d12</span></li>
+                <li><span class="d">d20</span></li>
+              </ul>
+              
+              <p>How many of each type of die are needed?  <i>2</i> of each at the very minimum. To keep the die rolling from slowing down game play, <i>4</i> or more of each die type is recommended for a player and <i>6</i> or more of each die type is recommended for a game master.</p>
 
-              <p>A lot of <code class="d">d4</code>, <code class="d">d6</code>, <code class="d">d8</code>, <code class="d">d10</code>, <code class="d">d12</code>, and <code class="d">d20</code> dice.</p>
-            </section> <!-- dice-req -->
-
+            </section> <!-- dice -->
 
             <section id="lp">
               <h1>Level Pool</h1>
@@ -77,22 +118,24 @@ FIXME
                 <li>a measurement of physical ability.</li>
               </ul>
 
-              <p>A Level Pool consists of one or more dice, where each die in the pool is either a <code class="d">d4</code>, <code class="d">d6</code>, <code class="d">d8</code>, <code class="d">d10</code>, <code class="d">d12</code>, or <code class="d">d20</code> die, and potentially a results modifier.</p>
+              <p>A Level Pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, or <span class="d">d20</span>.</p>
+              
+              <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
               <div id="lp-examples" class="panel panel-example">
                 <div class="panel-heading">Examples</div>
                 <div class="panel-body">
-                  <p><code class="lp">1:d20</code> - A level pool consisting of a single <code class="d">d20</code>.</p>
+                  <p><code class="lp">1:d20</code> - A level pool consisting of a single <span class="d">d20</span>.</p>
 
-                  <p><code class="lp">2:d10</code> - A level pool consisting of two <code class="d">d10</code>s.</p>
+                  <p><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</p>
 
-                  <p><code class="lp">1:d8/1:d10</code> - A level pool consisting of one <code class="d">d8</code> and one <code class="d">d10</code>.</p>
+                  <p><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</p>
 
-                  <p><code class="lp">1:d4/2:d6/1:d8/3:d10/2:d12/1:d20</code> - A level pool consisting of one <code class="d">d4</code>, two <code class="d">d6</code>s, one <code class="d">d8</code>, three <code class="d">d10</code>s, two <code class="d">d12</code>s, and one <code class="d">d20</code>.</p>
+                  <p><code class="lp">1:d4|2:d6|1:d8|3:d10|2:d12|1:d20</code> - A level pool consisting of one <span class="d">d4</span>, two <span class="d">d6</span>s, one <span class="d">d8</span>, three <span class="d">d10</span>s, two <span class="d">d12</span>s, and one <span class="d">d20</span>.</p>
 
-                  <p><code class="lp">1:4/2:6/1:8/3:10/2:12/1:20</code> - The same level pool as the previous example.</p>
+                  <p><code class="lp">1:4|2:6|1:8|3:10|2:12|1:20</code> - The same level pool as the previous example.</p>
 
-                  <p><code class="lp">1:d6/4:d10/+2</code> - A level pool consisting of one <code class="d">d6</code>, four <code class="d">d10</code>s, and a results modifier of *+2*.</p>
+                  <p><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
                 </div>
 
               </div>
@@ -115,7 +158,7 @@ FIXME
               <section id="improving-lp">
                 <h1>Improving a Level Pool</h1>
 
-                <p>See <a href="section-skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="ap">Advancement Points</a></p>
+                <p>See <a href="skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="ap">Advancement Points</a></p>
               </section> <!-- improving-lp -->
 
             </section> <!-- lp -->
@@ -144,7 +187,7 @@ FIXME
               <div id="sap-gain-example" class="panel panel-example">
                 <div class="panel-heading">SAP Gain Example</div>
                 <div class="panel-body">
-                  <p>Rayus the Swift has a <code class="lp">3:d8/2:d10/3:d20</code> <abbr title="Level Pool" class="initialism">LP</abbr> in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>14</i>, <i>11</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.</p>
+                  <p>Rayus the Swift has a <code class="lp">3:d8|2:d10|3:d20</code> <abbr title="Level Pool" class="initialism">LP</abbr> in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>14</i>, <i>11</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.</p>
                 </div>
               </div>
 
@@ -191,12 +234,12 @@ FIXME
                 <div id="skill-lp-example" class="panel panel-example">
                   <div class="panel-heading">Skill LP Example</div>
                   <div class="panel-body">
-                    <p>Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two <code class="d">d4</code>s, three <code class="d">d8</code>s, one <code class="d">d10</code>, and four <code class="d">d12</code>s (abbreviated as: <code class="lp">2:d4/3:d8/1:10/4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two <code class="d">d20</code>s with a results modifier of *-1*, due to the arthritis  (abbreviated as: <code class="lp">2:d20/-1</code>) and her food preparation skill level pool is <code class="lp">4:d4/4:d6/2:d8/2:d10/1:d12</code>.</p>
+                    <p>Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two <span class="d">d4</span>s, three <span class="d">d8</span>s, one <span class="d">d10</span>, and four <span class="d">d12</span>s (abbreviated as: <code class="lp">2:d4|3:d8|1:10|4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two <span class="d">d20</span>s with a results modifier of <i>-1</i>, due to the arthritis  (abbreviated as: <code class="lp">2:d20|-1</code>) and her food preparation skill level pool is <code class="lp">4:d4|4:d6|2:d8|2:d10|1:d12</code>.</p>
                   </div>
                 </div>
 
                 <p>See <a href="#lp-notation">Level Pool Notation</a>.</p>
-              </section>
+              </section> <!-- skill-lp -->
 
               <section id="skill-phys-attr">
                 <h1>Related Physical Attributes</h1>
@@ -211,17 +254,17 @@ FIXME
                   <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
                 </ul>
 
-              </section>
+              </section> <!-- skill-phys-attr -->
 
               <section id="skill-spec-req">
                 <h1>Specialization Requirements</h1>
                 <p>FIXME</p>
-              </section>
+              </section> <!-- skill-spec-req -->
 
               <section id="skill-prereq">
                 <h1>Specialization Prerequisites</h1>
                 <p>FIXME</p>
-              </section>
+              </section> <!-- skill-prereq -->
 
 
             </section> <!-- skill-attr -->
@@ -230,37 +273,34 @@ FIXME
 
             <section id="skill-attempt">
               <h1>Skill Attempt</h1>
-              <!-- [skill-attempt]: #skill-attempt -->
 
               <p>A gamer [rolls the skill's Level Pool][roll lp] when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.  If every rolled die in the Level Pool results in a <i>1</i>, then <i>2</i> Specific Advancement Points are gained for that skill.</p>
 
               <section id="skill-attempt-opposed">
                 <h1>Opposing/Opposed Skill Attempt</h1>
-                <!-- [skill-attempt-opposed]: #skill-attempt-opposed -->
 
                 <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
 
-              </section>
+              </section> <!-- skill-attempt-opposed -->
 
               <section id="skill-attempt-unopposed">
                 <h1>Unopposed Skill Attempt</h1>
-                <!-- [skill-attempt-unopposed]: #skill-attempt-unopposed -->
 
                 <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
 
-              </section>
+              </section> <!-- skill-attempt-unopposed -->
 
               <section id="skill-attempt-combining-skills">
                 <h1>Combining Skills</h1>
 
                 <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the Level Pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
-              </section>
+              </section> <!-- skill-attempt-combining-skills -->
 
               <section id="skill-attempt-teamwork">
                 <h1>Teamwork</h1>
 
                 <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the Level Pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
-              </section>
+              </section> <!-- skill-attempt-teamwork -->
 
             </section> <!-- skill-attempt -->
 
@@ -274,20 +314,20 @@ FIXME
 
                 <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
 
-              </section>
+              </section> <!-- getting-skills-character-creation -->
 
               <section id="getting-skills-character-play">
                 <h1>Acquirement During Character Play</h1>
 
-                <p>Skills are acquired as the character is played.  General Advancement Points are used to *purchase* skills.</p>
-              </section>
+                <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
+              </section> <!-- getting-skills-character-play -->
 
             </section> <!-- getting-skills -->
 
             <section id="skill-improvement">
               <h1>Skill Improvement</h1>
 
-              <section id="section-skill-lp-advancement">
+              <section id="skill-lp-advancement">
                 <h1>Skill Level Pool Advancement</h1>
 
                 <table id="table-normal-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
@@ -296,23 +336,23 @@ FIXME
                     <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td>None</td>                        <td><code class="d">d20</code></td>  <td>10 if not specified by skill</td></tr>
-                    <tr><td><code class="d">d20</code></td>  <td><code class="d">d12</code></td>  <td>15</td></tr>
-                    <tr><td><code class="d">d12</code></td>  <td><code class="d">d10</code></td>  <td>20</td></tr>
-                    <tr><td><code class="d">d10</code></td>  <td><code class="d">d8</code></td>   <td>30</td></tr>
-                    <tr><td><code class="d">d8</code></td>   <td><code class="d">d6</code></td>   <td>45</td></tr>
-                    <tr><td><code class="d">d6</code></td>   <td><code class="d">d4</code></td>   <td>60</td></tr>
+                    <tr><td>None</td>                        <td><span class="d">d20</span></td>  <td>10 if not specified by skill</td></tr>
+                    <tr><td><span class="d">d20</span></td>  <td><span class="d">d12</span></td>  <td>15</td></tr>
+                    <tr><td><span class="d">d12</span></td>  <td><span class="d">d10</span></td>  <td>20</td></tr>
+                    <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
+                    <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
+                    <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
                   </tbody>
                 </table>
 
 
-              </section>
+              </section> <!-- skill-lp-advancement -->
 
-              <section id="section-related-phys-attrs-lp-advancement">
+              <section id="skill-related-phys-attrs-lp-advancement">
                 <h1>Related Physical Attribute Level Pool Advancement</h1>
                 <p>See [Physical Attribute Level Pool Advancement](#phys-attrs-lp-advancement)</p>
 
-              </section>
+              </section> <!-- skill-related-phys-attrs-lp-advancement -->
 
             </section> <!-- skill-improvement -->
 
@@ -359,16 +399,16 @@ FIXME
                   <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>None</td>                        <td><code class="d">d20</code></td>  <td>30</td></tr>
-                  <tr><td><code class="d">d20</code></td>  <td><code class="d">d12</code></td>  <td>30</td></tr>
-                  <tr><td><code class="d">d12</code></td>  <td><code class="d">d10</code></td>  <td>40</td></tr>
-                  <tr><td><code class="d">d10</code></td>  <td><code class="d">d8</code></td>   <td>60</td></tr>
-                  <tr><td><code class="d">d8</code></td>   <td><code class="d">d6</code></td>   <td>90</td></tr>
-                  <tr><td><code class="d">d6</code></td>   <td><code class="d">d4</code></td>   <td>120</td></tr>
+                  <tr><td>None</td>                        <td><span class="d">d20</span></td>  <td>30</td></tr>
+                  <tr><td><span class="d">d20</span></td>  <td><span class="d">d12</span></td>  <td>30</td></tr>
+                  <tr><td><span class="d">d12</span></td>  <td><span class="d">d10</span></td>  <td>40</td></tr>
+                  <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
+                  <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
+                  <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
                 </tbody>
               </table>
 
-            </section>
+            </section> <!-- phys-attrs-lp-advancement -->
 
 
 
@@ -387,12 +427,12 @@ FIXME
                     <tr><th>Die</th> <th>Health Points</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td><code class="d">d20</code></td>   <td>1</td></tr>
-                    <tr><td><code class="d">d12</code></td>   <td>3</td></tr>
-                    <tr><td><code class="d">d10</code></td>   <td>4</td></tr>
-                    <tr><td><code class="d">d8</code></td>    <td>6</td></tr>
-                    <tr><td><code class="d">d6</code></td>    <td>9</td></tr>
-                    <tr><td><code class="d">d4</code></td>   <td>12</td></tr>
+                    <tr><td><span class="d">d20</span></td>   <td>1</td></tr>
+                    <tr><td><span class="d">d12</span></td>   <td>3</td></tr>
+                    <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
+                    <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
+                    <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
+                    <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
                   </tbody>
                 </table>
 
@@ -401,12 +441,12 @@ FIXME
                   <div class="panel-body">
                     <!-- FIXME -->
 
-                    <p>mSt:  <code class="lp">1:d8/2:d12/1:d20</code><br/>
-                       mEn:  <code class="lp">1:d12/4:d20</code><br/>
-                       mAg:  <code class="lp">2:d10/2:d12/1:d20</code><br/>
-                       bSt:  <code class="lp">2:d6/1:d10/2:d12/1:d20</code><br/>
-                       bEn:  <code class="lp">3:d6/2:d12/2:d20</code><br/>
-                       bAg:  <code class="lp">1:d4/2:d6/4:d20</code><br/></p>
+                    <p>mSt:  <code class="lp">1:d8|2:d12|1:d20</code><br/>
+                       mEn:  <code class="lp">1:d12|4:d20</code><br/>
+                       mAg:  <code class="lp">2:d10|2:d12|1:d20</code><br/>
+                       bSt:  <code class="lp">2:d6|1:d10|2:d12|1:d20</code><br/>
+                       bEn:  <code class="lp">3:d6|2:d12|2:d20</code><br/>
+                       bAg:  <code class="lp">1:d4|2:d6|4:d20</code><br/></p>
 
                     <p>mSt:  6 + (2 * 3) + 1 = 13<br/>
                        mEn:  3 + 4 = 7<br/>
@@ -419,10 +459,17 @@ FIXME
                   </div>
                 </div>
 
-              </section>
+              </section> <!-- hp-calc -->
 
             </section> <!-- hnd-mech -->
+
           </section> <!-- phys-attr-mech -->
+
+
+
+
+
+
 
           <section id="appendix-notations-and-conventions">
             <h1>Notations and Conventions</h1>
@@ -443,18 +490,18 @@ FIXME
             {result modifier}   := {+|-}{number}
             {die type}          := [d]4|[d]6|[d]8|[d]10|[d]12|[d]20
             {dice group}        := {count}:{die type}
-
-            {level pool}        := {dice group}[/{dice group}]...[/{result modifier}]
+            {div}               := '|' or '/'
+            {level pool}        := {dice group}[{div}{dice group}]...[{div}{result modifier}]
                   </pre>
                 </div>
               </div>
-            </section>
+            </section> <!-- lp-notation -->
 
           </section> <!-- appendix-notations-and-conventions -->
 
           <section id="glossary">
             <h1>Glossary</h1>
-
+            
             <!-- FIXME
             <div id="glossary-entry-game-master" class="glossary-entry">
               <span class="glossary-term">Game Master</span>
@@ -480,7 +527,7 @@ FIXME
             [health points]: #glossary-entry-health-points
             -->
 
-          </section>
+          </section> <!-- glossary -->
 
 
         </div>
