@@ -7,9 +7,10 @@ var
 
   , baseDir = process.cwd()
   , bootstrapDir = path.join(baseDir, 'cavea-bootstrap')
+  , taskSets
   ;
 
-module.exports = {
+taskSets = {
 
   // Task set name
   deleteTmp: {
@@ -77,3 +78,5 @@ module.exports = {
 
 
 };
+
+module.exports = taskSets;
