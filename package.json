@@ -35,12 +35,12 @@
     "findup-sync": "~0.1.2",
     "fs-extra": "~0.8.1",
     "glob": "~3.2.6",
-    "handlebars": ">=1.0.12",
     "less": ">=1.5.0",
     "linewrap": "~0.2.1",
     "lodash": "~2.2.1",
     "marked": ">=0.2.9",
     "underscore.string": "~2.3.3",
-    "wrench": "~1.5.4"
+    "wrench": "~1.5.4",
+    "mustache": "~0.7.3"
   }
 }
