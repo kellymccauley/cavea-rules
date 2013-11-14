@@ -93,18 +93,19 @@
               
               <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
               
-              <p>The following types of die are required during game play:</p>
+
+              <div id="die-notation-examples" class="panel panel-example">
+                <div class="panel-heading">Die Notaion Examples</div>
+                <div class="panel-body">
+                  <p><span class="d">d4</span> - A die with four sides.</p>
+                  <p><span class="d">d6</span> - A six sided die.</p>
+                  <p><span class="d">d20</span> - A twenty sided die.</p>
+                </div>
+              </div>
               
-              <ul class="list-unstyled">
-                <li><span class="d">d4</span></li>
-                <li><span class="d">d6</span></li>
-                <li><span class="d">d8</span></li>
-                <li><span class="d">d10</span></li>
-                <li><span class="d">d12</span></li>
-                <li><span class="d">d20</span></li>
-              </ul>
+              <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, and <span class="d">d20</span>.</p>
               
-              <p>How many of each type of die are needed?  <i>2</i> of each at the very minimum. To keep the die rolling from slowing down game play, <i>4</i> or more of each die type is recommended for a player and <i>6</i> or more of each die type is recommended for a game master.</p>
+              <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.</p>
 
             </section> <!-- dice -->
 
@@ -114,16 +115,16 @@
               <p>A Level Pool (LP) is:</p>
 
               <ul>
-                <li>a measurement of expertise of a skill or</li>
-                <li>a measurement of physical ability.</li>
+                <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
+                <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
               </ul>
 
               <p>A Level Pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, or <span class="d">d20</span>.</p>
               
               <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
-              <div id="lp-examples" class="panel panel-example">
-                <div class="panel-heading">Examples</div>
+              <div id="lp-notation-examples" class="panel panel-example">
+                <div class="panel-heading">Level Pool Notation Examples</div>
                 <div class="panel-body">
                   <p><code class="lp">1:d20</code> - A level pool consisting of a single <span class="d">d20</span>.</p>
 
@@ -150,8 +151,42 @@
                 <ol>
                   <li>Gather and roll all of the dice that compose the Level Pool.</li>
                   <li>Add up all of the <i>1</i>s for an unmodified total.</li>
-                  <li>Add and/or subtract any relevant modifiers from the unmodified total for the final result.</li>
+                  <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
                  </ol>
+                 
+                 
+                 
+              <div id="rolling-lp-examples" class="panel panel-example">
+                <div class="panel-heading">Rolling Level Pool Example</div>
+                <div class="panel-body">
+                  <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a police officer and is nearly at the end of a long foot chase, she has the running suspect, Bruno, right at her finger tips.</p>
+                  
+                  <ul class="list-unstyled">
+                    <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
+                    <li><b>Jill:</b> "Close enough to make a grab."</li>
+                    <li><b>Alice:</b> "Yes, but just barely."</li>
+                    <li><b>Jill:</b> "I want to take him to the ground!"</li>
+                    <li><b>Jill (as Sally):</b> "You're going down, Bruno!"</li>
+                    <li><b>Jill:</b> "and she lunges for him."</li>
+                    <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
+                    <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
+                    <li>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>3</i> or higher to successfully grab him and throw him to the ground.</li>
+                    <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
+                    <li>Sally has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code> for her Wing Chun skill.  Jill rolls 5, 5, 4, 1, and 20.  Only one <i>1</i>.</li>
+                    <li><b>Jill:</b> "and I rolled a 1."</li>
+                    <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
+                    <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
+                    <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend.</li>
+                    <li>Alice decides Bruno is going to use his well honed street fighting skill to strike Sally.  He has a Level Pool of <code class="lp">1:d4|2:d6|3:d10|2:d20</code>.  Alice rolls 1, 3, 2, 2, 1, 8, 8, and 4.  She adds up the <i>1</i>s for a total of 2.</li>
+                    <li>Jill rolls 3, 5, 14, 7, and 4.  No <i>1</i>s so her total is 0.</li>
+                    <li><b>Jill:</b> "Crud! 0.</li>
+                    <li><b>Alice:</b> "Ouch.  Bruno's fist strikes Sally in her left eye.  She'll have a swollen black eye for a week.  She also has a -1 for her fighting skills.</li>
+                    <li>Jill makes a note that Sally's Wing Chun skill temporarily has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code>.</li>
+                  </ul>
+                
+                </div>
+               </div>
+               
               </section> <!-- rolling-lp -->
 
 
@@ -363,6 +398,8 @@
 
           <section id="phys-attr-mech">
             <h1>Physical Attribute Mechanics</h1>
+            
+            <p>The core physical attributes are:</p>
 
             <dl class="dl-horizontal">
               <dt><span id="phys-attr-mst">Mental Strength</span></dt>
@@ -385,8 +422,9 @@
 
             </dl>
 
-            <p>Similar to skills, Level Pools are used as a measure of each of the above physical attributes.</p>
-
+            <section id="phys-attrs-lp">
+              <p>Similar to skills, <a href="#lp">Level Pools</a> are used as a measure of a core physical attribute.</p>
+            </section>
 
             <section id="phys-attrs-lp-advancement">
               <h1>Physical Attribute Level Pool Advancement</h1>
