@@ -141,7 +141,7 @@
 
               </div>
 
-              <p>(<b>Technical:</b> See <a href="skill-lp">Level Pool Notation</a> for the formal notation specification).</p>
+              <p>(<b>Technical:</b> See <a href="ebnf-grammar.txt">Level Pool Notation</a> for the formal notation specification).</p>
 
               <section id="rolling-lp">
                 <h1>Rolling a Level Pool</h1>
@@ -515,24 +515,7 @@
             <section id="lp-notation">
               <h1>Level Pool Notation</h1>
 
-              <div id="hp-calc-examples" class="panel panel-example">
-                <div class="panel-heading">Formal specification</div>
-                <div class="panel-body">
-                  <pre>
-            |                   := or
-            [content]           := "content" is optional
-            {content}...        := repeat "content"
-            [content]...        := repeat optional "content"
 
-            {count}             := 1, 2, 3, ...
-            {result modifier}   := {+|-}{number}
-            {die type}          := [d]4|[d]6|[d]8|[d]10|[d]12|[d]20
-            {dice group}        := {count}:{die type}
-            {div}               := '|' or '/'
-            {level pool}        := {dice group}[{div}{dice group}]...[{div}{result modifier}]
-                  </pre>
-                </div>
-              </div>
             </section> <!-- lp-notation -->
 
           </section> <!-- appendix-notations-and-conventions -->
@@ -572,18 +555,6 @@
       </div>
 
 
-
-      <div class="row">
-        <div class="col-8">
-          <hr/>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-8">
-          {{{copyright}}}
-        </div>
-      </div>
 
     </div><!-- container -->
 

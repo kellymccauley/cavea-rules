@@ -1,0 +1,45 @@
+(*
+  EBNF grammar for notations used in Cavea: Rules of the Stage
+
+  The specified grammar is public domain.
+ *)
+ 
+(* Numbers *)
+
+sign            = "+" | "-" ;
+zero            = "0" ;
+nonZeroDigit    = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+digit           = zero | nonZeroDigit ;
+count           = nonZeroDigit , {digit} ;
+
+
+(* Symbols *)
+
+colon           = ":" ;
+
+
+(* Dice *)
+
+diePrefix       = "d" ;
+commonDieSides  = "4" | "6" | "8" | "10" | "12" | "20" _
+
+(* altDieSides is not used in Cavea: Rules of the Stage. *)
+altDieSides     = "2" | "14" | "16" | "18" | "30" | "50" | "100" ;
+
+dieSides        = commonDieSides | altDieSides ;
+
+die             = diePrefix, dieSides ;
+
+(* Level Pool Notation - lp *)
+
+lpDieType       = [diePrefix], commonDieSides ;
+
+lpDivider       = "|" | "/" ;
+
+resultModifier  = [sign], nonZeroDigit, {digit} ;
+
+diceGroup       = count, colon, lpDieType ;
+lastDiceGroup   = diceGroup, [lpDivider, resultModifier] ;
+
+lp              = "default" | lastDiceGroup | {diceGroup, lpDivider}, lastDiceGroup ;
+
