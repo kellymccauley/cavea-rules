@@ -4,16 +4,14 @@
 var
     path = require('path')
   , u = require('util')
-  , fse = require('fs-extra')
+  , fs = require('fs')
   , _ = require('lodash')
   , program = require('commander')
   , findup = require('findup-sync')
-  , Table = require('cli-table')
-  , linewrap = require('linewrap')
-  , clc = require('cli-color')
   , debug = require('debug')('build')
 
   , go = require('./build_lib/go')
+  , helper = require('./build_lib/helper')
   // , clean = require('./build_lib/clean')
   // , distclean = require('./build_lib/distclean')
   // , build = require('./build_lib/build')
@@ -59,7 +57,7 @@ if (program.taskSetsFile) {
 
 config.taskSetsFile = path.resolve(findup(taskSetsFile, {nocase: true}));
 
-if (!fse.existsSync(taskSetsFile)) {
+if (!fs.existsSync(taskSetsFile)) {
   console.log("File not found: %s", taskSetsFile);
   program.outputHelp();
   process.exit(1);
@@ -83,11 +81,11 @@ if (config.taskSetsToRun.length === 0) {
 debug("config:\n%s", u.inspect(config, {depth: 4}));
 
 if (program.listTaskSets) {
-  listTaskSets(config, taskSets, false);
+  helper.printTaskSets(config, taskSets, false);
 }
 
 if (program.listAllTaskSets) {
-  listTaskSets(config, taskSets, true);
+  helper.printTaskSets(config, taskSets, true);
 }
 
 
@@ -104,91 +102,6 @@ if (_err) {
   throw _err;
 }
 
-
-
-function listTaskSets(config, taskSets, showAll) {
-  'use strict';
-  var
-      taskSetKeys
-    , tsTable
-    , fullList = []
-    , wrap;
-
-
-  wrap = linewrap(79, {
-    skipScheme: 'ansi-color',
-    respectLineBreaks: 'all',
-    whitespace: 'all'
-  });
-
-  tsTable = new Table({
-    head: [clc.underline("Task Set Name"), clc.underline("Description")],
-    chars: {
-      'top-left': '',     'top': '',        'top-mid': '',    'top-right': '',
-      // 'mid': '-',         'mid-mid': '  ', 
-      'mid': ' ',         'mid-mid': '  ', 
-      'left': ' ',        'left-mid': ' ',  'right': '  ',    'right-mid': '  ',
-      'bottom-left': '',  'bottom': '',     'bottom-mid': '', 'bottom-right': ''
-    },
-    style: { compact: true }
-  });
-
-  fullList.push(clc.bold('Task Sets ...'));
-
-  taskSetKeys = _.keys(taskSets);
-  taskSetKeys.sort();
-
-  _.each(taskSetKeys, function(tsName) {
-    'use strict';
-    var ts
-      , desc
-      , dependsOn
-      , prunedDesc
-      , row;
-
-    ts = taskSets[tsName];
-
-    if (showAll || ts.description) {
-      row = [tsName, ''];
-
-      fullList.push('');
-      fullList.push('');
-
-          fullList.push('Name:          ' + clc.bold(tsName));
-
-      if (ts.deps) {
-        dependsOn = _.toSentenceSerial(ts.deps);
-          fullList.push('Depends On:    ' + dependsOn);
-      }
-
-      if (ts.description) {
-        desc = ts.description;
-        if (desc.length > 79) {
-          fullList.push('Description:');
-          fullList.push('');
-          fullList.push(wrap(desc));
-        } else {
-          fullList.push('Description:   ' + desc);
-        }
-
-        prunedDesc = desc;
-        prunedDesc = _.prune(prunedDesc, 45, '...');
-        row[1] = prunedDesc;
-      }
-
-
-      tsTable.push(row);
-    }
-  });
-
-  console.log(_.flatten(fullList).join("\n"));
-  console.log();
-  console.log();
-  console.log(clc.bold('Summary ...'));
-  console.log(tsTable.toString());
-  process.exit(0);
-
-}
 
 
 

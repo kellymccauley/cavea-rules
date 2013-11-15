@@ -1,11 +1,15 @@
 'use strict';
 var path = require('path')
   , u = require('util')
-  , fse = require('fs-extra')
-  , glob = require('glob')
+  , shell = require('shelljs')
   , _ = require('lodash')
+  , clc = require('cli-color')
   , debug = require('debug')('build:task:rm')
+  , helper = require('../helper')
   ;
+
+shell.config.fatal = true;
+shell.config.silent = true;
 
 module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
   'use strict';
@@ -13,13 +17,21 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
     , toDelete = []
     , errMsg
     , _err
-    , root = path.resolve('/');
+    , root = path.resolve('/')
+    ;
  
-  logKey = ['[', taskSetName, ':delete', ']'].join('');
+  logKey = [
+    clc.bold('['), 
+    clc.bold.green(taskSetName), 
+    clc.bold(':'),
+    clc.bold.red('rm'),
+    clc.bold(']')].join('');
+
+  debug("%s Executing remove task ...", logKey);
 
   _.each(taskConfig.files, function(file) {
     'use strict';
-    toDelete.push(glob.sync(path.resolve(file), {nocase: true, nosort: true}));
+    toDelete.push(helper.expandGlob(file));
   });
 
   toDelete = _.flatten(toDelete);
@@ -28,15 +40,18 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
   _.each(toDelete, function(file) {
     'use strict';
     if (file !== root) {
-      u.print(u.format("%s Deleting %s ...", logKey, file));
+      u.print(u.format("%s Removing %s ...", logKey, file));
       try {
-        fse.removeSync(file);
+        shell.rm('-rf', file);
+
       } catch (e) {
-        u.print(" not ok\n");
+        u.print(" not ok!\n");
         _err = e;
         console.log("%s %s", logKey, _err.message);
         return false;
+
       }
+
       u.print(" ok\n");
     }
   });

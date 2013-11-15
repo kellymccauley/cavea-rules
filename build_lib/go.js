@@ -1,38 +1,38 @@
 'use strict';
-var
-    path = require('path')
+var go
   , u = require('util')
-  , fse = require('fs-extra')
   , _ = require('lodash')
-  , glob = require('glob')
+  , clc = require('cli-color')
+  , context = require('./context')
   , debug = require('debug')('build:go')
-  , go
   , taskFile;
 
 go = module.exports = function(config, taskSets, taskSetName, callback) {
   'use strict';
-  var _err, errMsg, taskSet, logKey, deps;
+  var _err, errMsg, taskSet, logKey, deps, completed, completedPropKey;
 
   taskSet = taskSets[taskSetName];
   if (!taskSet) {
     errMsg = u.format("Could not find the taskSet named %s.", taskSetName);
-    console.log(errMsg);
+    console.log(clc.bold.red(errMsg));
     callback(new Error(errMsg));
     return;
   }
 
-  logKey = '[' + taskSetName + ']';
+  logKey = [clc.bold('['), clc.bold.green(taskSetName), clc.bold(']')].join('');
 
   deps = _.result(taskSet, 'deps');
 
   if (deps) {
+    console.log('%s Running %s dependant task sets ...', logKey, clc.bold.cyan(taskSetName));
     if (_.isString(deps)) {
       deps = [deps];
     }
 
     // Do the dependencies first.
     _.each(deps, function(depTaskSetName) {
-      console.log('%s %s depends on %s.', logKey, taskSetName, depTaskSetName);
+      // console.log('%s %s depends on %s.', logKey, taskSetName, depTaskSetName);
+      // console.log();
       go(config, taskSets, depTaskSetName, function(err) {
         _err = err;
         return false;
@@ -41,28 +41,36 @@ go = module.exports = function(config, taskSets, taskSetName, callback) {
   }
 
   if (!_err && taskSet.tasks && taskSet.tasks.length > 0) {
-    console.log('%s Running %s tasks ...', logKey, taskSetName);
+    completedPropKey = ['go', taskSetName, 'completed'].join('.');
+    completed = context.resolveProperty(completedPropKey, {createIfMissing: false});
 
-    _.each(taskSet.tasks, function(taskConfig) {
-      if (taskConfig.task) {
-        taskConfig.task(config, taskSets, taskSetName, taskConfig, function(err) {
-          if (err) _err = err;
-        });
+    if (!completed) {
+      console.log('%s Running %s tasks ...', logKey, clc.bold.cyan(taskSetName));
+      _.each(taskSet.tasks, function(taskConfig) {
+        'use strict';
+        if (taskConfig.task) {
+          taskConfig.task(config, taskSets, taskSetName, taskConfig, function(err) {
+            if (err) _err = err;
+          });
 
-        if (_err) return false;
+          if (_err) return false;
+
+        } else {
+          debug("%s Task without a task function specified: %s", logKey, u.inspect(taskConfig));
+        }
+      });
+
+      if (_err) {
+        console.log(clc.bold.red(u.format('%s Unable to complete task set: %s', logKey, taskSetName)));
 
       } else {
-        debug("%s Task without a task function specified: %s", logKey, u.inspect(taskConfig));
+        console.log('%s Finished running %s tasks.', logKey, clc.bold.cyan(taskSetName));
+        context.setProperty(completedPropKey, true);
+
       }
-    });
-
-    if (_err) {
-      console.log('%s Unable to complete task set: %s', logKey, taskSetName);
-
-    } else {
-      console.log('%s Finished running %s tasks.', logKey, taskSetName);
 
     }
+
   }
 
   callback(_err);

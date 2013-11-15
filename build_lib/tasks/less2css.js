@@ -1,10 +1,15 @@
 'use strict';
 var path = require('path')
   , u = require('util')
-  , fse = require('fs-extra')
+  , fs = require('fs')
+  , shell = require('shelljs')
   , less = require('less')
+  , clc = require('cli-color')
   , debug = require('debug')('build:task:less2css')
   ;
+
+shell.config.fatal = true;
+shell.config.silent = true;
 
 module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
   'use strict';
@@ -17,14 +22,22 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
     , _err
     ;
 
-  logKey = ['[', taskSetName, ':less2css', ']'].join('');
+  logKey = [
+    clc.bold('['), 
+    clc.bold.green(taskSetName), 
+    clc.bold(':'),
+    clc.bold.yellow('less'),
+    clc.bold(']')].join('');
 
-  source = taskConfig.source;
+
+  debug("%s Executing less2css task ...", logKey);
+
+  source = taskConfig.from;
   sourceFileName = path.basename(source);
   sourceDir = path.dirname(source);
 
   destFileName = path.basename(source, 'less') + 'css';
-  destDir = path.resolve(taskConfig.destDir);
+  destDir = path.resolve(taskConfig.toDir);
   dest = path.join(destDir, destFileName);
 
   debug("%s source:         %s", logKey, source);
@@ -36,26 +49,25 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
   debug("%s destDir:        %s", logKey, destDir);
 
 
-  if (!fse.existsSync(source)) {
+  if (!fs.existsSync(source)) {
       errMsg = u.format("%s File not found: %s", logKey, source);
       console.log(errMsg);
       callback(new Error(errMsg));
       return;
   }
 
-  if (!fse.existsSync(destDir)) {
+  if (!fs.existsSync(destDir)) {
     u.print(u.format("%s Creating %s ...", logKey, destDir));
-    fse.mkdirsSync(destDir);
+    shell.mkdir('-p', destDir);
     u.print(" ok\n");
   }
 
 
   u.print(u.format("%s Compiling %s to %s ...", logKey, source, dest));
-  fse.readFile(source, 'utf8', function(e, data) {
+  fs.readFile(source, 'utf8', function(e, data) {
     var lessOpts;
 
     if (e) {
-      u.print(" not ok\n");
       console.log("%s Unable to open file for reading: %s", logKey, source);
       _err = e;
       return;
@@ -64,7 +76,7 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
     lessOpts = {
       dumpLineNumbers: "comments",
       paths: [sourceDir], // Specify search paths for @import directives
-      filename: destFileName // Specify a filename, for better error messages
+      filename: source // Specify a filename, for better error messages
     };
 
     parser = new(less.Parser)(lessOpts);
@@ -73,7 +85,6 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
       var css;
 
       if (e2) {
-        u.print(" not ok\n");
         _err = e2;
         less.writeError(e2, lessOpts);
         return;
@@ -82,7 +93,6 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
       try {
         css = tree.toCSS(lessOpts);
       } catch (e3) {
-        u.print(" not ok\n");
         _err = e3;
         less.writeError(e3, lessOpts);
         return;
@@ -90,10 +100,9 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
 
 
       try {
-        fse.writeFileSync(dest, css, 'utf8');
+        fs.writeFileSync(dest, css, 'utf8');
 
       } catch (e4) {
-        u.print(" not ok\n");
         _err = e4;
         console.log("%s Unable to write to file: %s", dest);
         return;
@@ -103,6 +112,7 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
   });
 
   if (_err) {
+    u.print(" not ok!\n");
     callback(_err);
     return;
 
