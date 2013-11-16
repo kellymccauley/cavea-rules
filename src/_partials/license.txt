@@ -1,9 +1,9 @@
 Rules, Books, Documents, and Media License
 
-[Cavea: Rules of the Stage](http://caveagames.org) by [Kelly A. McCauley](href="http://99kayaks.com/us#us-kelly-mccauley") is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/deed.en_US.
+[Cavea: Rules of the Stage](http://caveagames.org/rules) by [Kelly A. McCauley](href="http://99kayaks.com/us#us-kelly-mccauley") is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/deed.en_US.
 
 Source Code License
 
-Copyright {{doc.year}} Kelly A. McCauley
+Copyright {{copyright.date}} Kelly A. McCauley
 Licensed under the Apache License v2.0
 http://www.apache.org/licenses/LICENSE-2.0
