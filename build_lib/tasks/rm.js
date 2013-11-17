@@ -5,7 +5,10 @@ var path = require('path')
   , _ = require('lodash')
   , clc = require('cli-color')
   , debug = require('debug')('build:task:rm')
+
   , helper = require('../helper')
+  , fileset = require('../fileset')
+  , FileSet = fileset.FileSet
   ;
 
 shell.config.fatal = true;
@@ -20,21 +23,27 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
     , root = path.resolve('/')
     ;
  
-  logKey = [
-    clc.bold('['), 
-    clc.bold.green(taskSetName), 
-    clc.bold(':'),
-    clc.bold.red('rm'),
-    clc.bold(']')].join('');
+  logKey = ['[', taskSetName, ':rm]'].join('');
 
   debug("%s Executing remove task ...", logKey);
+  debug("%s taskConfig.files: %s", logKey, u.inspect(taskConfig.files));
 
-  _.each(taskConfig.files, function(file) {
-    'use strict';
-    toDelete.push(helper.expandGlob(file));
-  });
+  if (taskConfig.files) {
+    if (_.isString(taskConfig.files) || _.isArray(taskConfig.files)) {
+      toDelete = fileset.of(taskConfig.files).files;
+    } else if (taskConfig.files instanceof FileSet) {
+      toDelete = taskConfig.files.files;
+    } else {
+      toDelete = taskConfig.files;
+    }
+  }
 
-  toDelete = _.flatten(toDelete);
+  // _.each(taskConfig.files, function(file) {
+  //   'use strict';
+  //   toDelete.push(helper.expandGlob(file));
+  // });
+
+  // toDelete = _.flatten(toDelete);
   debug("%s toDelete: %s", logKey, u.inspect(toDelete));
 
   _.each(toDelete, function(file) {
