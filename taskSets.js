@@ -2,8 +2,9 @@
 var taskSets = {}
   , path = require('path')
   , u = require('util')
-  , debug = require('debug')('taskSets')
+  , _ = require('lodash')
   , dateFormat = require('dateformat')
+  , debug = require('debug')('taskSets')
 
   , helper = require('./build_lib/helper')
   , fileset = require('./build_lib/fileset')
@@ -69,7 +70,7 @@ taskSets['clean:tmp'] = {
       task: rm,
 
       // Remaining properties are specific to the task.
-      files: ['tmp/*']
+      files: ['./tmp/*']
     }
   ]
 };
@@ -79,7 +80,7 @@ taskSets['clean:dist'] = {
   tasks: [
     {
       task: rm,
-      file: ['dist/*']
+      files: ['./dist/*']
     }
   ]
 };
@@ -125,26 +126,49 @@ taskSets.less = {
 };
 
 
-taskSets.mustache = {
-  description: "Processes the mustache templates.",
+taskSets['rots:web'] = {
+  description: "Processes the rules of the stage documents.",
   deps: ['less'],
   tasks: [
-    // Rules of the Stage
-    { task: function() { context.setProperty('isForWebSite', true); } },
+    { 
+      // Set up
+      task: function() { 
+        context.setProperty('isForWebSite', true); 
+      } 
+    },
+
     {
+      // Text files.
       task: mustache,
       partials: fileset.of(
         [
-          './src/web/rules/_partials/**/*.{txt,html}',
-          './src/web/_partials/**/*.{txt,html}',
-          './src/_partials/**/*.{txt,html}'
+          './src/web/rules/_partials/**/*.txt',
+          './src/web/_partials/**/*.txt',
+          './src/_partials/**/*.txt'
         ]
       ),
       templateData: context.properties(),
       templates: fileset.of(
-        ['./src/web/rules/*.{txt,html}']
+        ['./src/web/rules/*.txt']
       ),
       toDir: './dist/web/rules/'
+    },
+    {
+      // HTML files.
+      task: mustache,
+      partials: fileset.of(
+        [
+          './src/web/rules/_partials/**/*.html',
+          './src/web/_partials/**/*.html',
+          './src/_partials/**/*.html'
+        ]
+      ),
+      templateData: context.properties(),
+      templates: fileset.of(['./src/web/rules/*.html']),
+      toDir: './dist/web/rules/',
+      outputTransformer: function (file, destFile, output) {
+        return output;
+      }
     },
     { task: function() { context.setProperty('isForWebSite', false); } },
 
@@ -153,7 +177,7 @@ taskSets.mustache = {
 
 taskSets.all = {
   description: 'Builds all of the documents',
-  deps: ['clean:tmp', 'clean:dist', 'init:dist', 'less'],
+  deps: ['init:dist', 'less', 'rots:web'],
   tasks: [
     {
       task: function(config, taskConfig, taskSetName, callback) {
