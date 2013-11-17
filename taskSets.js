@@ -32,15 +32,21 @@ context.loadWith({
 
   ts: {
     date: now,
+    human: dateFormat(now, "dddd, mmmm dS, yyyy, HH:MM:ss Z"),
+    utc: dateFormat(now, "UTC:dddd, mmmm dS, yyyy, HH:MM:ss Z"),
     iso: dateFormat(now, "isoDateTime"),
     year: dateFormat(now, "yyyy")
   },
 
   'rots': {
+    version: '0.2.0',
     inceptionYear: '2013',
     author: 'Kelly A. McCauley',
-    srcFile: 'src/web/rules/index.html',
-    destPath: 'dist/web/rules/'
+    srcFile: './src/web/rules/index.html',
+    destPath: './dist/web/rules/',
+    toc: '{{{rots.toc}}}',
+    figures: '{{{rots.figures}}}',
+    tables: '{{{rots.tables}}}'
   }
 });
 
@@ -53,6 +59,15 @@ if (props.project.inceptionYear !== props.ts.year) {
   );
 } else {
   context.setProperty('copyright.year', props.project.inceptionYear);
+}
+
+if (props.rots.inceptionYear !== props.ts.year) {
+  context.setProperty(
+    'rots.copyright.year',
+    [props.rots.inceptionYear, '-', props.ts.year].join('')
+  );
+} else {
+  context.setProperty('rots.copyright.year', props.rots.inceptionYear);
 }
 
 

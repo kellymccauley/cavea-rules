@@ -27,17 +27,15 @@
     {{/isForWebSite}}
 
     <div class="container">
-      <!--
-        #
-        # Title
-        #
-      -->
       <div class="row">
         <div class="col-md-8">
-          <div class="page-header">
-            <h1>Cavea: <small>Rules of the stage</small></h1>
-            
-          </div>
+          <section id="title" class="title">
+            <div class="page-header">
+              <h1>Cavea: <small>Rules of the stage</small></h1>
+
+              <p><small>Rules for the Cavea Role-playing Game.</small></p>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -45,12 +43,23 @@
 
       <div class="row">
         <div class="col-md-8">
-          <p>Written and developed by Kelly A. McCauley.</p>
-          
-          <p>Copyright &copy; {{{copyright.year}}} Kelly A. McCauley</p>
-          
-          <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-          
+          <section id="acknowledgements" class="acknowledgements">
+            <p>Written and developed by {{{rots.author}}}.</p>
+          </section>
+        </div>
+      </div>
+
+            
+      <div class="row">
+        <div class="col-md-8">
+          <section id="info" class="info">
+            <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
+            <small>Version: <b>{{{rots.version}}}</b></small><br/>
+            <small>Last Modified: <b>{{{ts.human}}}</b> ({{{ts.utc}}})</small></p>
+            
+            <p><small><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</small></p>
+
+          </section>
         </div>
       </div>
       
@@ -68,31 +77,55 @@
 
       <div class="row">
         <div class="col-md-8">
-        
-          <section id="front-matter" class="front-matter">
-
-            <section id="introduction">
-              <h1>Introduction</h1>
-              
-              <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
-              
-              <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
-              
-              <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
-              
-              <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
-              
-              <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>  
-              
-              <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
-              
-            </section> <!-- introduction -->
-          
-          </section> <!-- front-matter -->
-          
+          <section id="preface" class="preface">
+            <h1>Preface</h1>
+            
+            <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
+            
+            <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
+            
+            <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
+            
+            <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
+            
+            <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>  
+            
+            <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
+            
+          </section> <!-- introduction -->
         </div>
       </div>
           
+
+      <div class="row">
+        <div class="col-md-8">  
+          <section id="toc" class="toc">
+            <h1>Table of Contents</h1>
+            {{! This will get filled in during the build.}}{{{rots.toc}}}
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">  
+          <section id="figures" class="figures">
+            <h1>Figures</h1>
+            {{! This will get filled in during the build.}}{{{rots.figures}}}
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">  
+          <section id="tables" class="tables">
+            <h1>Tables</h1>
+            {{! This will get filled in during the build.}}{{{rots.figures}}}
+          </section>
+        </div>
+      </div>
+
+
+
       <div class="row">
         <div class="col-md-8">  
 
@@ -243,9 +276,13 @@
             </section> <!-- ap -->
 
           </section> <!-- basic-mech -->
+        </div>
+      </div>
 
 
 
+      <div class="row">
+        <div class="col-md-8">  
 
           <section id="skill-mech" class="chapter numbered-section">
             <h1>Skill Mechanics</h1>
@@ -404,8 +441,12 @@
 
           </section> <!-- skill-mech -->
 
+        </div>
+      </div>
 
 
+      <div class="row">
+        <div class="col-md-8">  
 
           <section id="phys-attr-mech" class="chapter numbered-section">
             <h1>Physical Attribute Mechanics</h1>
@@ -515,7 +556,12 @@
           </section> <!-- phys-attr-mech -->
 
 
+        </div>
+      </div>
 
+
+      <div class="row">
+        <div class="col-md-8">  
 
 
 
@@ -568,7 +614,14 @@
       </div>
 
 
+      <div class="row">
+        <div class="col-md-8">  
+          <section id="index" class="index numbered-section">
+            <h1>Index</h1>
+          </section>
 
+        </div>
+      </div>
     </div><!-- container -->
 
     {{#isForWebSite}}
