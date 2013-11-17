@@ -6,6 +6,9 @@ var taskSets = {}
   , dateFormat = require('dateformat')
   , debug = require('debug')('taskSets')
 
+  , httpServer = require('http-server')
+  , portfinder = require('portfinder')
+
   , helper = require('./build_lib/helper')
   , fileset = require('./build_lib/fileset')
   , context = require('./build_lib/context')
@@ -174,6 +177,41 @@ taskSets['rots:web'] = {
 
   ]
 }
+
+taskSets.serve = {
+  description: "Starts up a web server and serves dist/web.",
+  tasks: [
+    { 
+      task: function() {
+        var server;
+        portfinder.basePort = 8080;
+        portfinder.getPort(function(err, port) {
+          if (err) throw err;
+          server = httpServer.createServer({
+            root: './dist/web',
+            cache: -1,
+            showDir: true,
+            autoIndex: true
+          });
+          server.listen(port, '0.0.0.0', function() {
+            console.log('Starting http-server on port %s', port.toString());
+            console.log('CTRL-C to stop the server.');
+          });
+
+        });
+
+        if (process.platform !== 'win32') {
+          process.on('SIGINT', function () {
+            console.log('http-server has stopped.');
+            process.exit();
+          });
+        }
+      }
+    }
+  ]
+}
+
+taskSets.server = taskSets.serve;
 
 taskSets.all = {
   description: 'Builds all of the documents',
