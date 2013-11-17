@@ -9,150 +9,192 @@
     <meta name="author" content="Kelly A. McCauley"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cavea: Rules of the stage</title>
-    <meta name="description" content="Rules for Cavea, a pen and paper table top RPG."/>
-
+    <meta name="description" content="Rules for the Cavea Role-playing Game."/>
     {{#isForWebSite}}
       {{>site_html_head}}
     {{/isForWebSite}}
-
-    <!-- {{! Only for development.  Will not be included in the final output. -->
+    <!--{{! Only for development.  Will not be included in the final output. -->
     <link href="../../../dist/web/assets/css/cavea.css" rel="stylesheet"/>
     <script src="../../../dist/web/assets/lib/jquery.js" type="text/javascript"></script>
     <script src="../../../dist/web/assets/lib/bootstrap.js" type="text/javascript"></script>
-    <!-- }} -->
+    <!--}}-->
   </head>
   <body class="book">
-    {{#isForWebSite}}
-      {{>site_header}}
-    {{/isForWebSite}}
+    {{#isForWebSite}}{{>site_header}}{{/isForWebSite}}
 
     <div class="container">
+
       <div class="row">
         <div class="col-md-8">
-          <section id="title" class="title">
+
+          <!--{{!
+            #
+            # Title
+            #
+          }}-->
+          <section id="front-page" class="front-page">
             <div class="page-header">
-              <h1>Cavea: <small>Rules of the stage</small></h1>
+
+              <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
 
               <p><small>Rules for the Cavea Role-playing Game.</small></p>
+
             </div>
           </section>
-        </div>
-      </div>
 
 
 
-      <div class="row">
-        <div class="col-md-8">
+          <!--{{!
+            #
+            #  Acknowledgements and Credits
+            #
+          }}-->
           <section id="acknowledgements" class="acknowledgements">
-            <p>Written and developed by {{{rots.author}}}.</p>
-          </section>
-        </div>
-      </div>
+            <h1>Credits</h1>
 
-            
-      <div class="row">
-        <div class="col-md-8">
+            <p>Written and developed by {{{rots.author}}}.</p>
+
+          </section>
+
+
+
+          <!--{{!
+            #
+            #  Book Information
+            #
+          }}-->
           <section id="info" class="info">
+
             <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
             <small>Version: <b>{{{rots.version}}}</b></small><br/>
             <small>Last Modified: <b>{{{ts.human}}}</b> ({{{ts.utc}}})</small></p>
-            
+
             <p><small><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</small></p>
 
           </section>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
+
+
+
+          <!--{{!
+            #
+            #  Dedication
+            #
+          }}-->
           <section id="dedication" class="dedication">
             <blockquote>
-              <p>Dedicated to the Village Idiots and role-playing gamers everywhere.</p>
+              <p>Dedicated to the past and future Village Idiots.</p>
               <small>Kelly</small>
             </blockquote>
           </section>
-        </div>
-      </div>
- 
 
-      <div class="row">
-        <div class="col-md-8">
-          <section id="preface" class="preface">
-            <h1>Preface</h1>
-            
-            <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
-            
-            <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
-            
-            <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
-            
-            <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
-            
-            <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>  
-            
-            <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
-            
-          </section> <!-- introduction -->
-        </div>
-      </div>
-          
 
-      <div class="row">
-        <div class="col-md-8">  
+
+          <!--{{!
+            #
+            #  Table of Contents
+            #
+          }}-->
           <section id="toc" class="toc">
             <h1>Table of Contents</h1>
-            {{! This will get filled in during the build.}}{{{rots.toc}}}
+            <span id="toc-content">{{! This will get filled in during the build.}}</span>
           </section>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-8">  
-          <section id="figures" class="figures">
-            <h1>Figures</h1>
-            {{! This will get filled in during the build.}}{{{rots.figures}}}
+
+
+          <!--{{!
+            #
+            # List of Figures
+            #
+          }}-->
+          <section id="figures" class="lof">
+            <h1>List of Figures</h1>
+            <span id="lof-content">{{! This will get filled in during the build.}}</span>
           </section>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-8">  
-          <section id="tables" class="tables">
-            <h1>Tables</h1>
-            {{! This will get filled in during the build.}}{{{rots.figures}}}
+
+
+          <!--{{!
+            #
+            #  List of Tables
+            #
+          }}-->
+          <section id="tables" class="lot">
+            <h1>List of Tables</h1>
+            <span id="lot-content">{{! This will get filled in during the build.}}</span>
           </section>
-        </div>
-      </div>
 
 
 
-      <div class="row">
-        <div class="col-md-8">  
+          <!--{{!
+            #
+            #  Preface
+            #
+          }}-->
+          <section id="preface" class="preface">
+            <h1>Preface</h1>
 
+            <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
+
+            <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
+
+            <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
+
+            <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
+
+            <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>
+
+            <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
+
+          </section> <!-- preface -->
+
+
+
+
+          <!--{{!
+            #
+            #  Basic Mechanics
+            #
+          }}-->
           <section id="basic-mech" class="chapter numbered-section">
             <h1>Basic Mechanics</h1>
 
+
+            <!--{{!
+              #
+              #  Dice
+              #
+            }}-->
             <section id="dice">
               <h1>Dice</h1>
-              
-              <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
-              
 
-              <div id="die-notation-examples" class="panel panel-example">
-                <div class="panel-heading">Die Notaion Examples</div>
-                <div class="panel-body">
-                  <p><span class="d">d4</span> - A die with four sides.</p>
-                  <p><span class="d">d6</span> - A six sided die.</p>
-                  <p><span class="d">d20</span> - A twenty sided die.</p>
+              <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
+
+              <figure id="die-notation-examples">
+                <div class="panel panel-example">
+                  <div class="panel-heading">Die Notation Examples</div>
+                  <div class="panel-body">
+                    <ul class="list-unstyled">
+                      <li><span class="d">d4</span> - A die with four sides.</li>
+                      <li><span class="d">d6</span> - A six sided die.</li>
+                      <li><span class="d">d20</span> - A twenty sided die.</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              
+              </figure>
+
               <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, and <span class="d">d20</span>.</p>
-              
+
               <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.</p>
 
             </section> <!-- dice -->
 
+
+
+            <!--{{!
+              #
+              #  Level Pool
+              #
+            }}-->
             <section id="lp">
               <h1>Level Pool</h1>
 
@@ -164,29 +206,36 @@
               </ul>
 
               <p>A Level Pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, or <span class="d">d20</span>.</p>
-              
+
               <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
-              <div id="lp-notation-examples" class="panel panel-example">
-                <div class="panel-heading">Level Pool Notation Examples</div>
-                <div class="panel-body">
-                  <p><code class="lp">1:d20</code> - A level pool consisting of a single <span class="d">d20</span>.</p>
+              <figure id="lp-notation-examples">
+                <div class="panel panel-example">
+                  <div class="panel-heading">Level Pool Notation Examples</div>
+                  <div class="panel-body">
+                    <p><code class="lp">1:d20</code> - A level pool consisting of a single <span class="d">d20</span>.</p>
 
-                  <p><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</p>
+                    <p><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</p>
 
-                  <p><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</p>
+                    <p><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</p>
 
-                  <p><code class="lp">1:d4|2:d6|1:d8|3:d10|2:d12|1:d20</code> - A level pool consisting of one <span class="d">d4</span>, two <span class="d">d6</span>s, one <span class="d">d8</span>, three <span class="d">d10</span>s, two <span class="d">d12</span>s, and one <span class="d">d20</span>.</p>
+                    <p><code class="lp">1:d4|2:d6|1:d8|3:d10|2:d12|1:d20</code> - A level pool consisting of one <span class="d">d4</span>, two <span class="d">d6</span>s, one <span class="d">d8</span>, three <span class="d">d10</span>s, two <span class="d">d12</span>s, and one <span class="d">d20</span>.</p>
 
-                  <p><code class="lp">1:4|2:6|1:8|3:10|2:12|1:20</code> - The same level pool as the previous example.</p>
+                    <p><code class="lp">1:4|2:6|1:8|3:10|2:12|1:20</code> - The same level pool as the previous example.</p>
 
-                  <p><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
+                    <p><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
+                  </div>
                 </div>
-
-              </div>
+              </figure>
 
               <p>(<b>Technical:</b> See <a href="ebnf-grammar.txt">Level Pool Notation</a> for the formal notation specification).</p>
 
+
+              <!--{{!
+                #
+                #  Rolling a Level Pool
+                #
+              }}-->
               <section id="rolling-lp">
                 <h1>Rolling a Level Pool</h1>
 
@@ -196,44 +245,50 @@
                   <li>Gather and roll all of the dice that compose the Level Pool.</li>
                   <li>Add up all of the <i>1</i>s for an unmodified total.</li>
                   <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
-                 </ol>
-                 
-                 
-                 
-              <div id="rolling-lp-examples" class="panel panel-example">
-                <div class="panel-heading">Rolling Level Pool Example</div>
-                <div class="panel-body">
-                  <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a police officer and is nearly at the end of a long foot chase, she has the running suspect, Bruno, right at her finger tips.</p>
-                  
-                  <ul class="list-unstyled">
-                    <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
-                    <li><b>Jill:</b> "Close enough to make a grab."</li>
-                    <li><b>Alice:</b> "Yes, but just barely."</li>
-                    <li><b>Jill:</b> "I want to take him to the ground!"</li>
-                    <li><b>Jill (as Sally):</b> "You're going down, Bruno!"</li>
-                    <li><b>Jill:</b> "and she lunges for him."</li>
-                    <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
-                    <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
-                    <li>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>3</i> or higher to successfully grab him and throw him to the ground.</li>
-                    <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
-                    <li>Sally has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code> for her Wing Chun skill.  Jill rolls 5, 5, 4, 1, and 20.  Only one <i>1</i>.</li>
-                    <li><b>Jill:</b> "and I rolled a 1."</li>
-                    <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
-                    <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
-                    <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend.</li>
-                    <li>Alice decides Bruno is going to use his well honed street fighting skill to strike Sally.  He has a Level Pool of <code class="lp">1:d4|2:d6|3:d10|2:d20</code>.  Alice rolls 1, 3, 2, 2, 1, 8, 8, and 4.  She adds up the <i>1</i>s for a total of 2.</li>
-                    <li>Jill rolls 3, 5, 14, 7, and 4.  No <i>1</i>s so her total is 0.</li>
-                    <li><b>Jill:</b> "Crud! 0.</li>
-                    <li><b>Alice:</b> "Ouch.  Bruno's fist strikes Sally in her left eye.  She'll have a swollen black eye for a week.  She also has a -1 for her fighting skills.</li>
-                    <li>Jill makes a note that Sally's Wing Chun skill temporarily has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code>.</li>
-                  </ul>
-                
-                </div>
-               </div>
-               
+                </ol>
+
+          
+                <figure id="rolling-lp-examples">
+                  <div class="panel panel-example">
+                    <div class="panel-heading">Rolling Level Pool Example</div>
+                    <div class="panel-body">
+                      <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a police officer and is nearly at the end of a long foot chase, she has the running suspect, Bruno, right at her finger tips.</p>
+
+                      <ul class="list-unstyled">
+                        <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
+                        <li><b>Jill:</b> "Close enough to make a grab."</li>
+                        <li><b>Alice:</b> "Yes, but just barely."</li>
+                        <li><b>Jill:</b> "I want to take him to the ground!"</li>
+                        <li><b>Jill (as Sally):</b> "You're going down, Bruno!"</li>
+                        <li><b>Jill:</b> "and she lunges for him."</li>
+                        <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
+                        <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
+                        <li>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>3</i> or higher to successfully grab him and throw him to the ground.</li>
+                        <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
+                        <li>Sally has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code> for her Wing Chun skill.  Jill rolls 5, 5, 4, 1, and 20.  Only one <i>1</i>.</li>
+                        <li><b>Jill:</b> "and I rolled a 1."</li>
+                        <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
+                        <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
+                        <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend.</li>
+                        <li>Alice decides Bruno is going to use his well honed street fighting skill to strike Sally.  He has a Level Pool of <code class="lp">1:d4|2:d6|3:d10|2:d20</code>.  Alice rolls 1, 3, 2, 2, 1, 8, 8, and 4.  She adds up the <i>1</i>s for a total of 2.</li>
+                        <li>Jill rolls 3, 5, 14, 7, and 4.  No <i>1</i>s so her total is 0.</li>
+                        <li><b>Jill:</b> "Crud! 0.</li>
+                        <li><b>Alice:</b> "Ouch.  Bruno's fist strikes Sally in her left eye.  She'll have a swollen black eye for a week.  She also has a -1 for her fighting skills.</li>
+                        <li>Jill makes a note that Sally's Wing Chun skill temporarily has a Level Pool of <code class="lp">2:d6|2:d10|1:d20</code>.</li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </figure>
+
               </section> <!-- rolling-lp -->
 
 
+              <!--{{!
+                #
+                #  Improving a Level Pool
+                #
+              }}-->
               <section id="improving-lp">
                 <h1>Improving a Level Pool</h1>
 
@@ -243,6 +298,11 @@
             </section> <!-- lp -->
 
 
+            <!--{{!
+              #
+              #  Advancement Points
+              #
+            }}-->
             <section id="ap">
               <h1>Advancement Points</h1>
 
@@ -251,24 +311,39 @@
               <p>There are two types of Advancement Points: General and Specific.</p>
 
 
+
+              <!--{{!
+                #
+                #  General Advancement Points
+                #
+              }}-->
               <section id="gap">
                 <h1>General Advancement Points</h1>
 
                 <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">Level Pools</a> of known skills.</p>
               </section> <!-- gap -->
 
+
+
+              <!--{{!
+                #
+                #  Specific Advancement Points
+                #
+              }}-->
               <section id="sap">
                 <h1>Specific Advancement Points</h1>
 
                 <p>The Specific Advancement Points (SAP) can only be used to either increase the Level Pool of a specific skill or to increase the Level Pool of one of the physical attributes related to that skill.  Specific Advancement Points are gained when the dice in the Level Pool are rolled during a skill attempt.  A single SAP is gained for that skill if one or more <i>2</i>s are rolled.</p>
 
 
-              <div id="sap-gain-example" class="panel panel-example">
-                <div class="panel-heading">SAP Gain Example</div>
-                <div class="panel-body">
-                  <p>Rayus the Swift has a <code class="lp">3:d8|2:d10|3:d20</code> <abbr title="Level Pool" class="initialism">LP</abbr> in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>14</i>, <i>11</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.</p>
-                </div>
-              </div>
+                <figure id="sap-gain-example">
+                  <div class="panel panel-example">
+                    <div class="panel-heading">SAP Gain Example</div>
+                    <div class="panel-body">
+                      <p>Rayus the Swift has a <code class="lp">3:d8|2:d10|3:d20</code> <abbr title="Level Pool" class="initialism">LP</abbr> in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>14</i>, <i>11</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.</p>
+                    </div>
+                  </div>
+                </figure>
 
 
               </section> <!-- sap -->
@@ -276,17 +351,25 @@
             </section> <!-- ap -->
 
           </section> <!-- basic-mech -->
-        </div>
-      </div>
 
 
 
-      <div class="row">
-        <div class="col-md-8">  
 
+
+          <!--{{!
+            #
+            #  Skill Mechanics
+            #
+          }}-->
           <section id="skill-mech" class="chapter numbered-section">
             <h1>Skill Mechanics</h1>
 
+
+            <!--{{!
+              #
+              #  Skill Attributes
+              #
+            }}-->
             <section id="skill-attr">
               <h1>Skill Attributes</h1>
 
@@ -308,22 +391,35 @@
 
 
 
+              <!--{{!
+                #
+                #  Skill Level Pool
+                #
+              }}-->
               <section id="skill-lp">
                 <h1>Skill Level Pool</h1>
 
                 <p>A skill's <a href="#skill lp">Level Pool</a> (LP) is the measurement of expertise of that skill.</p>
 
 
-                <div id="skill-lp-example" class="panel panel-example">
-                  <div class="panel-heading">Skill LP Example</div>
-                  <div class="panel-body">
-                    <p>Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two <span class="d">d4</span>s, three <span class="d">d8</span>s, one <span class="d">d10</span>, and four <span class="d">d12</span>s (abbreviated as: <code class="lp">2:d4|3:d8|1:10|4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two <span class="d">d20</span>s with a results modifier of <i>-1</i>, due to the arthritis  (abbreviated as: <code class="lp">2:d20|-1</code>) and her food preparation skill level pool is <code class="lp">4:d4|4:d6|2:d8|2:d10|1:d12</code>.</p>
+                <figure id="skill-lp-example">
+                  <div class="panel panel-example">
+                    <div class="panel-heading">Skill LP Example</div>
+                    <div class="panel-body">
+                      <p>Rayus the Swift is renown for dodging arrows.  His dodging skill level pool is two <span class="d">d4</span>s, three <span class="d">d8</span>s, one <span class="d">d10</span>, and four <span class="d">d12</span>s (abbreviated as: <code class="lp">2:d4|3:d8|1:10|4:d12</code>).  Old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is two <span class="d">d20</span>s with a results modifier of <i>-1</i>, due to the arthritis  (abbreviated as: <code class="lp">2:d20|-1</code>) and her food preparation skill level pool is <code class="lp">4:d4|4:d6|2:d8|2:d10|1:d12</code>.</p>
+                    </div>
                   </div>
-                </div>
+                </figure>
 
                 <p>See <a href="#lp-notation">Level Pool Notation</a>.</p>
               </section> <!-- skill-lp -->
 
+
+              <!--{{!
+                #
+                #  Related Physical Attributes
+                #
+              }}-->
               <section id="skill-phys-attr">
                 <h1>Related Physical Attributes</h1>
 
@@ -441,16 +537,14 @@
 
           </section> <!-- skill-mech -->
 
-        </div>
-      </div>
 
 
-      <div class="row">
-        <div class="col-md-8">  
+
+
 
           <section id="phys-attr-mech" class="chapter numbered-section">
             <h1>Physical Attribute Mechanics</h1>
-            
+
             <p>The core physical attributes are:</p>
 
             <dl class="dl-horizontal">
@@ -556,32 +650,12 @@
           </section> <!-- phys-attr-mech -->
 
 
-        </div>
-      </div>
 
 
-      <div class="row">
-        <div class="col-md-8">  
-
-
-
-
-          <!--
-          <section id="appendix-notations-and-conventions" class="backmatter">
-            <h1>Notations and Conventions</h1>
-
-            <section id="lp-notation">
-              <h1>Level Pool Notation</h1>
-
-
-            </section> <!- - lp-notation - ->
-
-          </section> <!- - appendix-notations-and-conventions - ->
-          -->
 
           <section id="glossary" class="backmatter">
             <h1>Glossary</h1>
-            
+
             <!-- FIXME
             <div id="glossary-entry-game-master" class="glossary-entry">
               <span class="glossary-term">Game Master</span>
@@ -610,23 +684,20 @@
           </section> <!-- glossary -->
 
 
-        </div>
-      </div>
 
 
-      <div class="row">
-        <div class="col-md-8">  
+
           <section id="index" class="index numbered-section">
             <h1>Index</h1>
           </section>
+
+
 
         </div>
       </div>
     </div><!-- container -->
 
-    {{#isForWebSite}}
-      {{>site_footer}}
-    {{/isForWebSite}}
+    {{#isForWebSite}}{{>site_footer}}{{/isForWebSite}}
 
 
   </body>
