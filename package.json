@@ -31,6 +31,7 @@
     "cli-color": "~0.2.3",
     "cli-table": "~0.2.0",
     "commander": "~2.0.0",
+    "dateformat": "~1.0.6-1.2.3"
     "debug": "~0.7.3",
     "findup-sync": "~0.1.2",
     "glob": "~3.2.7",
@@ -44,8 +45,5 @@
     "underscore.string": "~2.3.3",
     "http-server": "~0.5.5",
     "portfinder": "~0.2.1"
-  },
-  "dependencies": {
-    "dateformat": "~1.0.6-1.2.3"
   }
 }

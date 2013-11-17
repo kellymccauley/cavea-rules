@@ -4,10 +4,10 @@ var taskSets = {}
   , u = require('util')
   , _ = require('lodash')
   , dateFormat = require('dateformat')
-  , debug = require('debug')('taskSets')
-
   , httpServer = require('http-server')
   , portfinder = require('portfinder')
+  , cheerio = require('cheerio')
+  , debug = require('debug')('taskSets')
 
   , helper = require('./build_lib/helper')
   , fileset = require('./build_lib/fileset')
@@ -43,10 +43,7 @@ context.loadWith({
     inceptionYear: '2013',
     author: 'Kelly A. McCauley',
     srcFile: './src/web/rules/index.html',
-    destPath: './dist/web/rules/',
-    toc: '{{{rots.toc}}}',
-    figures: '{{{rots.figures}}}',
-    tables: '{{{rots.tables}}}'
+    destPath: './dist/web/rules/'
   }
 });
 
@@ -185,7 +182,10 @@ taskSets['rots:web'] = {
       templates: fileset.of(['./src/web/rules/*.html']),
       toDir: './dist/web/rules/',
       outputTransformer: function (file, destFile, output) {
-        return output;
+        'use strict';
+        var $ = cheerio.load(output);
+
+        return $.html();
       }
     },
     { task: function() { context.setProperty('isForWebSite', false); } },
