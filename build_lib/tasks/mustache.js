@@ -23,6 +23,7 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
     , templateFiles = []
     , destPath
     , data
+    , transformerCallback
     ;
 
   logKey = ['[', taskSetName, ':mustache', ']'].join('');
@@ -34,6 +35,12 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
 
   if (taskConfig.templates) {
     if (taskConfig.toDir) {
+
+      if (taskConfig.outputTransformer && _.isFunction(taskConfig.outputTransformer)) {
+        transformerCallback = _.createCallback(taskConfig.outputTransformer) || null;
+
+      }
+
 
       if (taskConfig.partials) {
         if (_.isString(taskConfig.partials) || _.isArray(taskConfig.partials)) {
@@ -101,7 +108,13 @@ module.exports = function(config, taskSets, taskSetName, taskConfig, callback) {
           input = fs.readFileSync(file, {encoding: 'utf8'});
           output = mustache.render(input, data, partials);
 
-          fs.truncateSync(destFile, 0);
+          if (transformerCallback) {
+            output = transformerCallback(file, destFile, output);
+          }
+
+          if (fs.existsSync(destFile)) {
+            fs.truncateSync(destFile, 0);
+          }
           fs.writeFileSync(destFile, output, {encoding: 'utf8'});
 
           u.print(" ok\n");
