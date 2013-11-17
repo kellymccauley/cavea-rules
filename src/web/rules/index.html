@@ -8,7 +8,6 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Kelly A. McCauley"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Cavea: Rules of the stage</title>
     <meta name="description" content="Rules for Cavea, a pen and paper table top RPG."/>
 
@@ -18,22 +17,16 @@
 
     <!-- {{! Only for development.  Will not be included in the final output. -->
     <link href="../../../dist/web/assets/css/cavea.css" rel="stylesheet"/>
-
     <script src="../../../dist/web/assets/lib/jquery.js" type="text/javascript"></script>
     <script src="../../../dist/web/assets/lib/bootstrap.js" type="text/javascript"></script>
-
     <!-- }} -->
-
   </head>
-  <body>
-
+  <body class="book">
     {{#isForWebSite}}
       {{>site_header}}
     {{/isForWebSite}}
 
-
     <div class="container">
-
       <!--
         #
         # Title
@@ -60,7 +53,18 @@
           
         </div>
       </div>
-
+      
+      <div class="row">
+        <div class="col-md-8">
+          <section id="dedication" class="dedication">
+            <blockquote>
+              <p>Dedicated to the Village Idiots and role-playing gamers everywhere.</p>
+              <small>Kelly</small>
+            </blockquote>
+          </section>
+        </div>
+      </div>
+ 
 
       <div class="row">
         <div class="col-md-8">
@@ -92,7 +96,7 @@
       <div class="row">
         <div class="col-md-8">  
 
-          <section id="basic-mech" class="chapter">
+          <section id="basic-mech" class="chapter numbered-section">
             <h1>Basic Mechanics</h1>
 
             <section id="dice">
@@ -200,7 +204,7 @@
               <section id="improving-lp">
                 <h1>Improving a Level Pool</h1>
 
-                <p>See <a href="skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="ap">Advancement Points</a></p>
+                <p>See <a href="#skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="#ap">Advancement Points</a></p>
               </section> <!-- improving-lp -->
 
             </section> <!-- lp -->
@@ -217,7 +221,7 @@
               <section id="gap">
                 <h1>General Advancement Points</h1>
 
-                <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="lp">Level Pools</a> of known skills.</p>
+                <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">Level Pools</a> of known skills.</p>
               </section> <!-- gap -->
 
               <section id="sap">
@@ -243,7 +247,7 @@
 
 
 
-          <section id="skill-mech">
+          <section id="skill-mech" class="chapter numbered-section">
             <h1>Skill Mechanics</h1>
 
             <section id="skill-attr">
@@ -392,7 +396,7 @@
 
               <section id="skill-related-phys-attrs-lp-advancement">
                 <h1>Related Physical Attribute Level Pool Advancement</h1>
-                <p>See [Physical Attribute Level Pool Advancement](#phys-attrs-lp-advancement)</p>
+                <p>See <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
 
               </section> <!-- skill-related-phys-attrs-lp-advancement -->
 
@@ -403,7 +407,7 @@
 
 
 
-          <section id="phys-attr-mech">
+          <section id="phys-attr-mech" class="chapter numbered-section">
             <h1>Physical Attribute Mechanics</h1>
             
             <p>The core physical attributes are:</p>
@@ -516,18 +520,20 @@
 
 
 
-          <section id="appendix-notations-and-conventions">
+          <!--
+          <section id="appendix-notations-and-conventions" class="backmatter">
             <h1>Notations and Conventions</h1>
 
             <section id="lp-notation">
               <h1>Level Pool Notation</h1>
 
 
-            </section> <!-- lp-notation -->
+            </section> <!- - lp-notation - ->
 
-          </section> <!-- appendix-notations-and-conventions -->
+          </section> <!- - appendix-notations-and-conventions - ->
+          -->
 
-          <section id="glossary">
+          <section id="glossary" class="backmatter">
             <h1>Glossary</h1>
             
             <!-- FIXME
