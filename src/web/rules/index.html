@@ -176,15 +176,15 @@
                     <ul class="list-unstyled">
                       <li><span class="d">d4</span> - A die with four sides.</li>
                       <li><span class="d">d6</span> - A six sided die.</li>
-                      <li><span class="d">d20</span> - A twenty sided die.</li>
+                      <li><span class="d">d10</span> - A ten sided die.</li>
                     </ul>
                   </div>
                 </div>
               </figure>
 
-              <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, and <span class="d">d20</span>.</p>
+              <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</p>
 
-              <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the Level Pools get large and also when playing with kids.</p>
+              <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the level pools get large and also when playing with kids.</p>
 
             </section> <!-- dice -->
 
@@ -205,7 +205,7 @@
                 <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
               </ul>
 
-              <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, <span class="d">d10</span>, <span class="d">d12</span>, or <span class="d">d20</span>.</p>
+              <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
 
               <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
@@ -214,15 +214,15 @@
                   <div class="panel-heading">Level Pool Notation Examples</div>
                   <div class="panel-body">
                     <ul class="list-unstyled">
-                      <li><code class="lp">1:d20</code> - A level pool consisting of a single <span class="d">d20</span>.</li>
+                      <li><code class="lp">1:d6</code> - A level pool consisting of a single <span class="d">d6</span>.</li>
 
                       <li><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</li>
 
                       <li><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</li>
 
-                      <li><code class="lp">1:d4|2:d6|1:d8|3:d10|2:d12|1:d20</code> - A level pool consisting of one <span class="d">d4</span>, two <span class="d">d6</span>s, one <span class="d">d8</span>, three <span class="d">d10</span>s, two <span class="d">d12</span>s, and one <span class="d">d20</span>.</li>
+                      <li><code class="lp">1:d4|3:d6|1:d8|3:d10</code> - A level pool consisting of one <span class="d">d4</span>, three <span class="d">d6</span>s, one <span class="d">d8</span>, and three <span class="d">d10</span>s.</li>
 
-                      <li><code class="lp">1:4|2:6|1:8|3:10|2:12|1:20</code> - The same level pool as the previous example.</li>
+                      <li><code class="lp">1:4|3:6|1:8|3:10</code> - The compact version of the previous example.</li>
 
                       <li><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</li>
                     </ul>
@@ -252,9 +252,9 @@
           
                 <figure id="rolling-lp-examples">
                   <div class="panel panel-example">
-                    <div class="panel-heading">Rolling Level Pool Example</div>
+                    <div class="panel-heading">Rolling Level Pools Example</div>
                     <div class="panel-body">
-                      <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a police officer and is nearly at the end of a long foot chase, she has the running suspect, Bruno, right at her finger tips.</p>
+                      <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a rookie police officer and is nearly at the end of a long foot chase.  She has the running suspect, Bruno, right at her finger tips.</p>
 
                       <ul class="list-unstyled">
                         <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
@@ -265,34 +265,57 @@
                         <li><b>Jill:</b> "and she lunges for him."</li>
                         <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
                         <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
-                      </ul>
-
-                      <p>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>3</i> or higher to successfully grab him and throw him to the ground.</p>
-
-                      <ul class="list-unstyled">
                         <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
                       </ul>
 
-                      <p>Sally has a level pool of <code class="lp">2:d6|2:d10|1:d20</code> for her Wing Chun skill.  Jill rolls 5, 5, 4, 1, and 20.  Only one <i>1</i>.</p>
+                      <p>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>4</i> or higher to successfully grab him and throw him to the ground.</p>
+
+                      <p>Sally has a level pool of <code class="lp">4:d6|4:d10</code> for her <i>Wing Chun</i> skill.  Jill rolls 5, 6, 1, 1, 7, 1, 6, and 9.  Jill adds up all of the <i>1</i>s for a total of <i>3</i>.</p>
 
                       <ul class="list-unstyled">
-                        <li><b>Jill:</b> "and I got a 1."</li>
+                        <li><b>Jill:</b> "and I got a three."</li>
                         <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
                         <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
-                        <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend.</li>
+                        <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend."</li>
                       </ul>
 
-                      <p>Alice decides Bruno is going to use his well honed street fighting skill to strike Sally.  He has a level pool of <code class="lp">1:d4|2:d6|3:d10|2:d20</code>.  Alice rolls 1, 3, 2, 2, 1, 8, 8, and 4.  She adds up the <i>1</i>s for a total of 2.</p>
+                      <p>Alice decides that Bruno is going to use his well honed street fighting skill to strike Sally.  His <i>Street Fighting</i> level pool is <code class="lp">1:d4|2:d6|4:d10</code>.  Alice rolls 1, 5, 5, 1, 5, 1, and 1.  She adds up the <i>1</i>s for a total of 4.</p>
 
-                      <p>Jill rolls 3, 5, 14, 7, and 4.  No <i>1</i>s so her total is 0.</p>
+                      <p>Jill rolls 3, 1, 5, 3, 4, 10, 8.  Only a single <i>1</i>.</p>
 
                       <ul class="list-unstyled">
-                        <li><b>Jill:</b> "Crud! 0.</li>
-                        <li><b>Alice:</b> "Ouch.  Bruno's fist strikes Sally in her left eye.  She'll have a swollen black eye for a week.  She also has a -1 for her fighting skills.</li>
+                        <li><b>Jill:</b> "I've got a one."</li>
+                        <li><b>Alice:</b> "Not enough."
+                        <li><b>Jill:</b> "Crud!"</li>
+                      </ul>
+                      
+                      <p>Alice rolls some dice and figures out where and how bad Sally was hit.</p>
+
+                      <ul class="list-unstyled">
+                        <li><b>Alice:</b> "Bruno's fist strikes Sally hard in her left eye for twelve points of damage."</li>
+                        <li><b>Jill (as Sally):</b> "Ouch! You %$#!~*!"</li>
+                        <li><b>Alice:</b> "She'll have a swollen black eye for a week.  She will also have a minus one (-1) for her fighting skills until the swelling goes down.  A pack of ice might help."</li>
                       </ul>
 
-                      <p>Jill makes a note that Sally's Wing Chun skill temporarily has a level pool of <code class="lp">2:d6|2:d10|1:d20|-1</code>.</p>
+                      <p>Jill makes a note that Sally's <i>Wing Chun</i> skill temporarily has a level pool of <code class="lp">4:d6|4:d10|-1</code>.</p>
 
+                      <ul class="list-unstyled">
+                        <li><b>Alice:</b> "Bruno raring back for another hard blow. What's Sally's next move?"</li>
+                        <li><b>Jill:</b> "I hope Charlie's going to catch up soon.  Sally's going to just defend herself and try to keep him occupied until Charlie shows up."</li>
+                        <li><b>Alice:</b> "Okay.  Wing Chun, again?"</li>
+                        <li><b>Jill:</b> "Yes"</li>
+                        <li><b>Alice:</b> "Sally gets a plus one (+1).  Roll."</li>
+                      </ul>
+
+                      <p>Alice rolls Bruno's <i>Street Fighting</i> skill, again.  She rolls 3, 2, 6, 8, 9, 4, and 2.  No <i>1</i>s.</p>
+
+                      <p>Jill rolls 3, 6, 5, 1, 10, 4, 7, and 2.  She adds up the <i>1</i>s subtracts 1 for the swollen eye and adds 1 for being completely on the defensive. The total result comes to 1.</p>
+
+                      <ul class="list-unstyled">
+                        <li><b>Jill:</b> "A one."</li>
+                        <li><b>Alice:</b> "Sally blocks Bruno's punch."</li>
+                      </ul>
+                      
                     </div>
                   </div>
                 </figure>
@@ -336,7 +359,9 @@
               <section id="gap">
                 <h1>General Advancement Points</h1>
 
-                <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">Level Pools</a> of known skills.</p>
+                <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">level pools</a> of known skills.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
+               
+                <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
               </section> <!-- gap -->
 
 
@@ -349,14 +374,14 @@
               <section id="sap">
                 <h1>Specific Advancement Points</h1>
 
-                <p>The Specific Advancement Points (SAP) can only be used to either increase the level pool of a specific skill or to increase the level pool of one of the physical attributes related to that skill.  Specific Advancement Points are gained when the dice in the level pool are rolled during a skill attempt.  A single SAP is gained for that skill if one or more <i>2</i>s are rolled.</p>
+                <p>The Specific Advancement Points (SAP) can only be used to either increase the level pool of a specific skill or to increase the level pool of one of the physical attributes related to that skill.  Specific Advancement Points are gained when the dice in the level pool are rolled during a skill attempt.  A SAP is gained for that skill for every <i>2</i> rolled during that attempt.  The player does gain SAP, they need to tell the game master how many SAP were gained.</p>
 
 
                 <figure id="sap-gain-example">
                   <div class="panel panel-example">
                     <div class="panel-heading">SAP Gain Example</div>
                     <div class="panel-body">
-                      <p>Rayus the Swift has a <code class="lp">3:d8|2:d10|3:d20</code> <abbr title="Level Pool" class="initialism">LP</abbr> in Moving Silently.  During his Moving Silently skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>14</i>, <i>11</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his Moving Silently skill or his mEn, bEn, or bAg physical attributes.</p>
+                      <p>Rayus the Swift has a <code class="lp">3:d8|4:d10</code> LP in <i>Moving Silently</i>.  During his <i>Moving Silently</i> skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>10</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his <i>Moving Silently</i> skill or his <i>mEn</i>, <i>bEn</i>, or <i>bAg</i> physical attributes.</p>
                     </div>
                   </div>
                 </figure>
@@ -422,8 +447,11 @@
                   <div class="panel panel-example">
                     <div class="panel-heading">Skill LP Example</div>
                     <div class="panel-body">
-                      <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">4:d4|2:d6|3:d8|5:10|5:d12</code> and his Food Preparation skill level pool is <code class="lp"></code>.</p>
-                      <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d20|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|4:d6|3:d8|3:d10|2:d12|2:d20</code>.</p>
+
+                      <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
+
+                      <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
+
                     </div>
                   </div>
                 </figure>
@@ -597,7 +625,7 @@
               <section id="skill-attempt-combining-skills">
                 <h1>Combining Skills</h1>
 
-                <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the Level Pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
+                <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
               </section> <!-- skill-attempt-combining-skills -->
 
 
@@ -681,9 +709,7 @@
                     <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td>None</td>                        <td><span class="d">d20</span></td>  <td>10 if not specified by skill</td></tr>
-                    <tr><td><span class="d">d20</span></td>  <td><span class="d">d12</span></td>  <td>15</td></tr>
-                    <tr><td><span class="d">d12</span></td>  <td><span class="d">d10</span></td>  <td>20</td></tr>
+                    <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>20</td></tr>
                     <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
                     <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
                     <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
@@ -767,7 +793,7 @@
             <section id="phys-attrs-lp-advancement">
               <h1>Attribute Level Pool Advancement</h1>
 
-              <p>At the time of character creation, all physical attributes start out with a <code class="lp">3:d20</code> level pool for free.</p>
+              <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
 
               <table id="table-phys-attr-lp-die-ap-cost" class="table table-bordered table-condensed">
                 <caption>Related Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
@@ -775,9 +801,7 @@
                   <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>None</td>                        <td><span class="d">d20</span></td>  <td>30</td></tr>
-                  <tr><td><span class="d">d20</span></td>  <td><span class="d">d12</span></td>  <td>30</td></tr>
-                  <tr><td><span class="d">d12</span></td>  <td><span class="d">d10</span></td>  <td>40</td></tr>
+                  <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>40</td></tr>
                   <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
                   <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
                   <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
@@ -807,7 +831,7 @@
               <section id="hp-calc">
                 <h1>Calculating Health Points</h1>
 
-                <p>For each die in the <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> Level Pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.</p>
+                <p>For each die in the <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> level pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.</p>
 
                 <table id="table-lp-die-to-hp" class="table table-bordered table-condensed">
                   <caption>Level Pool Die to Health Points Table</caption>
@@ -815,8 +839,6 @@
                     <tr><th>Die</th> <th>Health Points</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td><span class="d">d20</span></td>   <td>1</td></tr>
-                    <tr><td><span class="d">d12</span></td>   <td>3</td></tr>
                     <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
                     <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
                     <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
@@ -828,23 +850,22 @@
                   <div class="panel panel-example">
                     <div class="panel-heading">Example</div>
                     <div class="panel-body">
-                      <!-- FIXME -->
 
-                      <p>mSt:  <code class="lp">1:d8|2:d12|1:d20</code><br/>
-                         mEn:  <code class="lp">1:d12|4:d20</code><br/>
-                         mAg:  <code class="lp">2:d10|2:d12|1:d20</code><br/>
-                         bSt:  <code class="lp">2:d6|1:d10|2:d12|1:d20</code><br/>
-                         bEn:  <code class="lp">3:d6|2:d12|2:d20</code><br/>
-                         bAg:  <code class="lp">1:d4|2:d6|4:d20</code><br/></p>
+                      <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
+                         mEn:  <code class="lp">2:d10</code><br/>
+                         mAg:  <code class="lp">3:d10</code><br/>
+                         bSt:  <code class="lp">2:d6|2:d10</code><br/>
+                         bEn:  <code class="lp">3:d6|2:d10</code><br/>
+                         bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
 
-                      <p>mSt:  6 + (2 * 3) + 1 = 13<br/>
-                         mEn:  3 + 4 = 7<br/>
-                         mAg:  (2 * 4) + (2 * 3) + 1 = 15<br/>
-                         bSt:  (2 * 6) + 4 + (2 * 3) + 1 = 23<br/>
-                         bEn:  (3 * 9) + (2 * 3) + 2 = 35<br/>
-                         bAg:  12 + (2 * 9) + 4 = 34<br/></p>
+                      <p>mSt: (1 * 6) + (1 * 4) = 10
+                         mEn: 2 * 4 = 8
+                         mAg: 3 * 4 = 12
+                         bSt: (2 * 9) + (2 * 4) = 26
+                         bEn: (3 * 9) + (2 * 4) = 35
+                         bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
 
-                      <p>13 + 7 + 15 + 23 + 35 + 34 = 127 Health Points<br/></p>
+                      <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
                     </div>
                   </div>
                 </figure>

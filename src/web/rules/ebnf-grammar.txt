@@ -16,17 +16,14 @@ count           = nonZeroDigit , {digit} ;
 (* Symbols *)
 
 colon           = ":" ;
+semicolon       = ";" ;
 
 
 (* Dice *)
 
 diePrefix       = "d" ;
-commonDieSides  = "4" | "6" | "8" | "10" | "12" | "20" _
+dieSides  = "4" | "6" | "8" | "10" ;
 
-(* altDieSides is not used in Cavea: Rules of the Stage. *)
-altDieSides     = "2" | "14" | "16" | "18" | "30" | "50" | "100" ;
-
-dieSides        = commonDieSides | altDieSides ;
 
 die             = diePrefix, dieSides ;
 
@@ -34,12 +31,13 @@ die             = diePrefix, dieSides ;
 
 lpDieType       = [diePrefix], commonDieSides ;
 
-lpDivider       = "|" | "/" ;
+lpSeparator       = "|" | "/" ;
 
 resultModifier  = [sign], nonZeroDigit, {digit} ;
 
-diceGroup       = count, colon, lpDieType ;
-lastDiceGroup   = diceGroup, [lpDivider, resultModifier] ;
+dgSeparator     = colon | semicolon;
+diceGroup       = count, dgSeparator, lpDieType ;
+lastDiceGroup   = diceGroup, [lpSeparator, resultModifier] ;
 
-lp              = "default" | lastDiceGroup | {diceGroup, lpDivider}, lastDiceGroup ;
+lp              = "default" | lastDiceGroup | {diceGroup, lpSeparator}, lastDiceGroup ;
 
