@@ -374,13 +374,33 @@
               <section id="sap">
                 <h1>Specific Advancement Points</h1>
 
-                <p>The Specific Advancement Points (SAP) can only be used to either increase the level pool of a specific skill or to increase the level pool of one of the physical attributes related to that skill.  Specific Advancement Points are gained when the dice in the level pool are rolled during a skill attempt.  A SAP is gained for that skill for every <i>2</i> rolled during that attempt.  The player does gain SAP, they need to tell the game master how many SAP were gained.</p>
+                <p>The Specific Advancement Points (SAP) are advancement points that are gained by skill use.  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  That gained SAP then can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill.</p>  
+                
+                <p>The following table describes the die results from a skill attempt that indicate when Specific Advancement Points are gained:</p>
+                
+
+                <table id="table-sap-gain-conditions" class="table table-bordered table-condensed">
+                  <!-- <caption></caption> -->
+                  <thead>
+                    <tr><th>Skill Attempt Results</th> <th>SAPs Gained</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>One or more <i>2</i>s on any die rolled.</td> <td>1</td></tr>
+                    <tr><td>All <i>2</i>s on all dice rolled.</td> <td>2</td></tr>
+                    <tr><td>All <i>1</i>s on all dice rolled.</td> <td>3</td></tr>
+                    <tr><td>The highest face on each die rolled.</td> <td>4</td></tr>
+                  </tbody>
+                </table>
+
+                <p>When a player gains a SAP, they must tell the game master how many SAP were gained.</p>
 
 
                 <figure id="sap-gain-example">
                   <div class="panel panel-example">
                     <div class="panel-heading">SAP Gain Example</div>
                     <div class="panel-body">
+                      <p>Sally, Jill's character, is at a crime scene and is trying to speak to a lady who witnessed the brutal murder.  The lady only speaks Spanish and the last time Sally had tried to speak Spanish was in high school, six years ago.  Sally has a <code class="lp">1:d10</code> for <i>Speak Language: Spanish</i>.  Jill rolls a 1.  Sally succeeds and understands the lady.  And since Jill rolled all <i>1</i>s, she gets <i>3</i> SAPs that can be applied to either Sally's <i>Speak Language: Spanish</i> skill or Sally's <i>mSt</i>, <i>mEn</i>, or <i>mAg</i> <a href="#phys-attr-mech">physical attributes</a>.</p>
+                      
                       <p>Rayus the Swift has a <code class="lp">3:d8|4:d10</code> LP in <i>Moving Silently</i>.  During his <i>Moving Silently</i> skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>10</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his <i>Moving Silently</i> skill or his <i>mEn</i>, <i>bEn</i>, or <i>bAg</i> physical attributes.</p>
                     </div>
                   </div>
@@ -421,9 +441,10 @@
                 <li><a href="#skill-phys-attr">Related Physical Attributes</a></li>
                 <li><a href="#skill-spec-req">Specialization Requirements</a></li>
                 <li><a href="#skill-prereq">Prerequisites</a></li>
-                <li><a href="#skill-init-advancement-cost">Initial Advancement Cost</a></li>
+                <li><a href="#skill-init-learning-cost">Initial Advancement Cost</a></li>
                 <li><a href="#skill-init-learning-methods">Initial Learning Methods</a></li>
-                <li><a href="#skill-init-improvement-methods">Improvement Methods</a></li>
+                <li><a href="#skill-improvement-cost">Improvement Cost</a></li>
+                <li><a href="#skill-improvement-methods">Improvement Methods</a></li>
                 <li><a href="#skill-progression-requirements">Progression requirements</a></li>
                 <li><a href="#skill-defaults">Alternate Skill and/or Physical Attribute</a></li>
                 <li><a href="#skill-categorizations">Categorizations</a></li>
@@ -524,10 +545,10 @@
                 #  Improvement Methods
                 #
               }}-->
-              <section id="skill-init-improvement-methods">
+              <section id="skill-improvement-methods">
                 <h1>Initial Improvement Methods</h1>
                 <p>FIXME</p>
-              </section> <!-- skill-init-improvement-methods -->
+              </section> <!-- skill-improvement-methods -->
 
 
               <!--{{!
@@ -587,7 +608,7 @@
             <section id="skill-attempt">
               <h1>Skill Attempt</h1>
 
-              <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.  If every rolled die in the level pool results in a <i>1</i>, then <i>2</i> Specific Advancement Points are gained for that skill.</p>
+              <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
 
 
 
