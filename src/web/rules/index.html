@@ -26,929 +26,931 @@
 
       <div class="row">
         <div class="col-md-8">
-
-          <!--{{!
-            #
-            # Title
-            #
-          }}-->
-          <section id="front-page" class="front-page">
-            <div class="page-header">
-
-              <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
-
-              <p><small>Rules for the Cavea Role-playing Game.</small></p>
-
-            </div>
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  Acknowledgements and Credits
-            #
-          }}-->
-          <section id="acknowledgements" class="acknowledgements">
-            <h1>Credits</h1>
-
-            <p>Written and developed by {{{rots.author}}}.</p>
-
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  Book Information
-            #
-          }}-->
-          <section id="info" class="info">
-
-            <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
-            <small>Version: <b>{{{rots.version}}}</b></small><br/>
-            <small>Last Modified: <b>{{{ts.human}}}</b> ({{{ts.utc}}})</small></p>
-
-            <p><small><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</small></p>
-
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  Dedication
-            #
-          }}-->
-          <section id="dedication" class="dedication">
-            <blockquote>
-              <p>Dedicated to the past and future Village Idiots.</p>
-              <small>Kelly</small>
-            </blockquote>
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  Table of Contents
-            #
-          }}-->
-          <section id="toc" class="toc">
-            <h1>Table of Contents</h1>
-            <span id="toc-content">{{! This will get filled in during the build.}}</span>
-          </section>
-
-
-
-          <!--{{!
-            #
-            # List of Figures
-            #
-          }}-->
-          <section id="figures" class="lof">
-            <h1>List of Figures</h1>
-            <span id="lof-content">{{! This will get filled in during the build.}}</span>
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  List of Tables
-            #
-          }}-->
-          <section id="tables" class="lot">
-            <h1>List of Tables</h1>
-            <span id="lot-content">{{! This will get filled in during the build.}}</span>
-          </section>
-
-
-
-          <!--{{!
-            #
-            #  Preface
-            #
-          }}-->
-          <section id="preface" class="preface">
-            <h1>Preface</h1>
-
-            <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
-
-            <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
-
-            <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
-
-            <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
-
-            <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>
-
-            <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
-
-          </section> <!-- preface -->
-
-
-
-
-          <!--{{!
-            #
-            #  Basic Mechanics
-            #
-          }}-->
-          <section id="basic-mech" class="chapter numbered-section">
-            <h1>Basic Mechanics</h1>
-
+          <main>
 
             <!--{{!
               #
-              #  Dice
+              # Title
               #
             }}-->
-            <section id="dice">
-              <h1>Dice</h1>
+            <section id="front-page" class="front-page">
+              <div class="page-header">
 
-              <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
+                <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
 
-              <figure id="die-notation-examples">
-                <div class="panel panel-example">
-                  <div class="panel-heading">Die Notation Examples</div>
-                  <div class="panel-body">
-                    <ul class="list-unstyled">
-                      <li><span class="d">d4</span> - A die with four sides.</li>
-                      <li><span class="d">d6</span> - A six sided die.</li>
-                      <li><span class="d">d10</span> - A ten sided die.</li>
-                    </ul>
-                  </div>
-                </div>
-              </figure>
+                <p><small>Rules for the Cavea Role-playing Game.</small></p>
 
-              <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</p>
-
-              <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the level pools get large and also when playing with kids.</p>
-
-            </section> <!-- dice -->
-
-
-
-            <!--{{!
-              #
-              #  Level Pool
-              #
-            }}-->
-            <section id="lp">
-              <h1>Level Pool</h1>
-
-              <p>A <em>level pool</em> (LP) is:</p>
-
-              <ul>
-                <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
-                <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
-              </ul>
-
-              <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
-
-              <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
-
-              <figure id="lp-notation-examples">
-                <div class="panel panel-example">
-                  <div class="panel-heading">Level Pool Notation Examples</div>
-                  <div class="panel-body">
-                    <ul class="list-unstyled">
-                      <li><code class="lp">1:d6</code> - A level pool consisting of a single <span class="d">d6</span>.</li>
-
-                      <li><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</li>
-
-                      <li><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</li>
-
-                      <li><code class="lp">1:d4|3:d6|1:d8|3:d10</code> - A level pool consisting of one <span class="d">d4</span>, three <span class="d">d6</span>s, one <span class="d">d8</span>, and three <span class="d">d10</span>s.</li>
-
-                      <li><code class="lp">1:4|3:6|1:8|3:10</code> - The compact version of the previous example.</li>
-
-                      <li><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</li>
-                    </ul>
-                  </div>
-                </div>
-              </figure>
-
-              <p>(<b>Technical:</b> See <a href="ebnf-grammar.txt">Level Pool Notation</a> for the formal notation specification).</p>
-
-
-              <!--{{!
-                #
-                #  Rolling a Level Pool
-                #
-              }}-->
-              <section id="rolling-lp">
-                <h1>Rolling a Level Pool</h1>
-
-                <p>The procedure for rolling a level pool is as follow:</p>
-
-                <ol>
-                  <li>Gather and roll all of the dice that compose the level pool.</li>
-                  <li>Add up all of the <i>1</i>s for an unmodified total.</li>
-                  <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
-                </ol>
-
-          
-                <figure id="rolling-lp-examples">
-                  <div class="panel panel-example">
-                    <div class="panel-heading">Rolling Level Pools Example</div>
-                    <div class="panel-body">
-                      <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a rookie police officer and is nearly at the end of a long foot chase.  She has the running suspect, Bruno, right at her finger tips.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
-                        <li><b>Jill:</b> "Close enough to make a grab."</li>
-                        <li><b>Alice:</b> "Yes, but just barely."</li>
-                        <li><b>Jill:</b> "I want to take him to the ground!"</li>
-                        <li><b>Jill (as Sally):</b> "You're going down, Bruno!"</li>
-                        <li><b>Jill:</b> "and she lunges for him."</li>
-                        <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
-                        <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
-                        <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
-                      </ul>
-
-                      <p>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>4</i> or higher to successfully grab him and throw him to the ground.</p>
-
-                      <p>Sally has a level pool of <code class="lp">4:d6|4:d10</code> for her <i>Wing Chun</i> skill.  Jill rolls 5, 6, 1, 1, 7, 1, 6, and 9.  Jill adds up all of the <i>1</i>s for a total of <i>3</i>.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Jill:</b> "and I got a three."</li>
-                        <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
-                        <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
-                        <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend."</li>
-                      </ul>
-
-                      <p>Alice decides that Bruno is going to use his well honed street fighting skill to strike Sally.  His <i>Street Fighting</i> level pool is <code class="lp">1:d4|2:d6|4:d10</code>.  Alice rolls 1, 5, 5, 1, 5, 1, and 1.  She adds up the <i>1</i>s for a total of 4.</p>
-
-                      <p>Jill rolls 3, 1, 5, 3, 4, 10, 8.  Only a single <i>1</i>.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Jill:</b> "I've got a one."</li>
-                        <li><b>Alice:</b> "Not enough."
-                        <li><b>Jill:</b> "Crud!"</li>
-                      </ul>
-                      
-                      <p>Alice rolls some dice and figures out where and how bad Sally was hit.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Alice:</b> "Bruno's fist strikes Sally hard in her left eye for twelve points of damage."</li>
-                        <li><b>Jill (as Sally):</b> "Ouch! You %$#!~*!"</li>
-                        <li><b>Alice:</b> "She'll have a swollen black eye for a week.  She will also have a minus one (-1) for her fighting skills until the swelling goes down.  A pack of ice might help."</li>
-                      </ul>
-
-                      <p>Jill makes a note that Sally's <i>Wing Chun</i> skill temporarily has a level pool of <code class="lp">4:d6|4:d10|-1</code>.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Alice:</b> "Bruno raring back for another hard blow. What's Sally's next move?"</li>
-                        <li><b>Jill:</b> "I hope Charlie's going to catch up soon.  Sally's going to just defend herself and try to keep him occupied until Charlie shows up."</li>
-                        <li><b>Alice:</b> "Okay.  Wing Chun, again?"</li>
-                        <li><b>Jill:</b> "Yes"</li>
-                        <li><b>Alice:</b> "Sally gets a plus one (+1).  Roll."</li>
-                      </ul>
-
-                      <p>Alice rolls Bruno's <i>Street Fighting</i> skill, again.  She rolls 3, 2, 6, 8, 9, 4, and 2.  No <i>1</i>s.</p>
-
-                      <p>Jill rolls 3, 6, 5, 1, 10, 4, 7, and 2.  She adds up the <i>1</i>s subtracts 1 for the swollen eye and adds 1 for being completely on the defensive. The total result comes to 1.</p>
-
-                      <ul class="list-unstyled">
-                        <li><b>Jill:</b> "A one."</li>
-                        <li><b>Alice:</b> "Sally blocks Bruno's punch."</li>
-                      </ul>
-                      
-                    </div>
-                  </div>
-                </figure>
-
-              </section> <!-- rolling-lp -->
-
-
-              <!--{{!
-                #
-                #  Improving a Level Pool
-                #
-              }}-->
-              <section id="improving-lp">
-                <h1>Improving a Level Pool</h1>
-
-                <p>See <a href="#skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="#ap">Advancement Points</a></p>
-              </section> <!-- improving-lp -->
-
-            </section> <!-- lp -->
-
-
-            <!--{{!
-              #
-              #  Advancement Points
-              #
-            }}-->
-            <section id="ap">
-              <h1>Advancement Points</h1>
-
-              <p>Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.<p>
-
-              <p>There are two types of Advancement Points: <i>General</i> and <i>Specific</i>.</p>
-
-
-
-              <!--{{!
-                #
-                #  General Advancement Points
-                #
-              }}-->
-              <section id="gap">
-                <h1>General Advancement Points</h1>
-
-                <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">level pools</a> of known skills.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
-               
-                <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
-              </section> <!-- gap -->
-
-
-
-              <!--{{!
-                #
-                #  Specific Advancement Points
-                #
-              }}-->
-              <section id="sap">
-                <h1>Specific Advancement Points</h1>
-
-                <p>The Specific Advancement Points (SAP) are advancement points that are gained by skill use.  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  That gained SAP then can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill.</p>  
-                
-                <p>The following table describes the die results from a skill attempt that indicate when Specific Advancement Points are gained:</p>
-                
-
-                <table id="table-sap-gain-conditions" class="table table-bordered table-condensed">
-                  <!-- <caption></caption> -->
-                  <thead>
-                    <tr><th>Skill Attempt Results</th> <th>SAPs Gained</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>One or more <i>2</i>s on any die rolled.</td> <td>1</td></tr>
-                    <tr><td>All <i>2</i>s on all dice rolled.</td> <td>2</td></tr>
-                    <tr><td>All <i>1</i>s on all dice rolled.</td> <td>3</td></tr>
-                    <tr><td>The highest face on each die rolled.</td> <td>4</td></tr>
-                  </tbody>
-                </table>
-
-                <p>When a player gains a SAP, they must tell the game master how many SAP were gained.</p>
-
-
-                <figure id="sap-gain-example">
-                  <div class="panel panel-example">
-                    <div class="panel-heading">SAP Gain Example</div>
-                    <div class="panel-body">
-                      <p>Sally, Jill's character, is at a crime scene and is trying to speak to a lady who witnessed the brutal murder.  The lady only speaks Spanish and the last time Sally had tried to speak Spanish was in high school, six years ago.  Sally has a <code class="lp">1:d10</code> for <i>Speak Language: Spanish</i>.  Jill rolls a 1.  Sally succeeds and understands the lady.  And since Jill rolled all <i>1</i>s, she gets <i>3</i> SAPs that can be applied to either Sally's <i>Speak Language: Spanish</i> skill or Sally's <i>mSt</i>, <i>mEn</i>, or <i>mAg</i> <a href="#phys-attr-mech">physical attributes</a>.</p>
-                      
-                      <p>Rayus the Swift has a <code class="lp">3:d8|4:d10</code> LP in <i>Moving Silently</i>.  During his <i>Moving Silently</i> skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>10</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his <i>Moving Silently</i> skill or his <i>mEn</i>, <i>bEn</i>, or <i>bAg</i> physical attributes.</p>
-                    </div>
-                  </div>
-                </figure>
-
-
-              </section> <!-- sap -->
-
-            </section> <!-- ap -->
-
-          </section> <!-- basic-mech -->
-
-
-
-
-
-          <!--{{!
-            #
-            #  Skill Mechanics
-            #
-          }}-->
-          <section id="skill-mech" class="chapter numbered-section">
-            <h1>Skill Mechanics</h1>
-
-
-            <!--{{!
-              #
-              #  Skill Attributes
-              #
-            }}-->
-            <section id="skill-attr">
-              <h1>Skill Attributes</h1>
-
-              <ul>
-                <li>Name</li>
-                <li>Description</li>
-                <li><a href="#skill lp">Level Pool</a></li>
-                <li><a href="#skill-phys-attr">Related Physical Attributes</a></li>
-                <li><a href="#skill-spec-req">Specialization Requirements</a></li>
-                <li><a href="#skill-prereq">Prerequisites</a></li>
-                <li><a href="#skill-init-learning-cost">Initial Advancement Cost</a></li>
-                <li><a href="#skill-init-learning-methods">Initial Learning Methods</a></li>
-                <li><a href="#skill-improvement-cost">Improvement Cost</a></li>
-                <li><a href="#skill-improvement-methods">Improvement Methods</a></li>
-                <li><a href="#skill-progression-requirements">Progression requirements</a></li>
-                <li><a href="#skill-defaults">Alternate Skill and/or Physical Attribute</a></li>
-                <li><a href="#skill-categorizations">Categorizations</a></li>
-                <li><a href="#skill-genres">Genres</a></li>
-              </ul>
-
-
-
-              <!--{{!
-                #
-                #  Skill Level Pool
-                #
-              }}-->
-              <section id="skill-lp">
-                <h1>Skill Level Pool</h1>
-
-                <p>A skill's <a href="#lp">level pool</a> (LP) is the measurement of expertise of that skill.</p>
-
-
-                <figure id="skill-lp-example">
-                  <div class="panel panel-example">
-                    <div class="panel-heading">Skill LP Example</div>
-                    <div class="panel-body">
-
-                      <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
-
-                      <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
-
-                    </div>
-                  </div>
-                </figure>
-
-              </section> <!-- skill-lp -->
-
-
-              <!--{{!
-                #
-                #  Related Physical Attributes
-                #
-              }}-->
-              <section id="skill-phys-attr">
-                <h1>Related Physical Attributes</h1>
-
-                <p>Unlike other games, the gamer's choice of skills for their character and spending of <a href="sap">Specific Advancement Points</a> dictates the character's physical attributes.  The related physical attributes are:</p>
-                <ul class="list-unstyled">
-                  <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
-                  <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
-                  <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
-                  <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
-                  <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
-                  <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
-                </ul>
-
-              </section> <!-- skill-phys-attr -->
-
-
-              <!--{{!
-                #
-                #  Specialization Requirements
-                #
-              }}-->
-              <section id="skill-spec-req">
-                <h1>Specialization Requirements</h1>
-
-                <p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p>
-
-              </section> <!-- skill-spec-req -->
-
-              
-              <!--{{!
-                #
-                #  Initial Learning Cost
-                #
-              }}-->
-              <section id="skill-init-learning-cost">
-                <h1>Initial Learning Cost</h1>
-
-                <p></p>
-
-              </section> <!-- skill-init-advancement-cost -->
-
-
-
-              <!--{{!
-                #
-                #  Initial Learning Methods
-                #
-              }}-->
-              <section id="skill-init-learning-methods">
-                <h1>Initial Learning Methods</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-init-learning-methods -->
-
-
-
-              <!--{{!
-                #
-                #  Improvement Methods
-                #
-              }}-->
-              <section id="skill-improvement-methods">
-                <h1>Initial Improvement Methods</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-improvement-methods -->
-
-
-              <!--{{!
-                #
-                #  Progression requirements
-                #
-              }}-->
-              <section id="skill-progression-requirements">
-                <h1>Progression requirements</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-progression-requirements -->
-
-
-              <!--{{!
-                #
-                #  Alternate Skill and/or Physical Attribute
-                #
-              }}-->
-              <section id="skill-defaults">
-                <h1>Alternate Skill and/or Physical Attribute</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-defaults -->
-
-
-
-              <!--{{!
-                #
-                #  Categorizations
-                #
-              }}-->
-              <section id="skill-categorizations">
-                <h1>Categorizations</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-categorizations -->
-
-
-              <!--{{!
-                #
-                #  Genres
-                #
-              }}-->
-              <section id="skill-genres">
-                <h1>Genres</h1>
-                <p>FIXME</p>
-              </section> <!-- skill-genres -->
-
-
-            </section> <!-- skill-attr -->
-
-
-
-            <!--{{!
-              #
-              #  Skill Attempt
-              #
-            }}-->
-            <section id="skill-attempt">
-              <h1>Skill Attempt</h1>
-
-              <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
-
-
-
-              <!--{{!
-                #
-                #  Opposing/Opposed Skill Attempt
-                #
-              }}-->
-              <section id="skill-attempt-opposed">
-                <h1>Opposing/Opposed Skill Attempt</h1>
-
-                <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
-
-              </section> <!-- skill-attempt-opposed -->
-
-
-              <!--{{!
-                #
-                #  
-                #
-              }}-->
-              <section id="skill-attempt-unopposed">
-                <h1>Unopposed Skill Attempt</h1>
-
-                <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
-
-              </section> <!-- skill-attempt-unopposed -->
-
-
-              <!--{{!
-                #
-                #  Combining Skills
-                #
-              }}-->
-              <section id="skill-attempt-combining-skills">
-                <h1>Combining Skills</h1>
-
-                <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
-              </section> <!-- skill-attempt-combining-skills -->
-
-
-
-              <!--{{!
-                #
-                #  Teamwork
-                #
-              }}-->
-              <section id="skill-attempt-teamwork">
-                <h1>Teamwork</h1>
-
-                <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
-              </section> <!-- skill-attempt-teamwork -->
-
-            </section> <!-- skill-attempt -->
-
-
-            <!--{{!
-              #
-              #  Skill Acquirement
-              #
-            }}-->
-            <section id="getting-skills">
-              <h1>Skill Acquirement</h1>
-
-              <p>Skills are acquired during the character creation process and while playing the character.</p>
-
-
-
-              <!--{{!
-                #
-                #  Acquirement During Character Creation
-                #
-              }}-->
-              <section id="getting-skills-character-creation">
-                <h1>Acquirement During Character Creation</h1>
-
-                <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
-
-              </section> <!-- getting-skills-character-creation -->
-
-
-
-              <!--{{!
-                #
-                #  Acquirement During Character Play
-                #
-              }}-->
-              <section id="getting-skills-character-play">
-                <h1>Acquirement During Character Play</h1>
-
-                <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
-              </section> <!-- getting-skills-character-play -->
-
-            </section> <!-- getting-skills -->
-
-
-
-            <!--{{!
-              #
-              #  Skill Improvement
-              #
-            }}-->
-            <section id="skill-improvement">
-              <h1>Skill Improvement</h1>
-
-
-
-              <!--{{!
-                #
-                #  Skill Level Pool Advancement
-                #
-              }}-->
-              <section id="skill-lp-advancement">
-                <h1>Skill Level Pool Advancement</h1>
-
-                <table id="table-normal-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
-                  <caption>Normal Skill Level Pool Die Advancement Point Cost Table</caption>
-                  <thead>
-                    <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>20</td></tr>
-                    <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
-                    <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
-                    <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
-                  </tbody>
-                </table>
-
-
-              </section> <!-- skill-lp-advancement -->
-
-
-              <!--{{!
-                #
-                #  
-                #
-              }}-->
-              <section id="skill-related-phys-attrs-lp-advancement">
-                <h1>Related Physical Attribute Level Pool Advancement</h1>
-                <p>See <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
-
-              </section> <!-- skill-related-phys-attrs-lp-advancement -->
-
-            </section> <!-- skill-improvement -->
-
-          </section> <!-- skill-mech -->
-
-
-
-
-
-
-          <!--{{!
-            #
-            #  Physical Attribute Mechanics
-            #
-          }}-->
-          <section id="phys-attr-mech" class="chapter numbered-section">
-            <h1>Physical Attribute Mechanics</h1>
-
-            <p>The core physical attributes are:</p>
-
-            <dl class="dl-horizontal">
-              <dt><span id="phys-attr-mst">Mental Strength</span></dt>
-              <dd>represents the character's intelligence, learning capacity, and overall mental capability. <br/>Abbreviated as <i>mSt</i>.</dd>
-
-              <dt><span id="phys-attr-men">Mental Endurance</span></dt>
-              <dd>represents the character's will power and mental focus and stamina. <br/>Abbreviated as <i>mEn</i>.</dd>
-
-              <dt><span id="phys-attr-mag">Mental Agility</span></dt>
-              <dd>represents the character's speed of memory recall, the speed at which learning occurs, and the level of complexity of new topics that can be learned. <br/>Abbreviated as <i>mAg</i>.</dd>
-
-              <dt><span id="phys-attr-bst">Body Strength</span></dt>
-              <dd>represents the character's brawn, hardiness, durability, and muscle strength. <br/>Abbreviated as <i>bSt</i>.</dd>
-
-              <dt><span id="phys-attr-ben">Body Endurance</span></dt>
-              <dd>represents the character's fortitude and stamina. <br/>Abbreviated as <i>bEn</i>.</dd>
-
-              <dt><span id="phys-attr-bag">Body Agility</span></dt>
-              <dd>represents the character's balance, dexterity, and nimbleness. <br/>Abbreviated as <i>bAg</i>.</dd>
-
-            </dl>
-
-
-
-            <!--{{!
-              #
-              #  Physical Attribute Level Pool
-              #
-            }}-->
-            <section id="phys-attrs-lp">
-              <h1>Attribute Level Pool</h1>
-              <p>Similar to skills, <a href="#lp">level pools</a> are used as a measure of a core physical attribute.</p>
+              </div>
             </section>
 
 
 
             <!--{{!
               #
-              #  Physical Attribute Level Pool Advancement
+              #  Acknowledgements and Credits
               #
             }}-->
-            <section id="phys-attrs-lp-advancement">
-              <h1>Attribute Level Pool Advancement</h1>
+            <section id="acknowledgements" class="acknowledgements">
+              <h1>Credits</h1>
 
-              <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
+              <p>Written and developed by {{{rots.author}}}.</p>
 
-              <table id="table-phys-attr-lp-die-ap-cost" class="table table-bordered table-condensed">
-                <caption>Related Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
-                <thead>
-                  <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>40</td></tr>
-                  <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
-                  <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
-                  <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
-                </tbody>
-              </table>
+            </section>
 
-            </section> <!-- phys-attrs-lp-advancement -->
+
+
+            <!--{{!
+              #
+              #  Book Information
+              #
+            }}-->
+            <section id="info" class="info">
+
+              <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
+              <small>Version: <b>{{{rots.version}}}</b></small><br/>
+              <small>Last Modified: <b>{{{ts.human}}}</b> ({{{ts.utc}}})</small></p>
+
+              <p><small><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</small></p>
+
+            </section>
+
+
+
+            <!--{{!
+              #
+              #  Dedication
+              #
+            }}-->
+            <section id="dedication" class="dedication">
+              <blockquote>
+                <p>Dedicated to the past and future Village Idiots.</p>
+                <small>Kelly</small>
+              </blockquote>
+            </section>
+
+
+
+            <!--{{!
+              #
+              #  Table of Contents
+              #
+            }}-->
+            <section id="toc" class="toc">
+              <h1>Table of Contents</h1>
+              <span id="toc-content">{{! This will get filled in during the build.}}</span>
+            </section>
+
+
+
+            <!--{{!
+              #
+              # List of Figures
+              #
+            }}-->
+            <section id="figures" class="lof">
+              <h1>List of Figures</h1>
+              <span id="lof-content">{{! This will get filled in during the build.}}</span>
+            </section>
+
+
+
+            <!--{{!
+              #
+              #  List of Tables
+              #
+            }}-->
+            <section id="tables" class="lot">
+              <h1>List of Tables</h1>
+              <span id="lot-content">{{! This will get filled in during the build.}}</span>
+            </section>
+
+
+
+            <!--{{!
+              #
+              #  Preface
+              #
+            }}-->
+            <section id="preface" class="preface">
+              <h1>Preface</h1>
+
+              <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
+
+              <p>One or more players <i>play</i> a game by performing actions that are within the defined game rules.  For example, <i>Go</i> and <i>Chess</i>.  Stories, on the other hand, take the audience on an emotional ride through a narrative.  Unlike games, most stories do not involve direct audience participation.</p>
+
+              <p>Role-playing games are like two rivers joining at a confluence; a convergence of stories and games.  The two branches, stories and games, mix into each other forming a thing that takes the players on an emotional joyride through a story that they help shape and form.  Just like improvisational actors, the players play the unscripted role of one or more character.</p>
+
+              <p>How does a story move along in a role-playing game?  A player who is familiar with the rules and has a story in mind chooses to be the game's storyteller and referee rolled all into one keeps the story flowing.  They are typically called a Game Master.</p>
+
+              <p>Some role-playing games lean more towards the gaming aspect and the story aspect just adds flavor.  Other role-playing games lean more towards the story aspect.</p>
+
+              <p>Cavea is a role-playing game that strives to find a comfortable place somewhere in the middle.  This book, <i>Cavea: <small>Rules of the Stage</small></i>, covers only the rules of the game.  Other books will mix in the story flavors.</p>
+
+            </section> <!-- preface -->
 
 
 
 
             <!--{{!
               #
-              #  Health and Damage
+              #  Basic Mechanics
               #
             }}-->
-            <section id="hnd-mech">
-              <h1>Health and Damage Mechanics</h1>
+            <section id="basic-mech" class="chapter numbered-section">
+              <h1>Basic Mechanics</h1>
 
-              <p>As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead</p>
 
               <!--{{!
                 #
-                #  Calculating Health Points
+                #  Dice
                 #
               }}-->
-              <section id="hp-calc">
-                <h1>Calculating Health Points</h1>
+              <section id="dice">
+                <h1>Dice</h1>
 
-                <p>For each die in the <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> level pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.</p>
+                <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
 
-                <table id="table-lp-die-to-hp" class="table table-bordered table-condensed">
-                  <caption>Level Pool Die to Health Points Table</caption>
-                  <thead>
-                    <tr><th>Die</th> <th>Health Points</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
-                    <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
-                    <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
-                    <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
-                  </tbody>
-                </table>
-
-                <figure id="hp-calc-examples">
+                <figure id="die-notation-examples">
                   <div class="panel panel-example">
-                    <div class="panel-heading">Example</div>
+                    <div class="panel-heading">Die Notation Examples</div>
                     <div class="panel-body">
-
-                      <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
-                         mEn:  <code class="lp">2:d10</code><br/>
-                         mAg:  <code class="lp">3:d10</code><br/>
-                         bSt:  <code class="lp">2:d6|2:d10</code><br/>
-                         bEn:  <code class="lp">3:d6|2:d10</code><br/>
-                         bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
-
-                      <p>mSt: (1 * 6) + (1 * 4) = 10
-                         mEn: 2 * 4 = 8
-                         mAg: 3 * 4 = 12
-                         bSt: (2 * 9) + (2 * 4) = 26
-                         bEn: (3 * 9) + (2 * 4) = 35
-                         bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
-
-                      <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                      <ul class="list-unstyled">
+                        <li><span class="d">d4</span> - A die with four sides.</li>
+                        <li><span class="d">d6</span> - A six sided die.</li>
+                        <li><span class="d">d10</span> - A ten sided die.</li>
+                      </ul>
                     </div>
                   </div>
                 </figure>
 
-              </section> <!-- hp-calc -->
+                <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</p>
 
-            </section> <!-- hnd-mech -->
+                <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the level pools get large and also when playing with kids.</p>
 
-          </section> <!-- phys-attr-mech -->
-
-
+              </section> <!-- dice -->
 
 
 
-          <!--{{!
-            #
-            #  Glossary
-            #
-          }}-->
-          <section id="glossary" class="glossary">
-            <h1>Glossary</h1>
+              <!--{{!
+                #
+                #  Level Pool
+                #
+              }}-->
+              <section id="lp">
+                <h1>Level Pool</h1>
 
-            <!-- FIXME
-            <div id="glossary-entry-game-master" class="glossary-entry">
-              <span class="glossary-term">Game Master</span>
+                <p>A <em>level pool</em> (LP) is:</p>
 
-              <p class="glossary-definition">The person that directs and advances story.</p>
-            </div>
-            [game master]: #glossary-entry-game-master
+                <ul>
+                  <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
+                  <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
+                </ul>
+
+                <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
+
+                <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
+
+                <figure id="lp-notation-examples">
+                  <div class="panel panel-example">
+                    <div class="panel-heading">Level Pool Notation Examples</div>
+                    <div class="panel-body">
+                      <ul class="list-unstyled">
+                        <li><code class="lp">1:d6</code> - A level pool consisting of a single <span class="d">d6</span>.</li>
+
+                        <li><code class="lp">2:d10</code> - A level pool consisting of two <span class="d">d10</span>s.</li>
+
+                        <li><code class="lp">1:d8|1:d10</code> - A level pool consisting of one <span class="d">d8</span> and one <span class="d">d10</span>.</li>
+
+                        <li><code class="lp">1:d4|3:d6|1:d8|3:d10</code> - A level pool consisting of one <span class="d">d4</span>, three <span class="d">d6</span>s, one <span class="d">d8</span>, and three <span class="d">d10</span>s.</li>
+
+                        <li><code class="lp">1:4|3:6|1:8|3:10</code> - The compact version of the previous example.</li>
+
+                        <li><code class="lp">1:d6|4:d10|+2</code> - A level pool consisting of one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </figure>
+
+                <p>(<b>Technical:</b> See <a href="ebnf-grammar.txt">Level Pool Notation</a> for the formal notation specification).</p>
 
 
-            <div id="glossary-entry-gamer" class="glossary-entry">
-              <span class="glossary-term">Gamer</span>
+                <!--{{!
+                  #
+                  #  Rolling a Level Pool
+                  #
+                }}-->
+                <section id="rolling-lp">
+                  <h1>Rolling a Level Pool</h1>
 
-              <p class="glossary-definition">A person that plays the role of one or more characters.  Game Masters are gamers, too.</p>
-            </div>
-            [gamer]: #glossary-entry-gamer
+                  <p>The procedure for rolling a level pool is as follow:</p>
+
+                  <ol>
+                    <li>Gather and roll all of the dice that compose the level pool.</li>
+                    <li>Add up all of the <i>1</i>s for an unmodified total.</li>
+                    <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
+                  </ol>
+
+            
+                  <figure id="rolling-lp-examples">
+                    <div class="panel panel-example">
+                      <div class="panel-heading">Rolling Level Pools Example</div>
+                      <div class="panel-body">
+                        <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a rookie police officer and is nearly at the end of a long foot chase.  She has the running suspect, Bruno, right at her finger tips.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Alice:</b> "Sally's fingers brush against Bruno's jacket."</li>
+                          <li><b>Jill:</b> "Close enough to make a grab."</li>
+                          <li><b>Alice:</b> "Yes, but just barely."</li>
+                          <li><b>Jill:</b> "I want to take him to the ground!"</li>
+                          <li><b>Jill (as Sally):</b> "You're going down, Bruno!"</li>
+                          <li><b>Jill:</b> "and she lunges for him."</li>
+                          <li><b>Alice (as Bruno)</b> "Ha! I don't fink so, copper!"</li>
+                          <li><b>Alice:</b> "Go for it!  Roll your hand-to-hand combat skill."</li>
+                          <li><b>Jill:</b> "Sally's using Wing Chun ..."</li>
+                        </ul>
+
+                        <p>Alice decides that Jill needs a <i>1</i> or higher to successfully grab Bruno or a <i>4</i> or higher to successfully grab him and throw him to the ground.</p>
+
+                        <p>Sally has a level pool of <code class="lp">4:d6|4:d10</code> for her <i>Wing Chun</i> skill.  Jill rolls 5, 6, 1, 1, 7, 1, 6, and 9.  Jill adds up all of the <i>1</i>s for a total of <i>3</i>.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Jill:</b> "and I got a three."</li>
+                          <li><b>Alice:</b> "You've got a grip on him and stopped him from running, but you didn't throw him down.  Bruno turns on you and swings a massive ham sized fist at your face."</li>
+                          <li><b>Alice (as Bruno):</b> "Ya goin' down, pig!"</li>
+                          <li><b>Jill:</b> "Sally's going to use her Wing Chun to defend."</li>
+                        </ul>
+
+                        <p>Alice decides that Bruno is going to use his well honed street fighting skill to strike Sally.  His <i>Street Fighting</i> level pool is <code class="lp">1:d4|2:d6|4:d10</code>.  Alice rolls 1, 5, 5, 1, 5, 1, and 1.  She adds up the <i>1</i>s for a total of 4.</p>
+
+                        <p>Jill rolls 3, 1, 5, 3, 4, 10, 8.  Only a single <i>1</i>.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Jill:</b> "I've got a one."</li>
+                          <li><b>Alice:</b> "Not enough."
+                          <li><b>Jill:</b> "Crud!"</li>
+                        </ul>
+                        
+                        <p>Alice rolls some dice and figures out where and how bad Sally was hit.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Alice:</b> "Bruno's fist strikes Sally hard in her left eye for twelve points of damage."</li>
+                          <li><b>Jill (as Sally):</b> "Ouch! You %$#!~*!"</li>
+                          <li><b>Alice:</b> "She'll have a swollen black eye for a week.  She will also have a minus one (-1) for her fighting skills until the swelling goes down.  A pack of ice might help."</li>
+                        </ul>
+
+                        <p>Jill makes a note that Sally's <i>Wing Chun</i> skill temporarily has a level pool of <code class="lp">4:d6|4:d10|-1</code>.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Alice:</b> "Bruno raring back for another hard blow. What's Sally's next move?"</li>
+                          <li><b>Jill:</b> "I hope Charlie's going to catch up soon.  Sally's going to just defend herself and try to keep him occupied until Charlie shows up."</li>
+                          <li><b>Alice:</b> "Okay.  Wing Chun, again?"</li>
+                          <li><b>Jill:</b> "Yes"</li>
+                          <li><b>Alice:</b> "Sally gets a plus one (+1).  Roll."</li>
+                        </ul>
+
+                        <p>Alice rolls Bruno's <i>Street Fighting</i> skill, again.  She rolls 3, 2, 6, 8, 9, 4, and 2.  No <i>1</i>s.</p>
+
+                        <p>Jill rolls 3, 6, 5, 1, 10, 4, 7, and 2.  She adds up the <i>1</i>s subtracts 1 for the swollen eye and adds 1 for being completely on the defensive. The total result comes to 1.</p>
+
+                        <ul class="list-unstyled">
+                          <li><b>Jill:</b> "A one."</li>
+                          <li><b>Alice:</b> "Sally blocks Bruno's punch."</li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                  </figure>
+
+                </section> <!-- rolling-lp -->
 
 
-            <div id="glossary-entry-health-points" class="glossary-entry">
-              <span class="glossary-term">Health Points</span>
+                <!--{{!
+                  #
+                  #  Improving a Level Pool
+                  #
+                }}-->
+                <section id="improving-lp">
+                  <h1>Improving a Level Pool</h1>
 
-              <p class="glossary-definition">A measure of a character's health, where <i>0</i> indicates that the character is dead.</p>
-            </div>
-            [health points]: #glossary-entry-health-points
-            -->
+                  <p>See <a href="#skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="#ap">Advancement Points</a></p>
+                </section> <!-- improving-lp -->
 
-          </section> <!-- glossary -->
+              </section> <!-- lp -->
 
 
+              <!--{{!
+                #
+                #  Advancement Points
+                #
+              }}-->
+              <section id="ap">
+                <h1>Advancement Points</h1>
+
+                <p>Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.<p>
+
+                <p>There are two types of Advancement Points: <i>General</i> and <i>Specific</i>.</p>
 
 
 
-          <!--{{!
-            #
-            #  Index
-            #
-          }}-->
-          <section id="index" class="index">
-            <h1>Index</h1>
-          </section>
+                <!--{{!
+                  #
+                  #  General Advancement Points
+                  #
+                }}-->
+                <section id="gap">
+                  <h1>General Advancement Points</h1>
 
+                  <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">level pools</a> of known skills.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
+                 
+                  <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
+                </section> <!-- gap -->
+
+
+
+                <!--{{!
+                  #
+                  #  Specific Advancement Points
+                  #
+                }}-->
+                <section id="sap">
+                  <h1>Specific Advancement Points</h1>
+
+                  <p>The Specific Advancement Points (SAP) are advancement points that are gained by skill use.  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  That gained SAP then can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill.</p>  
+                  
+                  <p>The following table describes the die results from a skill attempt that indicate when Specific Advancement Points are gained:</p>
+                  
+
+                  <table id="table-sap-gain-conditions" class="table table-bordered table-condensed">
+                    <!-- <caption></caption> -->
+                    <thead>
+                      <tr><th>Skill Attempt Results</th> <th>SAPs Gained</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>One or more <i>2</i>s on any die rolled.</td> <td>1</td></tr>
+                      <tr><td>All <i>2</i>s on all dice rolled.</td> <td>2</td></tr>
+                      <tr><td>All <i>1</i>s on all dice rolled.</td> <td>3</td></tr>
+                      <tr><td>The highest face on each die rolled.</td> <td>4</td></tr>
+                    </tbody>
+                  </table>
+
+                  <p>When a player gains a SAP, they must tell the game master how many SAP were gained.</p>
+
+
+                  <figure id="sap-gain-example">
+                    <div class="panel panel-example">
+                      <div class="panel-heading">SAP Gain Example</div>
+                      <div class="panel-body">
+                        <p>Sally, Jill's character, is at a crime scene and is trying to speak to a lady who witnessed the brutal murder.  The lady only speaks Spanish and the last time Sally had tried to speak Spanish was in high school, six years ago.  Sally has a <code class="lp">1:d10</code> for <i>Speak Language: Spanish</i>.  Jill rolls a 1.  Sally succeeds and understands the lady.  And since Jill rolled all <i>1</i>s, she gets <i>3</i> SAPs that can be applied to either Sally's <i>Speak Language: Spanish</i> skill or Sally's <i>mSt</i>, <i>mEn</i>, or <i>mAg</i> <a href="#phys-attr-mech">physical attributes</a>.</p>
+                        
+                        <p>Rayus the Swift has a <code class="lp">3:d8|4:d10</code> LP in <i>Moving Silently</i>.  During his <i>Moving Silently</i> skill attempt, the LP roll resulted in: <i>7</i>, <i>8</i>, <i>2</i>, <i>6</i>, <i>9</i>, <i>2</i>, <i>10</i>.  Even though he stepped on a stick that snapped and gave his position away, he gained <i>1</i> SAP that he can use towards improving his <i>Moving Silently</i> skill or his <i>mEn</i>, <i>bEn</i>, or <i>bAg</i> physical attributes.</p>
+                      </div>
+                    </div>
+                  </figure>
+
+
+                </section> <!-- sap -->
+
+              </section> <!-- ap -->
+
+            </section> <!-- basic-mech -->
+
+
+
+
+
+            <!--{{!
+              #
+              #  Skill Mechanics
+              #
+            }}-->
+            <section id="skill-mech" class="chapter numbered-section">
+              <h1>Skill Mechanics</h1>
+
+
+              <!--{{!
+                #
+                #  Skill Attributes
+                #
+              }}-->
+              <section id="skill-attr">
+                <h1>Skill Attributes</h1>
+
+                <ul>
+                  <li>Name</li>
+                  <li>Description</li>
+                  <li><a href="#skill lp">Level Pool</a></li>
+                  <li><a href="#skill-phys-attr">Related Physical Attributes</a></li>
+                  <li><a href="#skill-spec-req">Specialization Requirements</a></li>
+                  <li><a href="#skill-prereq">Prerequisites</a></li>
+                  <li><a href="#skill-init-learning-cost">Initial Advancement Cost</a></li>
+                  <li><a href="#skill-init-learning-methods">Initial Learning Methods</a></li>
+                  <li><a href="#skill-improvement-cost">Improvement Cost</a></li>
+                  <li><a href="#skill-improvement-methods">Improvement Methods</a></li>
+                  <li><a href="#skill-progression-requirements">Progression requirements</a></li>
+                  <li><a href="#skill-defaults">Alternate Skill and/or Physical Attribute</a></li>
+                  <li><a href="#skill-categorizations">Categorizations</a></li>
+                  <li><a href="#skill-genres">Genres</a></li>
+                </ul>
+
+
+
+                <!--{{!
+                  #
+                  #  Skill Level Pool
+                  #
+                }}-->
+                <section id="skill-lp">
+                  <h1>Skill Level Pool</h1>
+
+                  <p>A skill's <a href="#lp">level pool</a> (LP) is the measurement of expertise of that skill.</p>
+
+
+                  <figure id="skill-lp-example">
+                    <div class="panel panel-example">
+                      <div class="panel-heading">Skill LP Example</div>
+                      <div class="panel-body">
+
+                        <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
+
+                        <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
+
+                      </div>
+                    </div>
+                  </figure>
+
+                </section> <!-- skill-lp -->
+
+
+                <!--{{!
+                  #
+                  #  Related Physical Attributes
+                  #
+                }}-->
+                <section id="skill-phys-attr">
+                  <h1>Related Physical Attributes</h1>
+
+                  <p>Unlike other games, the gamer's choice of skills for their character and spending of <a href="sap">Specific Advancement Points</a> dictates the character's physical attributes.  The related physical attributes are:</p>
+                  <ul class="list-unstyled">
+                    <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
+                    <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
+                    <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
+                    <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
+                    <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
+                    <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
+                  </ul>
+
+                </section> <!-- skill-phys-attr -->
+
+
+                <!--{{!
+                  #
+                  #  Specialization Requirements
+                  #
+                }}-->
+                <section id="skill-spec-req">
+                  <h1>Specialization Requirements</h1>
+
+                  <p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p>
+
+                </section> <!-- skill-spec-req -->
+
+                
+                <!--{{!
+                  #
+                  #  Initial Learning Cost
+                  #
+                }}-->
+                <section id="skill-init-learning-cost">
+                  <h1>Initial Learning Cost</h1>
+
+                  <p></p>
+
+                </section> <!-- skill-init-advancement-cost -->
+
+
+
+                <!--{{!
+                  #
+                  #  Initial Learning Methods
+                  #
+                }}-->
+                <section id="skill-init-learning-methods">
+                  <h1>Initial Learning Methods</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-init-learning-methods -->
+
+
+
+                <!--{{!
+                  #
+                  #  Improvement Methods
+                  #
+                }}-->
+                <section id="skill-improvement-methods">
+                  <h1>Initial Improvement Methods</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-improvement-methods -->
+
+
+                <!--{{!
+                  #
+                  #  Progression requirements
+                  #
+                }}-->
+                <section id="skill-progression-requirements">
+                  <h1>Progression requirements</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-progression-requirements -->
+
+
+                <!--{{!
+                  #
+                  #  Alternate Skill and/or Physical Attribute
+                  #
+                }}-->
+                <section id="skill-defaults">
+                  <h1>Alternate Skill and/or Physical Attribute</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-defaults -->
+
+
+
+                <!--{{!
+                  #
+                  #  Categorizations
+                  #
+                }}-->
+                <section id="skill-categorizations">
+                  <h1>Categorizations</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-categorizations -->
+
+
+                <!--{{!
+                  #
+                  #  Genres
+                  #
+                }}-->
+                <section id="skill-genres">
+                  <h1>Genres</h1>
+                  <p>FIXME</p>
+                </section> <!-- skill-genres -->
+
+
+              </section> <!-- skill-attr -->
+
+
+
+              <!--{{!
+                #
+                #  Skill Attempt
+                #
+              }}-->
+              <section id="skill-attempt">
+                <h1>Skill Attempt</h1>
+
+                <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
+
+
+
+                <!--{{!
+                  #
+                  #  Opposing/Opposed Skill Attempt
+                  #
+                }}-->
+                <section id="skill-attempt-opposed">
+                  <h1>Opposing/Opposed Skill Attempt</h1>
+
+                  <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
+
+                </section> <!-- skill-attempt-opposed -->
+
+
+                <!--{{!
+                  #
+                  #  
+                  #
+                }}-->
+                <section id="skill-attempt-unopposed">
+                  <h1>Unopposed Skill Attempt</h1>
+
+                  <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
+
+                </section> <!-- skill-attempt-unopposed -->
+
+
+                <!--{{!
+                  #
+                  #  Combining Skills
+                  #
+                }}-->
+                <section id="skill-attempt-combining-skills">
+                  <h1>Combining Skills</h1>
+
+                  <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
+                </section> <!-- skill-attempt-combining-skills -->
+
+
+
+                <!--{{!
+                  #
+                  #  Teamwork
+                  #
+                }}-->
+                <section id="skill-attempt-teamwork">
+                  <h1>Teamwork</h1>
+
+                  <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
+                </section> <!-- skill-attempt-teamwork -->
+
+              </section> <!-- skill-attempt -->
+
+
+              <!--{{!
+                #
+                #  Skill Acquirement
+                #
+              }}-->
+              <section id="getting-skills">
+                <h1>Skill Acquirement</h1>
+
+                <p>Skills are acquired during the character creation process and while playing the character.</p>
+
+
+
+                <!--{{!
+                  #
+                  #  Acquirement During Character Creation
+                  #
+                }}-->
+                <section id="getting-skills-character-creation">
+                  <h1>Acquirement During Character Creation</h1>
+
+                  <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
+
+                </section> <!-- getting-skills-character-creation -->
+
+
+
+                <!--{{!
+                  #
+                  #  Acquirement During Character Play
+                  #
+                }}-->
+                <section id="getting-skills-character-play">
+                  <h1>Acquirement During Character Play</h1>
+
+                  <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
+                </section> <!-- getting-skills-character-play -->
+
+              </section> <!-- getting-skills -->
+
+
+
+              <!--{{!
+                #
+                #  Skill Improvement
+                #
+              }}-->
+              <section id="skill-improvement">
+                <h1>Skill Improvement</h1>
+
+
+
+                <!--{{!
+                  #
+                  #  Skill Level Pool Advancement
+                  #
+                }}-->
+                <section id="skill-lp-advancement">
+                  <h1>Skill Level Pool Advancement</h1>
+
+                  <table id="table-normal-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
+                    <caption>Normal Skill Level Pool Die Advancement Point Cost Table</caption>
+                    <thead>
+                      <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>20</td></tr>
+                      <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
+                      <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
+                      <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
+                    </tbody>
+                  </table>
+
+
+                </section> <!-- skill-lp-advancement -->
+
+
+                <!--{{!
+                  #
+                  #  
+                  #
+                }}-->
+                <section id="skill-related-phys-attrs-lp-advancement">
+                  <h1>Related Physical Attribute Level Pool Advancement</h1>
+                  <p>See <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
+
+                </section> <!-- skill-related-phys-attrs-lp-advancement -->
+
+              </section> <!-- skill-improvement -->
+
+            </section> <!-- skill-mech -->
+
+
+
+
+
+
+            <!--{{!
+              #
+              #  Physical Attribute Mechanics
+              #
+            }}-->
+            <section id="phys-attr-mech" class="chapter numbered-section">
+              <h1>Physical Attribute Mechanics</h1>
+
+              <p>The core physical attributes are:</p>
+
+              <dl class="dl-horizontal">
+                <dt><span id="phys-attr-mst">Mental Strength</span></dt>
+                <dd>represents the character's intelligence, learning capacity, and overall mental capability. <br/>Abbreviated as <i>mSt</i>.</dd>
+
+                <dt><span id="phys-attr-men">Mental Endurance</span></dt>
+                <dd>represents the character's will power and mental focus and stamina. <br/>Abbreviated as <i>mEn</i>.</dd>
+
+                <dt><span id="phys-attr-mag">Mental Agility</span></dt>
+                <dd>represents the character's speed of memory recall, the speed at which learning occurs, and the level of complexity of new topics that can be learned. <br/>Abbreviated as <i>mAg</i>.</dd>
+
+                <dt><span id="phys-attr-bst">Body Strength</span></dt>
+                <dd>represents the character's brawn, hardiness, durability, and muscle strength. <br/>Abbreviated as <i>bSt</i>.</dd>
+
+                <dt><span id="phys-attr-ben">Body Endurance</span></dt>
+                <dd>represents the character's fortitude and stamina. <br/>Abbreviated as <i>bEn</i>.</dd>
+
+                <dt><span id="phys-attr-bag">Body Agility</span></dt>
+                <dd>represents the character's balance, dexterity, and nimbleness. <br/>Abbreviated as <i>bAg</i>.</dd>
+
+              </dl>
+
+
+
+              <!--{{!
+                #
+                #  Physical Attribute Level Pool
+                #
+              }}-->
+              <section id="phys-attrs-lp">
+                <h1>Attribute Level Pool</h1>
+                <p>Similar to skills, <a href="#lp">level pools</a> are used as a measure of a core physical attribute.</p>
+              </section>
+
+
+
+              <!--{{!
+                #
+                #  Physical Attribute Level Pool Advancement
+                #
+              }}-->
+              <section id="phys-attrs-lp-advancement">
+                <h1>Attribute Level Pool Advancement</h1>
+
+                <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
+
+                <table id="table-phys-attr-lp-die-ap-cost" class="table table-bordered table-condensed">
+                  <caption>Related Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
+                  <thead>
+                    <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>40</td></tr>
+                    <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
+                    <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
+                    <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
+                  </tbody>
+                </table>
+
+              </section> <!-- phys-attrs-lp-advancement -->
+
+
+
+
+              <!--{{!
+                #
+                #  Health and Damage
+                #
+              }}-->
+              <section id="hnd-mech">
+                <h1>Health and Damage Mechanics</h1>
+
+                <p>As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead</p>
+
+                <!--{{!
+                  #
+                  #  Calculating Health Points
+                  #
+                }}-->
+                <section id="hp-calc">
+                  <h1>Calculating Health Points</h1>
+
+                  <p>For each die in the <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> level pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.</p>
+
+                  <table id="table-lp-die-to-hp" class="table table-bordered table-condensed">
+                    <caption>Level Pool Die to Health Points Table</caption>
+                    <thead>
+                      <tr><th>Die</th> <th>Health Points</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
+                      <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
+                      <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
+                      <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
+                    </tbody>
+                  </table>
+
+                  <figure id="hp-calc-examples">
+                    <div class="panel panel-example">
+                      <div class="panel-heading">Example</div>
+                      <div class="panel-body">
+
+                        <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
+                           mEn:  <code class="lp">2:d10</code><br/>
+                           mAg:  <code class="lp">3:d10</code><br/>
+                           bSt:  <code class="lp">2:d6|2:d10</code><br/>
+                           bEn:  <code class="lp">3:d6|2:d10</code><br/>
+                           bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
+
+                        <p>mSt: (1 * 6) + (1 * 4) = 10
+                           mEn: 2 * 4 = 8
+                           mAg: 3 * 4 = 12
+                           bSt: (2 * 9) + (2 * 4) = 26
+                           bEn: (3 * 9) + (2 * 4) = 35
+                           bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
+
+                        <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                      </div>
+                    </div>
+                  </figure>
+
+                </section> <!-- hp-calc -->
+
+              </section> <!-- hnd-mech -->
+
+            </section> <!-- phys-attr-mech -->
+
+
+
+
+
+            <!--{{!
+              #
+              #  Glossary
+              #
+            }}-->
+            <section id="glossary" class="glossary">
+              <h1>Glossary</h1>
+
+              <!-- FIXME
+              <div id="glossary-entry-game-master" class="glossary-entry">
+                <span class="glossary-term">Game Master</span>
+
+                <p class="glossary-definition">The person that directs and advances story.</p>
+              </div>
+              [game master]: #glossary-entry-game-master
+
+
+              <div id="glossary-entry-gamer" class="glossary-entry">
+                <span class="glossary-term">Gamer</span>
+
+                <p class="glossary-definition">A person that plays the role of one or more characters.  Game Masters are gamers, too.</p>
+              </div>
+              [gamer]: #glossary-entry-gamer
+
+
+              <div id="glossary-entry-health-points" class="glossary-entry">
+                <span class="glossary-term">Health Points</span>
+
+                <p class="glossary-definition">A measure of a character's health, where <i>0</i> indicates that the character is dead.</p>
+              </div>
+              [health points]: #glossary-entry-health-points
+              -->
+
+            </section> <!-- glossary -->
+
+
+
+
+
+            <!--{{!
+              #
+              #  Index
+              #
+            }}-->
+            <section id="index" class="index">
+              <h1>Index</h1>
+            </section>
+
+          </main>
 
 
         </div>

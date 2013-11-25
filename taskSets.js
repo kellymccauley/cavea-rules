@@ -141,15 +141,15 @@ taskSets.less = {
 };
 
 
-taskSets['rots:web'] = {
+taskSets['rots:proc-templates'] = {
   description: "Processes the rules of the stage documents.",
   deps: ['less'],
   tasks: [
-    { 
+    {
       // Set up
-      task: function() { 
-        context.setProperty('isForWebSite', true); 
-      } 
+      task: function() {
+        context.setProperty('isForWebSite', true);
+      }
     },
 
     {
@@ -183,7 +183,24 @@ taskSets['rots:web'] = {
       toDir: './dist/web/rules/',
       outputTransformer: function (file, destFile, output) {
         'use strict';
-        var $ = cheerio.load(output);
+        var $ = cheerio.load(output)
+          , $toNumber
+          , idx = 0
+        ;
+
+        $toNumber = $('main > .numbered-section');
+
+        debug("\n");
+        $toNumber.each(function() {
+          'use strict';
+          var $section = $(this)
+            , numberStack = []
+            , maxDepth = 3
+          ;
+
+          numberSection($, $section, ++idx, numberStack, maxDepth);
+
+        });
 
         return $.html();
       }
@@ -193,10 +210,17 @@ taskSets['rots:web'] = {
   ]
 }
 
+
+taskSets['rots:web'] = {
+  description: 'Builds the html pages to use on the website.',
+  // deps: ['rots:proc-templates', 'rots:gen-sec-numbers', 'rots:gen-toc']
+  deps: ['rots:proc-templates']
+}
+
 taskSets.serve = {
   description: "Starts up a web server and serves dist/web.",
   tasks: [
-    { 
+    {
       task: function() {
         var server;
         portfinder.basePort = 8080;
@@ -245,4 +269,44 @@ taskSets['default'] = {
 };
 
 
+// Support functions.
+//
+function numberSection($, $section, idx, numberStack, maxDepth) {
+  'use strict';
+  var $subSections
+    , $h1
+    , sectionNumber
+    , i = 0
+  ;
+
+  if (numberStack.length + 1 <= maxDepth) {
+    numberStack.push(idx);
+    sectionNumber = numberStack.join('.');
+    debug("%s %s", sectionNumber, $section.attr('id'));
+
+    $section.attr('data-sec-number', sectionNumber);
+    $section.children('h1').each(function() {
+      'use strict';
+      var $h1 = $(this);
+      $h1.prepend(sectionNumber + ' ');
+    });
+
+    $section.children('section').each(function() {
+      'use strict';
+      var $subSection = $(this);
+      numberSection($, $subSection, ++i, numberStack, maxDepth);
+    });
+
+    numberStack.pop();
+  }
+
+
+}
+
+
+
+// Do the module thing.
+//
 module.exports = taskSets;
+
+
