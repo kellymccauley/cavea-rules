@@ -33,7 +33,7 @@
               # Title
               #
             }}-->
-            <section id="front-page" class="front-page">
+            <section id="front-page" class="front-page" data-skip-toc="true">
               <div class="page-header">
 
                 <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
@@ -50,7 +50,7 @@
               #  Acknowledgements and Credits
               #
             }}-->
-            <section id="acknowledgements" class="acknowledgements">
+            <section id="acknowledgements" class="acknowledgements" data-skip-toc="true">
               <h1>Credits</h1>
 
               <p>Written and developed by {{{rots.author}}}.</p>
@@ -64,7 +64,7 @@
               #  Book Information
               #
             }}-->
-            <section id="info" class="info">
+            <section id="info" class="info" data-skip-toc="true">
 
               <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
               <small>Version: <b>{{{rots.version}}}</b></small><br/>
@@ -81,7 +81,7 @@
               #  Dedication
               #
             }}-->
-            <section id="dedication" class="dedication">
+            <section id="dedication" class="dedication" data-skip-toc="true">
               <blockquote>
                 <p>Dedicated to the past and future Village Idiots.</p>
                 <small>Kelly</small>
@@ -95,7 +95,7 @@
               #  Table of Contents
               #
             }}-->
-            <section id="toc" class="toc">
+            <section id="toc" class="toc" data-skip-toc="true">
               <h1>Table of Contents</h1>
               <span id="toc-content">{{! This will get filled in during the build.}}</span>
             </section>
@@ -107,7 +107,7 @@
               # List of Figures
               #
             }}-->
-            <section id="figures" class="lof">
+            <section id="figures" class="lof" data-skip-toc="true">
               <h1>List of Figures</h1>
               <span id="lof-content">{{! This will get filled in during the build.}}</span>
             </section>
@@ -119,7 +119,7 @@
               #  List of Tables
               #
             }}-->
-            <section id="tables" class="lot">
+            <section id="tables" class="lot" data-skip-toc="true">
               <h1>List of Tables</h1>
               <span id="lot-content">{{! This will get filled in during the build.}}</span>
             </section>
@@ -843,56 +843,134 @@
               <section id="hnd-mech">
                 <h1>Health and Damage Mechanics</h1>
 
-                <p>As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead</p>
+                <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
+                
+                
 
                 <!--{{!
                   #
                   #  Calculating Health Points
                   #
                 }}-->
-                <section id="hp-calc">
-                  <h1>Calculating Health Points</h1>
-
-                  <p>For each die in the <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> level pools, look up the Health Point value for the type of die in the following table and add the value to the character's Health Point total.</p>
-
-                  <table id="table-lp-die-to-hp" class="table table-bordered table-condensed">
-                    <caption>Level Pool Die to Health Points Table</caption>
-                    <thead>
-                      <tr><th>Die</th> <th>Health Points</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
-                      <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
-                      <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
-                      <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
-                    </tbody>
-                  </table>
-
-                  <figure id="hp-calc-examples">
-                    <div class="panel panel-example">
-                      <div class="panel-heading">Example</div>
-                      <div class="panel-body">
-
-                        <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
-                           mEn:  <code class="lp">2:d10</code><br/>
-                           mAg:  <code class="lp">3:d10</code><br/>
-                           bSt:  <code class="lp">2:d6|2:d10</code><br/>
-                           bEn:  <code class="lp">3:d6|2:d10</code><br/>
-                           bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
-
-                        <p>mSt: (1 * 6) + (1 * 4) = 10
-                           mEn: 2 * 4 = 8
-                           mAg: 3 * 4 = 12
-                           bSt: (2 * 9) + (2 * 4) = 26
-                           bEn: (3 * 9) + (2 * 4) = 35
-                           bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
-
-                        <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                <section id="hnd-hp">
+                  <h1>Health Points</h1>
+                  
+                  <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
+                
+                  <!--{{!
+                    #
+                    #  Calculating Health Points
+                    #
+                  }}-->
+                  <section id="hnd-hp-calc">
+                    <h1>Calculating Health Points</h1>
+                    
+                    <p>The following describes how to calculate a character's health points.</p>
+  
+                    <ol>
+                      <li>Find the <i>Level Pool Die to Health Points</i> table that is appropriate for the character's species, race, culture, and age.</li>
+                      <li>For each die in the character's <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> attribute level pools:
+                        <ol>
+                          <li>Look up the Health Point value for the type of die in the table, and</li>
+                          <li>add the value to the character's Health Point total.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                    
+                    <p>The following table is an example:</p>
+  
+                    <table id="adult-human-lp-die-to-hp-table" class="table table-bordered table-condensed">
+                      <caption>Adult Human Level Pool Die to Health Points Table</caption>
+                      <thead>
+                        <tr><th>Die</th> <th>Health Points</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
+                        <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
+                        <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
+                        <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
+                      </tbody>
+                    </table>
+  
+                    <figure id="hnd-hp-calc-examples">
+                      <div class="panel panel-example">
+                        <div class="panel-heading">Example</div>
+                        <div class="panel-body">
+  
+                          <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
+                             mEn:  <code class="lp">2:d10</code><br/>
+                             mAg:  <code class="lp">3:d10</code><br/>
+                             bSt:  <code class="lp">2:d6|2:d10</code><br/>
+                             bEn:  <code class="lp">3:d6|2:d10</code><br/>
+                             bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
+  
+                          <p>mSt: (1 * 6) + (1 * 4) = 10
+                             mEn: 2 * 4 = 8
+                             mAg: 3 * 4 = 12
+                             bSt: (2 * 9) + (2 * 4) = 26
+                             bEn: (3 * 9) + (2 * 4) = 35
+                             bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
+  
+                          <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                        </div>
                       </div>
-                    </div>
-                  </figure>
+                    </figure>
+  
+                  </section> <!-- hnd-hp-calc -->
+                
+                </section> <!-- hnd-hp -->
+                
+                <!--{{!
+                  #
+                  #  Injuries
+                  #
+                }}-->
+                <section id="hnd-injuries">
+                  <h1>Injuries</h1>
+                
+                  <p></p>
+                </section> <!-- hnd-injuries -->
+                
+                
+                <!--{{!
+                  #
+                  #  Disabilities
+                  #
+                }}-->
+                <section id="hnd-disabilities">
+                  <h1>Disabilites</h1>
+                  
+                  
+                  <p>A disability that impairs a character are:</p>
+                  
+                  <ul>
+                    <li><i>temporary</i> or <i>permanent</i>,</li>
+                    <li>can be classified <i>mental</i> or <i>physical</i>, and</li>
+                    <li>rated as <i>moderate</i>, <i>major</i>, or <i>severe</i>.</li>
+                  </ul>
+                  
+                  
+                  <p>A temporary disability is a disability that will eventually go away.  The duration of recovery time is measured in years.</p>
+                  
+                  <p>A disability can also be rated as <i>minor</i>, but it does not impair the character.  A minor disability, as it pertains to the game, is considered to be character flavoring.</p>
+                  
+                  <p>Disabilities and Health Points are separate.  A character can be disabled and healthy.</p>
+                
+                </section> <!-- hnd-disabilities -->
+                
+                
+                <!--{{!
+                  #
+                  #  Damage
+                  #
+                }}-->
+                <section id="hnd-damage">
+                  <h1>Damage</h1>
+                  
+                  <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
+                  
+                </section>
 
-                </section> <!-- hp-calc -->
 
               </section> <!-- hnd-mech -->
 
