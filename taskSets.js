@@ -309,7 +309,7 @@ function numberSection($, $section, idx, numberStack, maxDepth) {
     $section.children('h1').each(function() {
       'use strict';
       var $h1 = $(this);
-      $h1.prepend(sectionNumber + ' ');
+      $h1.prepend('<span class="section-number">' + sectionNumber + ' </span>');
     });
 
     $section.children('section').each(function() {
