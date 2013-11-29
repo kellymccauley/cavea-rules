@@ -39,7 +39,7 @@ context.loadWith({
   },
 
   'rots': {
-    version: '0.2.0',
+    version: '0.2.2',
     inceptionYear: '2013',
     author: 'Kelly A. McCauley',
     srcFile: './src/web/rules/index.html',
