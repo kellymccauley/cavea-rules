@@ -26,14 +26,14 @@
 
       <div class="row">
         <div class="col-md-8">
-          <main>
+          <main id="book" data-max-section-numbering-depth="5">
 
             <!--{{!
               #
               # Title
               #
             }}-->
-            <section id="front-page" class="front-page" data-skip-toc="true">
+            <section id="front-page" class="front-page" data-toc-skip="true">
               <div class="page-header">
 
                 <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
@@ -50,7 +50,7 @@
               #  Acknowledgements and Credits
               #
             }}-->
-            <section id="acknowledgements" class="acknowledgements" data-skip-toc="true">
+            <section id="acknowledgements" class="acknowledgements" data-toc-skip="true">
               <h1>Credits</h1>
 
               <p>Written and developed by {{{rots.author}}}.</p>
@@ -64,7 +64,7 @@
               #  Book Information
               #
             }}-->
-            <section id="info" class="info" data-skip-toc="true">
+            <section id="info" class="info" data-toc-skip="true">
 
               <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
               <small>Version: <b>{{{rots.version}}}</b></small><br/>
@@ -81,7 +81,7 @@
               #  Dedication
               #
             }}-->
-            <section id="dedication" class="dedication" data-skip-toc="true">
+            <section id="dedication" class="dedication" data-toc-skip="true">
               <blockquote>
                 <p>Dedicated to the past and future Village Idiots.</p>
                 <small>Kelly</small>
@@ -95,9 +95,9 @@
               #  Table of Contents
               #
             }}-->
-            <section id="toc" class="toc" data-skip-toc="true">
+            <section id="toc" class="toc" data-toc-skip="true">
               <h1>Table of Contents</h1>
-              <span id="toc-content">{{! This will get filled in during the build.}}</span>
+              <div id="toc-content" class="toc-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
 
@@ -107,9 +107,9 @@
               # List of Figures
               #
             }}-->
-            <section id="figures" class="lof" data-skip-toc="true">
+            <section id="figures" class="lof" data-toc-skip="true">
               <h1>List of Figures</h1>
-              <span id="lof-content">{{! This will get filled in during the build.}}</span>
+              <div id="lof-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
 
@@ -119,9 +119,9 @@
               #  List of Tables
               #
             }}-->
-            <section id="tables" class="lot" data-skip-toc="true">
+            <section id="tables" class="lot" data-toc-skip="true">
               <h1>List of Tables</h1>
-              <span id="lot-content">{{! This will get filled in during the build.}}</span>
+              <div id="lot-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
 
@@ -162,6 +162,24 @@
 
               <!--{{!
                 #
+                #  People
+                #
+              }}-->
+              <section id="people">
+                <h1>People</h1>
+                
+                <p><span id="rule-people-requirements" class="rule">At least two people are needed to play Cavea.</span></p>
+                
+                <p><span id="rule-game-master-requirement" class="rule for-rule-summary">One person needs to be the game master.</span>  The game master runs the game, narrate parts of the story, and plays the roles of the antagonists and the supporting characters; a mashup of a writer, director, and improvisational actor.</p>
+                
+                <p><span id="rule-player-requirement" class="rule for-rule-summary">At least one person needs to be the player.</span></p>
+                
+                <p>The game master does <em>not</em> play against the player.  <span id="rule-gm-vs-player-requirement" class="rule">Cavea is not and should not be played as a <i>Game Master vs. Player</i> game.</span></p>
+                
+              </section><!-- people -->
+
+              <!--{{!
+                #
                 #  Dice
                 #
               }}-->
@@ -183,13 +201,32 @@
                   </div>
                 </figure>
 
-                <p>The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</p>
+                <p><span id="rule-die-type-requirement" class="rule for-rule-summary">The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</span></p>
 
                 <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the level pools get large and also when playing with kids.</p>
 
               </section> <!-- dice -->
+              
+            </section> <!-- basic-mech -->
 
-
+            <!--{{!
+              #
+              #  Character Mechanics
+              #
+            }}-->
+            <section id="character-mech" class="chapter numbered-section">
+              <h1>Character Mechanics</h1>
+              
+              <p>Characters in Cavea serve the same purpose as characters played by actors and actresses, they give stories a meaning.  The players are the <i>actors</i>; technically they are improvisational actors.  They, along with the game master, are also the audience.</p>
+              
+              <p>Players play the roles of the lead characters of a game's story.  They are the stars of the story.  They bring the protagonists to imaginary life.</p>
+              
+              <p></p>
+              
+              <p><span id="rule-player-agency" class="rule">A player's character's actions, reactions, decisions, and spoken lines are not and should never be scripted or predetermined by the game master or another player.</span>  This is even true when the character's <i>free will</i> has been compromised or taken away in the story.  A good player will perfom the role of the compromised character.</p>
+              
+              
+              
 
               <!--{{!
                 #
@@ -199,14 +236,16 @@
               <section id="lp">
                 <h1>Level Pool</h1>
 
-                <p>A <em>level pool</em> (LP) is:</p>
+                <div id="rule-lp-is" class="rule for-rule-summary">
+                  <p>A <em>level pool</em> (LP) is:</p>
 
-                <ul>
-                  <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
-                  <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
-                </ul>
+                  <ul>
+                    <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
+                    <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
+                  </ul>
 
-                <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
+                  <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
+                </div>
 
                 <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
@@ -242,13 +281,15 @@
                 <section id="rolling-lp">
                   <h1>Rolling a Level Pool</h1>
 
-                  <p>The procedure for rolling a level pool is as follow:</p>
+                  <div id="rule-rolling-lp" class="rule for-rule-summary">
+                    <p>The procedure for rolling a level pool is as follow:</p>
 
-                  <ol>
-                    <li>Gather and roll all of the dice that compose the level pool.</li>
-                    <li>Add up all of the <i>1</i>s for an unmodified total.</li>
-                    <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
-                  </ol>
+                    <ol>
+                      <li>Gather and roll all of the dice that compose the level pool.</li>
+                      <li>Add up all of the <i>1</i>s for an unmodified total.</li>
+                      <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
+                    </ol>
+                  </div>
 
             
                   <figure id="rolling-lp-examples">
@@ -832,149 +873,148 @@
 
               </section> <!-- phys-attrs-lp-advancement -->
 
+            </section> <!-- phys-attr-mech -->
 
 
+            <!--{{!
+              #
+              #  Health and Damage
+              #
+            }}-->
+            <section id="hnd-mech" class="chapter numbered-section">
+              <h1>Health and Damage Mechanics</h1>
+
+              <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
+              
+              
 
               <!--{{!
                 #
-                #  Health and Damage
+                #  Calculating Health Points
                 #
               }}-->
-              <section id="hnd-mech">
-                <h1>Health and Damage Mechanics</h1>
-
-                <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
+              <section id="hnd-hp">
+                <h1>Health Points</h1>
                 
-                
-
+                <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
+              
                 <!--{{!
                   #
                   #  Calculating Health Points
                   #
                 }}-->
-                <section id="hnd-hp">
-                  <h1>Health Points</h1>
+                <section id="hnd-hp-calc">
+                  <h1>Calculating Health Points</h1>
                   
-                  <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
-                
-                  <!--{{!
-                    #
-                    #  Calculating Health Points
-                    #
-                  }}-->
-                  <section id="hnd-hp-calc">
-                    <h1>Calculating Health Points</h1>
-                    
-                    <p>The following describes how to calculate a character's health points.</p>
+                  <p>The following describes how to calculate a character's health points.</p>
   
-                    <ol>
-                      <li>Find the <i>Level Pool Die to Health Points</i> table that is appropriate for the character's species, race, culture, and age.</li>
-                      <li>For each die in the character's <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> attribute level pools:
-                        <ol>
-                          <li>Look up the Health Point value for the type of die in the table, and</li>
-                          <li>add the value to the character's Health Point total.</li>
-                        </ol>
-                      </li>
-                    </ol>
-                    
-                    <p>The following table is an example:</p>
+                  <ol>
+                    <li>Find the <i>Level Pool Die to Health Points</i> table that is appropriate for the character's species, race, culture, and age.</li>
+                    <li>For each die in the character's <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> attribute level pools:
+                      <ol>
+                        <li>Look up the Health Point value for the type of die in the table, and</li>
+                        <li>add the value to the character's Health Point total.</li>
+                      </ol>
+                    </li>
+                  </ol>
+                  
+                  <p>The following table is an example:</p>
   
-                    <table id="adult-human-lp-die-to-hp-table" class="table table-bordered table-condensed">
-                      <caption>Adult Human Level Pool Die to Health Points Table</caption>
-                      <thead>
-                        <tr><th>Die</th> <th>Health Points</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
-                        <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
-                        <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
-                        <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
-                      </tbody>
-                    </table>
+                  <table id="adult-human-lp-die-to-hp-table" class="table table-bordered table-condensed">
+                    <caption>Adult Human Level Pool Die to Health Points Table</caption>
+                    <thead>
+                      <tr><th>Die</th> <th>Health Points</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
+                      <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
+                      <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
+                      <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
+                    </tbody>
+                  </table>
   
-                    <figure id="hnd-hp-calc-examples">
-                      <div class="panel panel-example">
-                        <div class="panel-heading">Example</div>
-                        <div class="panel-body">
+                  <figure id="hnd-hp-calc-examples">
+                    <div class="panel panel-example">
+                      <div class="panel-heading">Example</div>
+                      <div class="panel-body">
   
-                          <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
-                             mEn:  <code class="lp">2:d10</code><br/>
-                             mAg:  <code class="lp">3:d10</code><br/>
-                             bSt:  <code class="lp">2:d6|2:d10</code><br/>
-                             bEn:  <code class="lp">3:d6|2:d10</code><br/>
-                             bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
+                        <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
+                           mEn:  <code class="lp">2:d10</code><br/>
+                           mAg:  <code class="lp">3:d10</code><br/>
+                           bSt:  <code class="lp">2:d6|2:d10</code><br/>
+                           bEn:  <code class="lp">3:d6|2:d10</code><br/>
+                           bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
   
-                          <p>mSt: (1 * 6) + (1 * 4) = 10
-                             mEn: 2 * 4 = 8
-                             mAg: 3 * 4 = 12
-                             bSt: (2 * 9) + (2 * 4) = 26
-                             bEn: (3 * 9) + (2 * 4) = 35
-                             bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
+                        <p>mSt: (1 * 6) + (1 * 4) = 10
+                           mEn: 2 * 4 = 8
+                           mAg: 3 * 4 = 12
+                           bSt: (2 * 9) + (2 * 4) = 26
+                           bEn: (3 * 9) + (2 * 4) = 35
+                           bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
   
-                          <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
-                        </div>
+                        <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
                       </div>
-                    </figure>
+                    </div>
+                  </figure>
   
-                  </section> <!-- hnd-hp-calc -->
-                
-                </section> <!-- hnd-hp -->
-                
-                <!--{{!
-                  #
-                  #  Injuries
-                  #
-                }}-->
-                <section id="hnd-injuries">
-                  <h1>Injuries</h1>
-                
-                  <p></p>
-                </section> <!-- hnd-injuries -->
-                
-                
-                <!--{{!
-                  #
-                  #  Disabilities
-                  #
-                }}-->
-                <section id="hnd-disabilities">
-                  <h1>Disabilites</h1>
-                  
-                  
-                  <p>A disability that impairs a character are:</p>
-                  
-                  <ul>
-                    <li><i>temporary</i> or <i>permanent</i>,</li>
-                    <li>can be classified <i>mental</i> or <i>physical</i>, and</li>
-                    <li>rated as <i>moderate</i>, <i>major</i>, or <i>severe</i>.</li>
-                  </ul>
-                  
-                  
-                  <p>A temporary disability is a disability that will eventually go away.  The duration of recovery time is measured in years.</p>
-                  
-                  <p>A disability can also be rated as <i>minor</i>, but it does not impair the character.  A minor disability, as it pertains to the game, is considered to be character flavoring.</p>
-                  
-                  <p>Disabilities and Health Points are separate.  A character can be disabled and healthy.</p>
-                
-                </section> <!-- hnd-disabilities -->
+                </section> <!-- hnd-hp-calc -->
+              
+              </section> <!-- hnd-hp -->
+              
+              <!--{{!
+                #
+                #  Injuries
+                #
+              }}-->
+              <section id="hnd-injuries">
+                <h1>Injuries</h1>
+              
+                <p></p>
+              </section> <!-- hnd-injuries -->
+              
+              
+              <!--{{!
+                #
+                #  Disabilities
+                #
+              }}-->
+              <section id="hnd-disabilities">
+                <h1>Disabilites</h1>
                 
                 
-                <!--{{!
-                  #
-                  #  Damage
-                  #
-                }}-->
-                <section id="hnd-damage">
-                  <h1>Damage</h1>
-                  
-                  <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
-                  
-                </section>
+                <p>A disability that impairs a character are:</p>
+                
+                <ul>
+                  <li><i>temporary</i> or <i>permanent</i>,</li>
+                  <li>can be classified <i>mental</i> or <i>physical</i>, and</li>
+                  <li>rated as <i>moderate</i>, <i>major</i>, or <i>severe</i>.</li>
+                </ul>
+                
+                
+                <p>A temporary disability is a disability that will eventually go away.  The duration of recovery time is measured in years.</p>
+                
+                <p>A disability can also be rated as <i>minor</i>, but it does not impair the character.  A minor disability, as it pertains to the game, is considered to be character flavoring.</p>
+                
+                <p>Disabilities and Health Points are separate.  A character can be disabled and healthy.</p>
+              
+              </section> <!-- hnd-disabilities -->
+              
+              
+              <!--{{!
+                #
+                #  Damage
+                #
+              }}-->
+              <section id="hnd-damage">
+                <h1>Damage</h1>
+                
+                <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
+                
+              </section>
 
 
-              </section> <!-- hnd-mech -->
+            </section> <!-- hnd-mech -->
 
-            </section> <!-- phys-attr-mech -->
 
 
 
