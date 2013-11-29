@@ -183,26 +183,12 @@ taskSets['rots:proc-templates'] = {
       toDir: './dist/web/rules/',
       outputTransformer: function (file, destFile, output) {
         'use strict';
-        var $ = cheerio.load(output)
-          , $toNumber
-          , idx = 0
-        ;
+        var out;
 
-        $toNumber = $('main > .numbered-section');
+        out = createSectionNumbers(output);
+        out = createTOC(out);
 
-        debug("\n");
-        $toNumber.each(function() {
-          'use strict';
-          var $section = $(this)
-            , numberStack = []
-            , maxDepth = 3
-          ;
-
-          numberSection($, $section, ++idx, numberStack, maxDepth);
-
-        });
-
-        return $.html();
+        return out;
       }
     },
     { task: function() { context.setProperty('isForWebSite', false); } },
@@ -271,6 +257,41 @@ taskSets['default'] = {
 
 // Support functions.
 //
+
+
+function createSectionNumbers(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , maxDepth
+    , $toNumber
+    , idx = 0
+  ;
+
+  $main = $('#book');
+
+  maxDepth = $main.data('maxSectionNumberingDepth');
+  if (!maxDepth) {
+    maxDepth = 3;
+  }
+
+ 
+  $toNumber = $('main > .numbered-section');
+  
+  debug("\n");
+  $toNumber.each(function() {
+    'use strict';
+    var $section = $(this)
+      , numberStack = []
+    ;
+  
+    numberSection($, $section, ++idx, numberStack, maxDepth);
+  
+  });
+  
+  return $.html();
+}
+
 function numberSection($, $section, idx, numberStack, maxDepth) {
   'use strict';
   var $subSections
@@ -299,9 +320,91 @@ function numberSection($, $section, idx, numberStack, maxDepth) {
 
     numberStack.pop();
   }
+}
 
+
+
+function createTOC(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , $tocContent
+    , maxDepth
+    , toc
+    , $sections
+  ;
+
+  $tocContent = $('#toc-content');
+
+
+  $main = $('#book');
+
+  maxDepth = $main.data('maxSectionNumberingDepth');
+  if (!maxDepth) {
+    maxDepth = 3;
+  }
+
+  toc = ['<nav><ul>'];
+
+  $sections = $('main > section');
+  $sections.each(function() {
+    'use strict';
+    var $section = $(this)
+      , skipToc = false
+    ;
+
+    skipToc = $section.data('tocSkip') || false;
+
+    if (!skipToc) {
+      tocify($, $section, toc, 1, maxDepth);
+    }
+
+  });
+
+  toc.push('</ul></nav>');
+
+  $tocContent.html(toc.join(''));
+
+  return $.html();
+}
+
+
+function tocify($, $section, toc, depth, maxDepth) {
+  'use strict';
+  var $subSections
+  ;
+
+  if (depth <= maxDepth) {
+    toc.push('<li><a href="#');
+    toc.push($section.attr('id'));
+    toc.push('">');
+    $section.children('h1').each(function() {
+      'use strict';
+      var $h1 = $(this);
+      toc.push($h1.html());
+    });
+    toc.push('</a>');
+
+    $subSections = $section.children('section');
+    if ($subSections.length > 0) {
+      toc.push('<ul>');
+      $subSections.each(function() {
+        var $subSection = $(this);
+        tocify($, $subSection, toc, depth + 1, maxDepth);
+      });
+      toc.push('</ul>');
+    }
+
+    toc.push('</li>');
+
+    //       <ul>
+    //         <li><a href="#">Blah</a></li>
+    //       </ul>
+
+  }
 
 }
+
 
 
 
