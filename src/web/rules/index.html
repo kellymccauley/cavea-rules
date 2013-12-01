@@ -108,9 +108,9 @@
               # List of Figures
               #
             }}-->
-            <section id="figures" class="lof" data-toc-skip="true">
+            <section id="lof" class="lof" data-toc-skip="true">
               <h1>List of Figures</h1>
-              <div id="lof-content" role="navigation">{{! This will get filled in during the build.}}</div>
+              <div id="lof-content" class="lof-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
 
@@ -120,9 +120,9 @@
               #  List of Tables
               #
             }}-->
-            <section id="tables" class="lot" data-toc-skip="true">
+            <section id="lot" class="lot" data-toc-skip="true">
               <h1>List of Tables</h1>
-              <div id="lot-content" role="navigation">{{! This will get filled in during the build.}}</div>
+              <div id="lot-content" class="lot-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
 
@@ -190,9 +190,8 @@
                 <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
 
                 <figure id="die-notation-examples">
-                  <figcaption class="center-block"></figcaption>
+                  <figcaption class="center-block">Die Notation Examples</figcaption>
                   <div class="panel panel-example">
-                    <div class="panel-heading">Die Notation Examples</div>
                     <div class="panel-body">
                       <ul class="list-unstyled">
                         <li><span class="d">d4</span> - A die with four sides.</li>
@@ -252,9 +251,8 @@
                 <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
                 <figure id="lp-notation-examples">
-                  <figcaption class="center-block"></figcaption>
+                  <figcaption class="center-block">Level Pool Notation Examples</figcaption>
                   <div class="panel panel-example">
-                    <div class="panel-heading">Level Pool Notation Examples</div>
                     <div class="panel-body">
                       <ul class="list-unstyled">
                         <li><code class="lp">1:d6</code> - A level pool consisting of a single <span class="d">d6</span>.</li>
@@ -296,9 +294,8 @@
 
             
                   <figure id="rolling-lp-examples">
-                    <figcaption class="center-block"></figcaption>
+                    <figcaption class="center-block">Rolling Level Pools Example</figcaption>
                     <div class="panel panel-example">
-                      <div class="panel-heading">Rolling Level Pools Example</div>
                       <div class="panel-body">
                         <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a rookie police officer and is nearly at the end of a long foot chase.  She has the running suspect, Bruno, right at her finger tips.</p>
 
@@ -442,9 +439,8 @@
 
 
                   <figure id="sap-gain-example">
-                    <figcaption class="center-block"></figcaption>
+                    <figcaption class="center-block">SAP Gain Example</figcaption>
                     <div class="panel panel-example">
-                      <div class="panel-heading">SAP Gain Example</div>
                       <div class="panel-body">
                         <p>Sally, Jill's character, is at a crime scene and is trying to speak to a lady who witnessed the brutal murder.  The lady only speaks Spanish and the last time Sally had tried to speak Spanish was in high school, six years ago.  Sally has a <code class="lp">1:d10</code> for <i>Speak Language: Spanish</i>.  Jill rolls a 1.  Sally succeeds and understands the lady.  And since Jill rolled all <i>1</i>s, she gets <i>3</i> SAPs that can be applied to either Sally's <i>Speak Language: Spanish</i> skill or Sally's <i>mSt</i>, <i>mEn</i>, or <i>mAg</i> <a href="#phys-attr-mech">physical attributes</a>.</p>
                         
@@ -512,9 +508,8 @@
 
 
                   <figure id="skill-lp-example">
-                    <figcaption class="center-block"></figcaption>
+                    <figcaption class="center-block">Skill Level Pool Example</figcaption>
                     <div class="panel panel-example">
-                      <div class="panel-heading">Skill LP Example</div>
                       <div class="panel-body">
 
                         <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
@@ -940,9 +935,8 @@
                   </table>
   
                   <figure id="hnd-hp-calc-examples">
-                    <figcaption class="center-block"></figcaption>
+                    <figcaption class="center-block">Health Point Calculation Example</figcaption>
                     <div class="panel panel-example">
-                      <div class="panel-heading">Example</div>
                       <div class="panel-body">
   
                         <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
