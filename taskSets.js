@@ -407,8 +407,12 @@ function createLOF(output) {
   var $ = cheerio.load(output)
     , $main
     , $figures
+    , lof
+    , $lofContent
     , idx = 0
   ;
+
+  lof = ['<ul>'];
 
   $figures = $('main figure');
   $figures.each(function() {
@@ -417,12 +421,23 @@ function createLOF(output) {
       , $figCap
     ;
 
+    lof.push('<li><a href="#');
+    lof.push($figure.attr('id'));
+    lof.push('">');
+
     $figure.attr('data-fig-number', ++idx);
     $figCap = $figure.children('figcaption').each(function() {
       var $fc = $(this);
-      $fc.prepend('Figure <span class="figure-number">' + idx + '</span>');
+      $fc.prepend('Figure <span class="figure-number">' + idx + '</span> - ');
+      lof.push($fc.html());
     });
+
+    lof.push('</a></li>');
   });
+
+  lof.push('</ul>');
+
+  $('#lof-content').html(lof.join(''));
 
   return $.html();
 }
