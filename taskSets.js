@@ -39,7 +39,7 @@ context.loadWith({
   },
 
   'rots': {
-    version: '0.2.2',
+    version: '0.2.3',
     inceptionYear: '2013',
     author: 'Kelly A. McCauley',
     srcFile: './src/web/rules/index.html',
@@ -187,6 +187,7 @@ taskSets['rots:proc-templates'] = {
 
         out = createSectionNumbers(output);
         out = createTOC(out);
+        out = createLOF(out);
 
         return out;
       }
@@ -397,15 +398,34 @@ function tocify($, $section, toc, depth, maxDepth) {
 
     toc.push('</li>');
 
-    //       <ul>
-    //         <li><a href="#">Blah</a></li>
-    //       </ul>
-
   }
 
 }
 
+function createLOF(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , $figures
+    , idx = 0
+  ;
 
+  $figures = $('main figure');
+  $figures.each(function() {
+    'use strict';
+    var $figure = $(this)
+      , $figCap
+    ;
+
+    $figure.attr('data-fig-number', ++idx);
+    $figCap = $figure.children('figcaption').each(function() {
+      var $fc = $(this);
+      $fc.prepend('Figure <span class="figure-number">' + idx + '</span>');
+    });
+  });
+
+  return $.html();
+}
 
 
 // Do the module thing.
