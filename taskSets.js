@@ -188,6 +188,7 @@ taskSets['rots:proc-templates'] = {
         out = createSectionNumbers(output);
         out = createTOC(out);
         out = createLOF(out);
+        out = createLOT(out);
 
         return out;
       }
@@ -425,7 +426,7 @@ function createLOF(output) {
     lof.push($figure.attr('id'));
     lof.push('">');
 
-    $figure.attr('data-fig-number', ++idx);
+    $figure.attr('data-figure-number', ++idx);
     $figCap = $figure.children('figcaption').each(function() {
       var $fc = $(this);
       $fc.prepend('Figure <span class="figure-number">' + idx + '</span> - ');
@@ -438,6 +439,46 @@ function createLOF(output) {
   lof.push('</ul>');
 
   $('#lof-content').html(lof.join(''));
+
+  return $.html();
+}
+
+function createLOT(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , $tables
+    , lot
+    , $lotContent
+    , idx = 0
+  ;
+
+  lot = ['<ul>'];
+
+  $tables = $('main table');
+  $tables.each(function() {
+    'use strict';
+    var $table = $(this)
+      , $caption
+    ;
+
+    lot.push('<li><a href="#');
+    lot.push($table.attr('id'));
+    lot.push('">');
+
+    $table.attr('data-table-number', ++idx);
+    $caption = $table.children('caption').each(function() {
+      var $tc = $(this);
+      $tc.prepend('Table <span class="table-number">' + idx + '</span> - ');
+      lot.push($tc.html());
+    });
+
+    lot.push('</a></li>');
+  });
+
+  lot.push('</ul>');
+
+  $('#lot-content').html(lot.join(''));
 
   return $.html();
 }
