@@ -27,21 +27,22 @@
 
       <div class="row">
         <div class="col-md-8">
-          <main id="book" data-max-section-numbering-depth="5">
+          <main id="book" class="book" data-max-section-numbering-depth="5">
+            <div id="book-info" class="info">
+              <p>should not see this.</p>
+            </div>
 
             <!--{{!
               #
               # Title
               #
             }}-->
-            <section id="front-page" class="front-page" data-toc-skip="true">
-              <div class="page-header">
+            <section id="front-cover" class="cover" data-toc-skip="true">
 
-                <h1 id="title">Cavea: <small>Rules of the Stage</small></h1>
+              <p class="title">Cavea: <small>Rules of the Stage</small></p>
 
-                <p><small>Rules for the Cavea Role-playing Game.</small></p>
+              <p class="subtitle"><small>Rules for the Cavea Role-playing Game.</small></p>
 
-              </div>
             </section>
 
 
@@ -52,7 +53,7 @@
               #
             }}-->
             <section id="acknowledgements" class="acknowledgements" data-toc-skip="true">
-              <h1>Credits</h1>
+              <h1 class="title">Credits</h1>
 
               <p>Written and developed by {{{rots.author}}}.</p>
 
@@ -65,7 +66,7 @@
               #  Book Information
               #
             }}-->
-            <section id="info" class="info" data-toc-skip="true">
+            <section id="information" class="information" data-toc-skip="true">
 
               <p><small>Copyright &copy; {{{rots.copyright.year}}} {{{rots.author}}}</small><br/>
               <small>Version: <b>{{{rots.version}}}</b></small><br/>
@@ -97,7 +98,7 @@
               #
             }}-->
             <section id="toc" class="toc" data-toc-skip="true">
-              <h1>Table of Contents</h1>
+              <h1 class="title">Table of Contents</h1>
               <div id="toc-content" class="toc-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
@@ -109,7 +110,7 @@
               #
             }}-->
             <section id="lof" class="lof" data-toc-skip="true">
-              <h1>List of Figures</h1>
+              <h1 class="title">List of Figures</h1>
               <div id="lof-content" class="lof-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
@@ -121,7 +122,7 @@
               #
             }}-->
             <section id="lot" class="lot" data-toc-skip="true">
-              <h1>List of Tables</h1>
+              <h1 class="title">List of Tables</h1>
               <div id="lot-content" class="lot-content" role="navigation">{{! This will get filled in during the build.}}</div>
             </section>
 
@@ -133,7 +134,7 @@
               #
             }}-->
             <section id="preface" class="preface">
-              <h1>Preface</h1>
+              <h1 class="title">Preface</h1>
 
               <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
 
@@ -158,7 +159,7 @@
               #
             }}-->
             <section id="basic-mech" class="chapter numbered-section">
-              <h1>Basic Mechanics</h1>
+              <h1 class="title">Basic Mechanics</h1>
 
 
               <!--{{!
@@ -167,7 +168,7 @@
                 #
               }}-->
               <section id="people">
-                <h1>People</h1>
+                <h1 class="title">People</h1>
                 
                 <p><span id="rule-people-requirements" class="rule">At least two people are needed to play Cavea.</span></p>
                 
@@ -185,7 +186,7 @@
                 #
               }}-->
               <section id="dice">
-                <h1>Dice</h1>
+                <h1 class="title">Dice</h1>
 
                 <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <code>dN</code> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
 
@@ -216,7 +217,7 @@
               #
             }}-->
             <section id="character-mech" class="chapter numbered-section">
-              <h1>Character Mechanics</h1>
+              <h1 class="title">Character Mechanics</h1>
               
               <p>Characters in Cavea serve the same purpose as characters played by actors and actresses, they give stories a meaning.  The players are the <i>actors</i>; technically they are improvisational actors.  They, along with the game master, are also the audience.</p>
               
@@ -235,7 +236,7 @@
                 #
               }}-->
               <section id="lp">
-                <h1>Level Pool</h1>
+                <h1 class="title">Level Pool</h1>
 
                 <div id="rule-lp-is" class="rule for-rule-summary">
                   <p>A <em>level pool</em> (LP) is:</p>
@@ -280,7 +281,7 @@
                   #
                 }}-->
                 <section id="rolling-lp">
-                  <h1>Rolling a Level Pool</h1>
+                  <h1 class="title">Rolling a Level Pool</h1>
 
                   <div id="rule-rolling-lp" class="rule for-rule-summary">
                     <p>The procedure for rolling a level pool is as follow:</p>
@@ -372,7 +373,7 @@
                   #
                 }}-->
                 <section id="improving-lp">
-                  <h1>Improving a Level Pool</h1>
+                  <h1 class="title">Improving a Level Pool</h1>
 
                   <p>See <a href="#skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="#ap">Advancement Points</a></p>
                 </section> <!-- improving-lp -->
@@ -386,7 +387,7 @@
                 #
               }}-->
               <section id="ap">
-                <h1>Advancement Points</h1>
+                <h1 class="title">Advancement Points</h1>
 
                 <p>Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.<p>
 
@@ -400,7 +401,7 @@
                   #
                 }}-->
                 <section id="gap">
-                  <h1>General Advancement Points</h1>
+                  <h1 class="title">General Advancement Points</h1>
 
                   <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">level pools</a> of known skills.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
                  
@@ -415,7 +416,7 @@
                   #
                 }}-->
                 <section id="sap">
-                  <h1>Specific Advancement Points</h1>
+                  <h1 class="title">Specific Advancement Points</h1>
 
                   <p>The Specific Advancement Points (SAP) are advancement points that are gained by skill use.  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  That gained SAP then can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill.</p>  
                   
@@ -466,7 +467,7 @@
               #
             }}-->
             <section id="skill-mech" class="chapter numbered-section">
-              <h1>Skill Mechanics</h1>
+              <h1 class="title">Skill Mechanics</h1>
 
 
               <!--{{!
@@ -475,7 +476,7 @@
                 #
               }}-->
               <section id="skill-attr">
-                <h1>Skill Attributes</h1>
+                <h1 class="title">Skill Attributes</h1>
 
                 <ul>
                   <li>Name</li>
@@ -502,7 +503,7 @@
                   #
                 }}-->
                 <section id="skill-lp">
-                  <h1>Skill Level Pool</h1>
+                  <h1 class="title">Skill Level Pool</h1>
 
                   <p>A skill's <a href="#lp">level pool</a> (LP) is the measurement of expertise of that skill.</p>
 
@@ -529,7 +530,7 @@
                   #
                 }}-->
                 <section id="skill-phys-attr">
-                  <h1>Related Physical Attributes</h1>
+                  <h1 class="title">Related Physical Attributes</h1>
 
                   <p>Unlike other games, the gamer's choice of skills for their character and spending of <a href="sap">Specific Advancement Points</a> dictates the character's physical attributes.  The related physical attributes are:</p>
                   <ul class="list-unstyled">
@@ -550,7 +551,7 @@
                   #
                 }}-->
                 <section id="skill-spec-req">
-                  <h1>Specialization Requirements</h1>
+                  <h1 class="title">Specialization Requirements</h1>
 
                   <p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p>
 
@@ -563,7 +564,7 @@
                   #
                 }}-->
                 <section id="skill-init-learning-cost">
-                  <h1>Initial Learning Cost</h1>
+                  <h1 class="title">Initial Learning Cost</h1>
 
                   <p></p>
 
@@ -577,7 +578,7 @@
                   #
                 }}-->
                 <section id="skill-init-learning-methods">
-                  <h1>Initial Learning Methods</h1>
+                  <h1 class="title">Initial Learning Methods</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-init-learning-methods -->
 
@@ -589,7 +590,7 @@
                   #
                 }}-->
                 <section id="skill-improvement-methods">
-                  <h1>Initial Improvement Methods</h1>
+                  <h1 class="title">Initial Improvement Methods</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-improvement-methods -->
 
@@ -600,7 +601,7 @@
                   #
                 }}-->
                 <section id="skill-progression-requirements">
-                  <h1>Progression requirements</h1>
+                  <h1 class="title">Progression requirements</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-progression-requirements -->
 
@@ -611,7 +612,7 @@
                   #
                 }}-->
                 <section id="skill-defaults">
-                  <h1>Alternate Skill and/or Physical Attribute</h1>
+                  <h1 class="title">Alternate Skill and/or Physical Attribute</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-defaults -->
 
@@ -623,7 +624,7 @@
                   #
                 }}-->
                 <section id="skill-categorizations">
-                  <h1>Categorizations</h1>
+                  <h1 class="title">Categorizations</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-categorizations -->
 
@@ -634,7 +635,7 @@
                   #
                 }}-->
                 <section id="skill-genres">
-                  <h1>Genres</h1>
+                  <h1 class="title">Genres</h1>
                   <p>FIXME</p>
                 </section> <!-- skill-genres -->
 
@@ -649,7 +650,7 @@
                 #
               }}-->
               <section id="skill-attempt">
-                <h1>Skill Attempt</h1>
+                <h1 class="title">Skill Attempt</h1>
 
                 <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
 
@@ -661,7 +662,7 @@
                   #
                 }}-->
                 <section id="skill-attempt-opposed">
-                  <h1>Opposing/Opposed Skill Attempt</h1>
+                  <h1 class="title">Opposing/Opposed Skill Attempt</h1>
 
                   <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
 
@@ -674,7 +675,7 @@
                   #
                 }}-->
                 <section id="skill-attempt-unopposed">
-                  <h1>Unopposed Skill Attempt</h1>
+                  <h1 class="title">Unopposed Skill Attempt</h1>
 
                   <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
 
@@ -687,7 +688,7 @@
                   #
                 }}-->
                 <section id="skill-attempt-combining-skills">
-                  <h1>Combining Skills</h1>
+                  <h1 class="title">Combining Skills</h1>
 
                   <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
                 </section> <!-- skill-attempt-combining-skills -->
@@ -700,7 +701,7 @@
                   #
                 }}-->
                 <section id="skill-attempt-teamwork">
-                  <h1>Teamwork</h1>
+                  <h1 class="title">Teamwork</h1>
 
                   <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
                 </section> <!-- skill-attempt-teamwork -->
@@ -714,7 +715,7 @@
                 #
               }}-->
               <section id="getting-skills">
-                <h1>Skill Acquirement</h1>
+                <h1 class="title">Skill Acquirement</h1>
 
                 <p>Skills are acquired during the character creation process and while playing the character.</p>
 
@@ -726,7 +727,7 @@
                   #
                 }}-->
                 <section id="getting-skills-character-creation">
-                  <h1>Acquirement During Character Creation</h1>
+                  <h1 class="title">Acquirement During Character Creation</h1>
 
                   <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
 
@@ -740,7 +741,7 @@
                   #
                 }}-->
                 <section id="getting-skills-character-play">
-                  <h1>Acquirement During Character Play</h1>
+                  <h1 class="title">Acquirement During Character Play</h1>
 
                   <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
                 </section> <!-- getting-skills-character-play -->
@@ -755,7 +756,7 @@
                 #
               }}-->
               <section id="skill-improvement">
-                <h1>Skill Improvement</h1>
+                <h1 class="title">Skill Improvement</h1>
 
                 <!--{{!
                   #
@@ -763,7 +764,7 @@
                   #
                 }}-->
                 <section id="skill-lp-advancement">
-                  <h1>Skill Level Pool Advancement</h1>
+                  <h1 class="title">Skill Level Pool Advancement</h1>
 
                   <table id="table-standard-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
                     <caption>Standard Skill Level Pool Die Advancement Point Costs</caption>
@@ -797,7 +798,7 @@
                   #
                 }}-->
                 <section id="skill-related-phys-attrs-lp-advancement">
-                  <h1>Related Physical Attribute Level Pool Advancement</h1>
+                  <h1 class="title">Related Physical Attribute Level Pool Advancement</h1>
                   <p>See <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
 
                 </section> <!-- skill-related-phys-attrs-lp-advancement -->
@@ -817,7 +818,7 @@
               #
             }}-->
             <section id="phys-attr-mech" class="chapter numbered-section">
-              <h1>Physical Attribute Mechanics</h1>
+              <h1 class="title">Physical Attribute Mechanics</h1>
 
               <p>The core physical attributes are:</p>
 
@@ -850,7 +851,7 @@
                 #
               }}-->
               <section id="phys-attrs-lp">
-                <h1>Attribute Level Pool</h1>
+                <h1 class="title">Attribute Level Pool</h1>
                 <p>Similar to skills, <a href="#lp">level pools</a> are used as a measure of a core physical attribute.</p>
               </section>
 
@@ -862,7 +863,7 @@
                 #
               }}-->
               <section id="phys-attrs-lp-advancement">
-                <h1>Attribute Level Pool Advancement</h1>
+                <h1 class="title">Attribute Level Pool Advancement</h1>
 
                 <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
 
@@ -890,7 +891,7 @@
               #
             }}-->
             <section id="hnd-mech" class="chapter numbered-section">
-              <h1>Health and Damage Mechanics</h1>
+              <h1 class="title">Health and Damage Mechanics</h1>
 
               <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
               
@@ -902,7 +903,7 @@
                 #
               }}-->
               <section id="hnd-hp">
-                <h1>Health Points</h1>
+                <h1 class="title">Health Points</h1>
                 
                 <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
               
@@ -912,7 +913,7 @@
                   #
                 }}-->
                 <section id="hnd-hp-calc">
-                  <h1>Calculating Health Points</h1>
+                  <h1 class="title">Calculating Health Points</h1>
                   
                   <p>The following describes how to calculate a character's health points.</p>
   
@@ -975,7 +976,7 @@
                 #
               }}-->
               <section id="hnd-injuries">
-                <h1>Injuries</h1>
+                <h1 class="title">Injuries</h1>
               
                 <p></p>
               </section> <!-- hnd-injuries -->
@@ -987,7 +988,7 @@
                 #
               }}-->
               <section id="hnd-disabilities">
-                <h1>Disabilites</h1>
+                <h1 class="title">Disabilites</h1>
                 
                 
                 <p>A disability that impairs a character are:</p>
@@ -1014,7 +1015,7 @@
                 #
               }}-->
               <section id="hnd-damage">
-                <h1>Damage</h1>
+                <h1 class="title">Damage</h1>
                 
                 <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
                 
@@ -1034,7 +1035,7 @@
               #
             }}-->
             <section id="glossary" class="glossary">
-              <h1>Glossary</h1>
+              <h1 class="title">Glossary</h1>
 
               <!-- FIXME
               <div id="glossary-entry-game-master" class="glossary-entry">
@@ -1073,7 +1074,7 @@
               #
             }}-->
             <section id="index" class="index">
-              <h1>Index</h1>
+              <h1 class="title">Index</h1>
             </section>
 
           </main>
