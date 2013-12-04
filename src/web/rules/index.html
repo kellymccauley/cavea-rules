@@ -156,6 +156,86 @@
 
 
 
+            <!--{{!
+              #
+              #  Rules Summary
+              #
+            }}-->
+            <section id="rules-summary" class="chapter numbered-section">
+              <h1 class="title">Rules Summary</h1>
+
+              <dl class="dl-horizontal">
+                <dt><a href="#rule-people-requirements">Number of People</a></dt>
+                <dd><p>2+</p></dd>
+
+                <dt><a href="#rule-game-master-requirement">GM</a></dt>
+                <dd>
+                  <p><a href="#rule-game-master-requirement">Game Master</a>.</p>
+                  <p>One person to run the game.</p>
+                  <p>Does:</p>
+                  <ul>
+                    <li>Gives <a href="#gap">General Advancement Points</a> to players for role-playing, accomplishing goals, helping to make the game fun, bad puns, and anything else the GM deems worthy.</li>
+                  </ul>
+                </dd>
+
+                <dt><a href="#rule-player-requirement">Players</a></dt>
+                <dd>
+                  <p>The remaining people to take on character roles.</p>
+                  <p>Does:</p>
+                  <ul>
+                    <li>Gets <a href="#gap">General Advancement Points</a>.</li>
+                    <li>Gets <a href="#gap">Specific Advancement Points</a>.</li>
+                  </ul>
+                </dd>
+
+                <dt><a href="#rule-die-type-requirement">Dice</a></dt>
+                <dd><p>Multiple <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</p></dd>
+
+                <dt><a href="#character-mech">Characters</a></dt>
+                <dd>
+                  <p>At the very least have <a href="#skill-mech">skills</a>, <a href="#phys-attr-mech">physical attributes</a>, and <a href="#equipment-mech">equipment</a>.
+                  </p>
+                </dd>
+
+                <dt><a href="#rule-lp-consists-of">LP</a></dt>
+                <dd>
+                  <p><a href="lp">Level Pool</a>.</p>
+                  <p>Consists of one or more dice and sometimes a result modifier.</p> 
+                  <p>Example: <code class="lp">1:d6|4:d10|+2</code> - one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
+                  <p>Compact Example: <code class="lp">0|1|0|4|+2</code> - one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
+                </dd>
+
+                <dt><a href="#skill-lp">Skill LP</a></dt>
+                <dd>A level pool that is the measurement of a character's expertise in a skill.</dd>
+
+                <dt><a href="#phys-attrs-lp">Physical Attribute LP</a></dt>
+                <dd>A level pool that is the measurement of a character's physical attribute.</dd>
+
+                <dt><a href="#rule-rolling-lp">Rolling LP</a></dt>
+                <dd>
+                  <p>Procedure:</p>
+                  <ol>
+                    <li>Gather and roll all of the dice that compose the level pool.</li>
+                    <li>Add up all of the <i>1</i>s for an unmodified total.</li>
+                    <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
+                  </ol>
+                </dd>
+
+                <dt><a href="#rule-gap">GAP</a></dt>
+                <dd>
+                  <p><a href="#gap">General Advancement Points</a>.</p>
+                  <p>Used to learn new skills, to increase <a href="#skill-lp">skill level pools</a> and <a href="#phys-attrs-lp">physical attribute level pools</a>.</p>
+                </dd>
+
+                <!--{{!
+                <dt><a href="#"></a></dt>
+                <dd></dd>
+                }}-->
+
+              </dl>
+
+            </section>
+
 
             <!--{{!
               #
@@ -174,11 +254,11 @@
               <section id="people" class="section">
                 <h1 class="title">People</h1>
                 
-                <p><span id="rule-people-requirements" class="rule">At least two people are needed to play Cavea.</span></p>
+                <p><span id="rule-people-requirements" class="rule rule-primary">At least two people are needed to play Cavea.</span></p>
                 
-                <p><span id="rule-game-master-requirement" class="rule for-rule-summary">One person needs to be the game master.</span>  The game master runs the game, narrate parts of the story, and plays the roles of the antagonists and the supporting characters; a mashup of a writer, director, and improvisational actor.</p>
+                <p><span id="rule-game-master-requirement" class="rule rule-primary">One person needs to be the game master.</span>  The game master runs the game, narrate parts of the story, and plays the roles of the antagonists and the supporting characters; a mash-up of a writer, director, and improvisational actor.</p>
                 
-                <p><span id="rule-player-requirement" class="rule for-rule-summary">At least one person needs to be the player.</span></p>
+                <p><span id="rule-player-requirement" class="rule rule-primary">At least one person needs to be the player.</span></p>
                 
                 <p>The game master does <em>not</em> play against the player.  <span id="rule-gm-vs-player-requirement" class="rule">Cavea is not and should not be played as a <i>Game Master vs. Player</i> game.</span></p>
                 
@@ -207,7 +287,7 @@
                   </div>
                 </figure>
 
-                <p><span id="rule-die-type-requirement" class="rule for-rule-summary">The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</span></p>
+                <p><span id="rule-die-type-requirement" class="rule rule-primary">The following types of die are required during game play: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, and <span class="d">d10</span>.</span></p>
 
                 <p>How many of each type of die are needed?  Two of each at the very minimum. To keep the die rolling from slowing down game play, four or more of each die type is recommended for a player and six or more of each die type is recommended for a game master.  A dice cup is also recommended, especially when the level pools get large and also when playing with kids.</p>
 
@@ -230,8 +310,6 @@
               
               <p>Players play the roles of the lead characters of a game's story.  They are the stars of the story.  They bring the protagonists to imaginary life.</p>
               
-              <p></p>
-              
               <p><span id="rule-player-agency" class="rule">A player's character's actions, reactions, decisions, and spoken lines are not and should never be scripted or predetermined by the game master or another player.</span>  This is even true when the character's <i>free will</i> has been compromised or taken away in the story.  A good player will perfom the role of the compromised character.</p>
               
               
@@ -245,15 +323,15 @@
               <section id="lp" class="section">
                 <h1 class="title">Level Pool</h1>
 
-                <div id="rule-lp-is" class="rule for-rule-summary">
+                <div id="rule-lp-is" class="rule">
                   <p>A <em>level pool</em> (LP) is:</p>
 
                   <ul>
-                    <li><a href="#skill-lp">a measurement of expertise of a skill</a> or</li>
-                    <li><a href="#phys-attrs-lp">a measurement of physical ability</a>.</li>
+                    <li><a href="#skill-lp">a measurement of a character's expertise in a skill</a> or</li>
+                    <li><a href="#phys-attrs-lp">a measurement of a character's physical attribute</a>.</li>
                   </ul>
 
-                  <p>A level pool consists of one or more dice and sometimes a result modifier.  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
+                  <p><span id="rule-lp-consists-of" class="rule rule-primary">A level pool consists of one or more dice and sometimes a result modifier.</span>  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
                 </div>
 
                 <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
@@ -290,7 +368,7 @@
                 <section id="rolling-lp" class="section">
                   <h1 class="title">Rolling a Level Pool</h1>
 
-                  <div id="rule-rolling-lp" class="rule for-rule-summary">
+                  <div id="rule-rolling-lp" class="rule rule-primary">
                     <p>The procedure for rolling a level pool is as follow:</p>
 
                     <ol>
@@ -396,7 +474,7 @@
               <section id="ap" class="section">
                 <h1 class="title">Advancement Points</h1>
 
-                <p>Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.<p>
+                <p><span id="rule-ap" class="rule rule-primary">Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.</span><p>
 
                 <p>There are two types of Advancement Points: <i>General</i> and <i>Specific</i>.</p>
 
@@ -410,7 +488,7 @@
                 <section id="gap" class="section">
                   <h1 class="title">General Advancement Points</h1>
 
-                  <p>The General Advancement Points (GAP) can be used to learn new skills and to increase the <a href="#lp">level pools</a> of known skills.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
+                  <p><span id="rule-gap" class="rule rule-primary">General Advancement Points (GAP) can be used to learn new skills, to increase <a href="#skill-lp">skill level pools</a> and <a href="#phys-attrs-lp">physical attribute level pools</a></span>.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
                  
                   <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
                 </section> <!-- gap -->
@@ -425,7 +503,7 @@
                 <section id="sap" class="section">
                   <h1 class="title">Specific Advancement Points</h1>
 
-                  <p>The Specific Advancement Points (SAP) are advancement points that are gained by skill use.  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  That gained SAP then can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill.</p>  
+                  <p><span id="rule-sap-get" class="rule rule-primary">Specific Advancement Points (SAP) can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech">physical attributes</a> related to the skill and are gained by skill use.</span>  Certain die results from a <a href="#skill-attempt">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.</p>  
                   
                   <p>The following table describes the die results from a skill attempt that indicate when Specific Advancement Points are gained:</p>
                   
