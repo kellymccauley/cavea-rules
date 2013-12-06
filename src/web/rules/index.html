@@ -210,7 +210,7 @@
                 <dt><a href="#skill-lp">Skill LP</a></dt>
                 <dd>A level pool that is the measurement of a character's expertise in a skill.</dd>
 
-                <dt><a href="#phys-attrs-lp">Physical Attribute LP</a></dt>
+                <dt><a href="#phys-attr-core-lp">Physical Attribute LP</a></dt>
                 <dd>A level pool that is the measurement of a character's physical attribute.</dd>
 
                 <dt><a href="#rule-rolling-lp">Rolling LP</a></dt>
@@ -223,10 +223,14 @@
                   </ol>
                 </dd>
 
+                <dt><a href="#rule-ap">AP</a></dt>
+                <dd><p><a href="#ap">Advancement Points</a> are the currency used to <em>purchase</em> new skills, to improve a known skill, and improve a character's core physical attributes.</p>
+                </dd>
+                
                 <dt><a href="#rule-gap">GAP</a></dt>
                 <dd>
                   <p><a href="#gap">General Advancement Points</a>.</p>
-                  <p>Used to learn new skills, to increase <a href="#skill-lp">skill level pools</a> and <a href="#phys-attrs-lp">physical attribute level pools</a>.</p>
+                  <p>Used to purchase new skills, to improve <a href="#skill-lp">skill level pools</a>, and to improve <a href="#phys-attr-core-lp">core physical attribute level pools</a>.</p>
                 </dd>
 
                 <!--{{!
@@ -264,6 +268,15 @@
                 
                 <p>The game master does <em>not</em> play against the player.  <span id="rule-gm-vs-player-requirement" class="rule">Cavea is not and should not be played as a <i>Game Master vs. Player</i> game.</span></p>
                 
+                <p>Players play the lead character roles of a game's story.  They are the stars of the story.  They bring the protagonists to imaginary life.</p>
+              
+              <p><span id="rule-player-agency" class="rule">A player's character's actions, reactions, decisions, and spoken lines <em>are not</em> and <em>should never</em> be scripted or predetermined by the game master or by another player.</span>  This is even true when the character's <i>free will</i> has been compromised or taken away due to an event in the story.  The player should perfom the role of the compromised character (see the <a href="#rule-offensive-situations" class="xref">Offensive Situations</a> paragraph for exceptions).</p>
+              
+              <p><span id="rule-offensive-situations" class="rule" data-xref-label="Offensive Situations">The player and the game master cannot be required to or be forced to play or act out any scene that they find inappropriate, offensive, obscene, repulsive, and/or abhorrent.</span>  Any player that encounters that type of situation should speak up and voice their concern.  <span id="rule-no-offensive-scenes1" class="rule" data-xref-label="">Once a player has voiced their concerns, the game master <em>must</em> either adjust the scene or situation or halt the story.</span></p>
+              
+              <p><span id="rule-no-offensive-scenes2">The game master <em>must not</em> intentionally place any player's character into a scene or situation for which the game master knows beforehand that the player would find inappropriate, offensive, obscene, repulsive, and/or abhorrent.</span></p>
+
+                
               </section><!-- people -->
 
               <!--{{!
@@ -295,28 +308,6 @@
 
               </section> <!-- dice -->
               
-            </section> <!-- basic-mech -->
-
-
-
-
-            <!--{{!
-              #
-              #  Character Mechanics
-              #
-            }}-->
-            <section id="character-mech" class="chapter numbered-section">
-              <h1 class="title">Character Mechanics</h1>
-              
-              <p>Characters in Cavea serve the same purpose as characters played by actors and actresses, they give stories a meaning.  The players are the <i>actors</i>; technically they are improvisational actors.  They, along with the game master, are also the audience.</p>
-              
-              <p>Players play the roles of the lead characters of a game's story.  They are the stars of the story.  They bring the protagonists to imaginary life.</p>
-              
-              <p><span id="rule-player-agency" class="rule">A player's character's actions, reactions, decisions, and spoken lines are not and should never be scripted or predetermined by the game master or another player.</span>  This is even true when the character's <i>free will</i> has been compromised or taken away in the story.  A good player will perfom the role of the compromised character.</p>
-              
-              
-              
-
               <!--{{!
                 #
                 #  Level Pool
@@ -330,13 +321,13 @@
 
                   <ul>
                     <li><a href="#skill-lp">a measurement of a character's expertise in a skill</a> or</li>
-                    <li><a href="#phys-attrs-lp">a measurement of a character's physical attribute</a>.</li>
+                    <li><a href="#phys-attr-core-lp">a measurement of a character's physical attribute</a>.</li>
                   </ul>
 
                   <p><span id="rule-lp-consists-of" class="rule rule-primary">A level pool consists of one or more dice and sometimes a result modifier.</span>  Each die in the pool is either a <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.</p>
                 </div>
 
-                <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code>C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
+                <p>To describe the count of one type of die in a level pool, Cavea uses a notation of <code class="lp">C:dN</code> where <i>C</i> is the count of dice with <i>N</i> number of sides.  The counts of multiple die types are separated by a <i>|</i>. If there is a modifier to be applied, it appears at the end, also separated for the other counts by a <i>|</i>.  The following examples should help clarify:</p>
 
                 <figure id="lp-notation-examples">
                   <figcaption>Level Pool Notation Examples</figcaption>
@@ -462,10 +453,26 @@
                 <section id="improving-lp" class="section">
                   <h1 class="title">Improving a Level Pool</h1>
 
-                  <p>See <a href="#skill-lp-advancement">Skill Level Pool Advancement</a>, <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a>, <a href="#ap">Advancement Points</a></p>
+                  <p>See <a href="#skill-lp-advancement" class="xref">Skill Level Pool Advancement</a>, <a href="#phys-attr-core-lp-advancement"  class="xref">Physical Attribute Level Pool Advancement</a>, <a href="#ap"  class="xref">Advancement Points</a></p>
                 </section> <!-- improving-lp -->
 
               </section> <!-- lp -->
+              
+            </section> <!-- basic-mech -->
+
+
+
+
+            <!--{{!
+              #
+              #  Character Mechanics
+              #
+            }}-->
+            <section id="character-mech" class="chapter numbered-section">
+              <h1 class="title">Character Mechanics</h1>
+              
+              <p>Characters in Cavea serve the same purpose as characters played by actors and actresses in a movie, show, or play; characters give stories a reason to exist, a purpose, and a meaning.  The players are the <i>actors</i>; technically they are improvisational actors.  They, along with the game master, form the audience.</p>
+
 
 
               <!--{{!
@@ -476,7 +483,7 @@
               <section id="ap" class="section">
                 <h1 class="title">Advancement Points</h1>
 
-                <p><span id="rule-ap" class="rule rule-primary">Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to increase a skill's level pool, and improve physical attributes.</span><p>
+                <p><span id="rule-ap" class="rule rule-primary">Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to improve a known skill, and improve a character's core physical attributes.</span><p>
 
                 <p>There are two types of Advancement Points: <i>General</i> and <i>Specific</i>.</p>
 
@@ -490,7 +497,7 @@
                 <section id="gap" class="section">
                   <h1 class="title">General Advancement Points</h1>
 
-                  <p><span id="rule-gap" class="rule rule-primary">General Advancement Points (GAP) can be used to learn new skills, to increase <a href="#skill-lp">skill level pools</a> and <a href="#phys-attrs-lp">physical attribute level pools</a></span>.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
+                  <p><span id="rule-gap" class="rule rule-primary">General Advancement Points (GAP) can be used to learn new skills, to increase <a href="#skill-lp">skill level pools</a> and <a href="#phys-attr-core-lp">physical attribute level pools</a></span>.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
                  
                   <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
                 </section> <!-- gap -->
@@ -542,575 +549,708 @@
 
               </section> <!-- ap -->
 
-            </section> <!-- basic-mech -->
+            
 
 
 
 
-
-            <!--{{!
-              #
-              #  Skill Mechanics
-              #
-            }}-->
-            <section id="skill-mech" class="chapter numbered-section">
-              <h1 class="title">Skill Mechanics</h1>
 
 
               <!--{{!
                 #
-                #  Skill Attributes
+                #  Physical Characteristics and Attribute Mechanics
                 #
               }}-->
-              <section id="skill-attr" class="section">
-                <h1 class="title">Skill Attributes</h1>
-
-                <ul>
-                  <li>Name</li>
-                  <li>Description</li>
-                  <li><a href="#skill lp">Level Pool</a></li>
-                  <li><a href="#skill-phys-attr">Related Physical Attributes</a></li>
-                  <li><a href="#skill-spec-req">Specialization Requirements</a></li>
-                  <li><a href="#skill-prereq">Prerequisites</a></li>
-                  <li><a href="#skill-init-learning-cost">Initial Advancement Cost</a></li>
-                  <li><a href="#skill-init-learning-methods">Initial Learning Methods</a></li>
-                  <li><a href="#skill-improvement-cost">Improvement Cost</a></li>
-                  <li><a href="#skill-improvement-methods">Improvement Methods</a></li>
-                  <li><a href="#skill-progression-requirements">Progression requirements</a></li>
-                  <li><a href="#skill-defaults">Alternate Skill and/or Physical Attribute</a></li>
-                  <li><a href="#skill-categorizations">Categorizations</a></li>
-                  <li><a href="#skill-genres">Genres</a></li>
-                </ul>
-
-
-
+              <section id="phys-char-attr-mech" class="section numbered-section">
+                <h1 class="title">Physical Characteristic and Attribute Mechanics</h1>
+                
+                <p>A Character has physical characteristics and attributes.  In Cavea, a distinction is made between a characteristic and an attribute.  <span id="rule-phys-char">A physical characteristic is a non-measurable, distinguishing quality, aspect, or feature.</span>  <span id="rule-phys-attr">A physical attribute is a measurable, distinguishing quality, aspect, or feature.</span></p>
+                
                 <!--{{!
                   #
-                  #  Skill Level Pool
+                  #  Physical Characteristic Mechanics
                   #
                 }}-->
-                <section id="skill-lp" class="section">
-                  <h1 class="title">Skill Level Pool</h1>
+                <section id="phys-char-mech" class="section numbered-section">
+                  <h1 class="title">Physical Characteristics</h1>
+                  
+                  <p>Some physical characteristics add flavor to a character and others may impart bonuses or inflict penalties.  Most characteristics are optional.  Non-optional characteristics will be noted in any Cavea story universe or story settings guides.  The game master may also decide which characteristics are required for the story setting.</p>
+                  
+                  <p>The following is a small sample list of characteristics:</p>
+                  
+                  <dl>
+                    <dt>Skin</dt>
+                    <dd>By location on body...
+                      <table class="table table-bordered table-condensed">
+                        <tr><th>Composition</th><td>None, normal, scale, plate, metal, ....</td></tr>
+                        <tr><th>Coloring</th><td>One or more of red, green, blue, ....</td></tr>
+                        <tr><th>Pattern</th><td>None, calico, blended, racing stripes, ....</td></tr>
+                      </table>
+                    </dd>
+                    
+                    <dt>Head Hair</dt>
+                    <dd>By location of hair...
+                      <table class="table table-bordered table-condensed">
+                        <tr><th>Composition</th><td>Normal, synthetic, wire, snakes, ....</td></tr>
+                        <tr><th>Coloring</th><td>One or more of black, brown, ....</td></tr>
+                        <tr><th>Pattern</th><td>None, ringed, striped, ....</dd>
+                        <tr><th>Style</th><td>Short, thinning, curly, waves, straight, braided, ....</td></tr>
+                      </table>
+                    </dd>
+                   
+                    
+                  </dl>
+                  
+                </section> <!-- phys-char-mech -->
+  
+                <!--{{!
+                  #
+                  #  Physical Attribute Mechanics
+                  #
+                }}-->
+                <section id="phys-attr-mech" class="section numbered-section">
+                  <h1 class="title">Physical Attributes</h1>
+                  
+                  
+                  
+                  <!--{{!
+                    #
+                    #  Physical Attribute Mechanics
+                    #
+                  }}-->
+                  <section id="phys-attr-core" class="section numbered-section">
+                    <h1 class="title">Core Attributes</h1>
+                    
+                    <p>The core physical attributes are:</p>
+      
+                    <dl class="dl-horizontal">
+                      <dt><span id="phys-attr-mst">Mental Strength</span></dt>
+                      <dd>represents the character's intelligence, learning capacity, and overall mental capability.  Can be abbreviated as <i>mSt</i>.</dd>
+      
+                      <dt><span id="phys-attr-men">Mental Endurance</span></dt>
+                      <dd>represents the character's will power and mental focus and stamina. Can be abbreviated as <i>mEn</i>.</dd>
+      
+                      <dt><span id="phys-attr-mag">Mental Agility</span></dt>
+                      <dd>represents the character's speed of memory recall, the speed at which learning occurs, and the level of complexity of new topics that can be learned. Can be abbreviated as <i>mAg</i>.</dd>
+      
+                      <dt><span id="phys-attr-bst">Body Strength</span></dt>
+                      <dd>represents the character's brawn, hardiness, durability, and muscle strength. Can be abbreviated as <i>bSt</i>.</dd>
+      
+                      <dt><span id="phys-attr-ben">Body Endurance</span></dt>
+                      <dd>represents the character's fortitude and stamina. Can be abbreviated as <i>bEn</i>.</dd>
+      
+                      <dt><span id="phys-attr-bag">Body Agility</span></dt>
+                      <dd>represents the character's balance, dexterity, and nimbleness. Can be abbreviated as <i>bAg</i>.</dd>
+      
+                    </dl>
+             
+                  
+    
+                    <!--{{!
+                      #
+                      #  Physical Attribute Level Pool
+                      #
+                    }}-->
+                    <section id="phys-attr-core-lp" class="section">
+                      <h1 class="title">Attribute Level Pool</h1>
+                      <p>Similar to skills, a <a href="#lp">level pool</a> is used as a measure of a core physical attribute.</p>
+                    </section>
+      
+      
+      
+                    <!--{{!
+                      #
+                      #  Physical Attribute Level Pool Advancement
+                      #
+                    }}-->
+                    <section id="phys-attr-core-lp-advancement" class="section">
+                      <h1 class="title">Attribute Level Pool Advancement</h1>
+      
+                      <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
+      
+                      <table id="table-phys-attr-lp-die-ap-cost" class="table table-bordered table-condensed">
+                        <caption>Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
+                        <thead>
+                          <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>40</td></tr>
+                          <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
+                          <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
+                          <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
+                        </tbody>
+                      </table>
+      
+                    </section> <!-- phys-attr-core-lp-advancement -->
+                  
+                  </section> <!-- phys-attr-core -->
+                  
+                </section> <!-- phys-attr-mech -->                  
+  
+              </section> <!-- phys-char-attr-mech -->
+  
 
-                  <p>A skill's <a href="#lp">level pool</a> (LP) is the measurement of expertise of that skill.</p>
 
-
-                  <figure id="skill-lp-example">
-                    <figcaption>Skill Level Pool Example</figcaption>
+              <!--{{!
+                #
+                #  Skill Mechanics
+                #
+              }}-->
+              <section id="skill-mech" class="section numbered-section">
+                <h1 class="title">Skill Mechanics</h1>
+  
+  
+                <!--{{!
+                  #
+                  #  Skill Attributes
+                  #
+                }}-->
+                <section id="skill-attr" class="section">
+                  <h1 class="title">Skill Attributes</h1>
+  
+                  <!--
+                  <ul>
+                    <li>Name</li>
+                    <li>Description</li>
+                    <li><a href="#skill lp">Level Pool</a></li>
+                    <li><a href="#skill-phys-attr">Related Physical Attributes</a></li>
+                    <li><a href="#skill-spec-req">Specialization Requirements</a></li>
+                    <li><a href="#skill-prereq">Prerequisites</a></li>
+                    <li><a href="#skill-init-learning-cost">Initial Advancement Cost</a></li>
+                    <li><a href="#skill-init-learning-methods">Initial Learning Methods</a></li>
+                    <li><a href="#skill-improvement-cost">Improvement Cost</a></li>
+                    <li><a href="#skill-improvement-methods">Improvement Methods</a></li>
+                    <li><a href="#skill-progression-requirements">Progression requirements</a></li>
+                    <li><a href="#skill-defaults">Alternate Skill and/or Physical Attribute</a></li>
+                    <li><a href="#skill-categorizations">Categorizations</a></li>
+                    <li><a href="#skill-genres">Genres</a></li>
+                  </ul>
+                  -->
+                  
+                  <dl>
+                    <dt>Name</dt>
+                    <dd>The name of the skill.</dd>
+                    
+                    <dt>Description</dt>
+                    <dd>The information and details about the skill.</dd>
+                    
+                    <dt id="skill-lp">Level Pool</dt>
+                    <dd>
+                      <p>A skill's <a href="#lp">level pool</a> is the measurement of expertise a character has in that skill.</p>
+  
+  
+                      <figure id="skill-lp-example">
+                        <figcaption>Skill Level Pool Example</figcaption>
+                        <div class="panel panel-example">
+                          <div class="panel-body">
+    
+                            <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
+    
+                            <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
+    
+                          </div>
+                        </div>
+                      </figure>  
+                    </dd>
+                    
+                    <dt id="skill-phys-attr">Related Physical Attributes</dt>
+                    <dd>
+                      <p>A skill's related physical attributes are the character's core physical attributes that are impacted by the use of the skill.</p>
+                      
+                      <p>The set physical attributes that a skill can be potentially related to:</p>
+                      <ul class="list-unstyled">
+                        <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
+                        <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
+                        <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
+                        <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
+                        <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
+                        <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
+                      </ul>
+                    </dd>
+                    
+                    <dt id="skill-spec-req">Specialization Requirements</dt>
+                    
+                    <dt id="skill-prereq">Prerequisites</dt>
+                    
+                    <dt id="skill-init-learning-cost">Initial Advancement Cost</dt>
+                    
+                    <dt id="skill-init-learning-methods">Initial Learning Methods</dt>
+                    
+                    <dt id="skill-improvement-cost">Improvement Cost</dt>
+                    
+                    <dt id="skill-improvement-methods">Improvement Methods</dt>
+                    
+                    <dt id="skill-progression-requirements">Progression requirements</dt>
+                    
+                    <dt id="skill-defaults">Alternate Skill and/or Physical Attribute</dt>
+                    
+                    <dt id="skill-categorizations">Categorizations</dt>
+                    
+                    <dt id="skill-genres">Genres</dt>
+                  </dl>
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Skill Level Pool
+                    #
+  
+                  <section id="skill-lp" class="section">
+                    <h1 class="title">Skill Level Pool</h1>
+  
+                    <p>A skill's <a href="#lp">level pool</a> (LP) is the measurement of expertise a character had in that skill.</p>
+  
+  
+                    <figure id="skill-lp-example">
+                      <figcaption>Skill Level Pool Example</figcaption>
+                      <div class="panel panel-example">
+                        <div class="panel-body">
+  
+                          <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
+  
+                          <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
+  
+                        </div>
+                      </div>
+                    </figure>
+  
+                  </section>
+                  }}--> <!-- skill-lp -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Related Physical Attributes
+                    #
+                  }}-->
+                  <section id="skill-phys-attr" class="section">
+                    <h1 class="title">Related Physical Attributes</h1>
+  
+                    <p>Unlike other games, the gamer's choice of skills for their character and spending of <a href="sap">Specific Advancement Points</a> dictates the character's physical attributes.  The related physical attributes are:</p>
+                    <ul class="list-unstyled">
+                      <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
+                      <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
+                      <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
+                      <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
+                      <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
+                      <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
+                    </ul>
+  
+                  </section> <!-- skill-phys-attr -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Specialization Requirements
+                    #
+                  }}-->
+                  <section id="skill-spec-req" class="section">
+                    <h1 class="title">Specialization Requirements</h1>
+  
+                    <p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p>
+  
+                  </section> <!-- skill-spec-req -->
+  
+                  
+                  <!--{{!
+                    #
+                    #  Initial Learning Cost
+                    #
+                  }}-->
+                  <section id="skill-init-learning-cost" class="section">
+                    <h1 class="title">Initial Learning Cost</h1>
+  
+                    <p></p>
+  
+                  </section> <!-- skill-init-advancement-cost -->
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Initial Learning Methods
+                    #
+                  }}-->
+                  <section id="skill-init-learning-methods" class="section">
+                    <h1 class="title">Initial Learning Methods</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-init-learning-methods -->
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Improvement Methods
+                    #
+                  }}-->
+                  <section id="skill-improvement-methods" class="section">
+                    <h1 class="title">Initial Improvement Methods</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-improvement-methods -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Progression requirements
+                    #
+                  }}-->
+                  <section id="skill-progression-requirements" class="section">
+                    <h1 class="title">Progression requirements</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-progression-requirements -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Alternate Skill and/or Physical Attribute
+                    #
+                  }}-->
+                  <section id="skill-defaults" class="section">
+                    <h1 class="title">Alternate Skill and/or Physical Attribute</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-defaults -->
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Categorizations
+                    #
+                  }}-->
+                  <section id="skill-categorizations" class="section">
+                    <h1 class="title">Categorizations</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-categorizations -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Genres
+                    #
+                  }}-->
+                  <section id="skill-genres" class="section">
+                    <h1 class="title">Genres</h1>
+                    <p>FIXME</p>
+                  </section> <!-- skill-genres -->
+  
+  
+                </section> <!-- skill-attr -->
+  
+  
+  
+                <!--{{!
+                  #
+                  #  Skill Attempt
+                  #
+                }}-->
+                <section id="skill-attempt" class="section">
+                  <h1 class="title">Skill Attempt</h1>
+  
+                  <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Opposing/Opposed Skill Attempt
+                    #
+                  }}-->
+                  <section id="skill-attempt-opposed" class="section">
+                    <h1 class="title">Opposing/Opposed Skill Attempt</h1>
+  
+                    <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
+  
+                  </section> <!-- skill-attempt-opposed -->
+  
+  
+                  <!--{{!
+                    #
+                    #  
+                    #
+                  }}-->
+                  <section id="skill-attempt-unopposed" class="section">
+                    <h1 class="title">Unopposed Skill Attempt</h1>
+  
+                    <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
+  
+                  </section> <!-- skill-attempt-unopposed -->
+  
+  
+                  <!--{{!
+                    #
+                    #  Combining Skills
+                    #
+                  }}-->
+                  <section id="skill-attempt-combining-skills" class="section">
+                    <h1 class="title">Combining Skills</h1>
+  
+                    <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
+                  </section> <!-- skill-attempt-combining-skills -->
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Teamwork
+                    #
+                  }}-->
+                  <section id="skill-attempt-teamwork" class="section">
+                    <h1 class="title">Teamwork</h1>
+  
+                    <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
+                  </section> <!-- skill-attempt-teamwork -->
+  
+                </section> <!-- skill-attempt -->
+  
+  
+                <!--{{!
+                  #
+                  #  Skill Acquirement
+                  #
+                }}-->
+                <section id="getting-skills" class="section">
+                  <h1 class="title">Skill Acquirement</h1>
+  
+                  <p>Skills are acquired during the character creation process and while playing the character.</p>
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Acquirement During Character Creation
+                    #
+                  }}-->
+                  <section id="getting-skills-character-creation" class="section">
+                    <h1 class="title">Acquirement During Character Creation</h1>
+  
+                    <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
+  
+                  </section> <!-- getting-skills-character-creation -->
+  
+  
+  
+                  <!--{{!
+                    #
+                    #  Acquirement During Character Play
+                    #
+                  }}-->
+                  <section id="getting-skills-character-play" class="section">
+                    <h1 class="title">Acquirement During Character Play</h1>
+  
+                    <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
+                  </section> <!-- getting-skills-character-play -->
+  
+                </section> <!-- getting-skills -->
+  
+  
+  
+                <!--{{!
+                  #
+                  #  Skill Improvement
+                  #
+                }}-->
+                <section id="skill-improvement" class="section">
+                  <h1 class="title">Skill Improvement</h1>
+  
+                  <!--{{!
+                    #
+                    #  Skill Level Pool Advancement
+                    #
+                  }}-->
+                  <section id="skill-lp-advancement">
+                    <h1 class="title">Skill Level Pool Advancement</h1>
+  
+                    <table id="table-standard-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
+                      <caption>Standard Skill Level Pool Die Advancement Point Costs</caption>
+                      <thead>
+                        <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>20</td></tr>
+                        <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
+                        <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
+                        <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
+                      </tbody>
+                    </table>
+  
+  
+                  <figure id="skill-lp-advancement-example-purchase-additional-die">
+                    <figcaption>Skill Level Pool Advancement Example: Purchasing an additional die</figcaption>
                     <div class="panel panel-example">
                       <div class="panel-body">
-
-                        <p>Rayus the Swift is renown for dodging arrows, though his friends would not touch his cooking, even with a ten foot pole.  His Dodge skill level pool is <code class="lp">5:d4|3:d6|3:d8|5:10</code> and his Food Preparation skill level pool is <code class="lp">1:d10</code>.</p>
-
-                        <p>His old Gran has arthritis in her hips and cannot move very quickly but is a culinary expert.  Her dodge skill LP is <code class="lp">2:d10|-1</code>, due to the arthritis and her food preparation skill level pool is <code class="lp">5:d4|5:d6|3:d8|4:d10</code>.</p>
-
+                        <p>Sally, Jill's character, has a <code class="lp">1:d10</code> <a href="lp">LP</a> for <i>Swimming</i> which means that Sally can barely swim.  Jill has earned <i>20</i> <a href="#gap">GAP</a> for role-playing and for an exceptionally good bad pun while taking down a drug dealer.  And Jill has <i>4</i> <a href="#sap">SAP</a> for swimming, since Sally had been thrown into the water next to the city harbor and Jill epically failed the Sally's <i>Swimming</i> skill attempt roll (see <a href="#table-sap-gain-conditions"><span data-text-ref="#table-sap-gain-conditions caption">Specific Advancement Points Gain Conditions</span></a>).  So Jill has a total of <i>24</i> <a href="#ap">advancement points</a> that she can spend to improve Sally's swimming skill.  Jill consults the <i><a href="#table-standard-skill-lp-die-ap-cost"><span data-text-ref="#table-standard-skill-lp-die-ap-cost caption">Standard Skill Level Pool Die Advancement Point Costs</span></a></i> table.  Jill does not have enough advancement points to improve her existing <code class="lp">1:d10</code>, so she decides to spend <i>4</i> of her <i>Swimming</i> SAP and <i>16</i> of her GAP to add another <span class="d">d10</span>.  Sally now has a <code class="lp">2:d10</code> LP for <i>Swimming</i>.</p>
                       </div>
                     </div>
                   </figure>
-
-                </section> <!-- skill-lp -->
-
-
-                <!--{{!
-                  #
-                  #  Related Physical Attributes
-                  #
-                }}-->
-                <section id="skill-phys-attr" class="section">
-                  <h1 class="title">Related Physical Attributes</h1>
-
-                  <p>Unlike other games, the gamer's choice of skills for their character and spending of <a href="sap">Specific Advancement Points</a> dictates the character's physical attributes.  The related physical attributes are:</p>
-                  <ul class="list-unstyled">
-                    <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
-                    <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
-                    <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
-                    <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
-                    <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
-                    <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
-                  </ul>
-
-                </section> <!-- skill-phys-attr -->
+  
+  
+                  </section> <!-- skill-lp-advancement -->
+  
+  
+                  <!--{{!
+                    #
+                    #  
+                    #
+                  }}-->
+                  <section id="skill-related-phys-attr-core-lp-advancement" class="section">
+                    <h1 class="title">Related Physical Attribute Level Pool Advancement</h1>
+                    <p>See <a href="#phys-attr-core-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
+  
+                  </section> <!-- skill-related-phys-attr-core-lp-advancement -->
+  
+                </section> <!-- skill-improvement -->
+  
+              </section> <!-- skill-mech -->
+  
 
 
-                <!--{{!
-                  #
-                  #  Specialization Requirements
-                  #
-                }}-->
-                <section id="skill-spec-req" class="section">
-                  <h1 class="title">Specialization Requirements</h1>
 
-                  <p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p>
 
-                </section> <!-- skill-spec-req -->
 
+
+
+
+              <!--{{!
+                #
+                #  Health and Damage
+                #
+              }}-->
+              <section id="hnd-mech" class="section numbered-section">
+                <h1 class="title">Health and Damage Mechanics</h1>
+  
+                <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
                 
-                <!--{{!
-                  #
-                  #  Initial Learning Cost
-                  #
-                }}-->
-                <section id="skill-init-learning-cost" class="section">
-                  <h1 class="title">Initial Learning Cost</h1>
-
-                  <p></p>
-
-                </section> <!-- skill-init-advancement-cost -->
-
-
-
-                <!--{{!
-                  #
-                  #  Initial Learning Methods
-                  #
-                }}-->
-                <section id="skill-init-learning-methods" class="section">
-                  <h1 class="title">Initial Learning Methods</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-init-learning-methods -->
-
-
-
-                <!--{{!
-                  #
-                  #  Improvement Methods
-                  #
-                }}-->
-                <section id="skill-improvement-methods" class="section">
-                  <h1 class="title">Initial Improvement Methods</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-improvement-methods -->
-
-
-                <!--{{!
-                  #
-                  #  Progression requirements
-                  #
-                }}-->
-                <section id="skill-progression-requirements" class="section">
-                  <h1 class="title">Progression requirements</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-progression-requirements -->
-
-
-                <!--{{!
-                  #
-                  #  Alternate Skill and/or Physical Attribute
-                  #
-                }}-->
-                <section id="skill-defaults" class="section">
-                  <h1 class="title">Alternate Skill and/or Physical Attribute</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-defaults -->
-
-
-
-                <!--{{!
-                  #
-                  #  Categorizations
-                  #
-                }}-->
-                <section id="skill-categorizations" class="section">
-                  <h1 class="title">Categorizations</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-categorizations -->
-
-
-                <!--{{!
-                  #
-                  #  Genres
-                  #
-                }}-->
-                <section id="skill-genres" class="section">
-                  <h1 class="title">Genres</h1>
-                  <p>FIXME</p>
-                </section> <!-- skill-genres -->
-
-
-              </section> <!-- skill-attr -->
-
-
-
-              <!--{{!
-                #
-                #  Skill Attempt
-                #
-              }}-->
-              <section id="skill-attempt" class="section">
-                <h1 class="title">Skill Attempt</h1>
-
-                <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
-
-
-
-                <!--{{!
-                  #
-                  #  Opposing/Opposed Skill Attempt
-                  #
-                }}-->
-                <section id="skill-attempt-opposed" class="section">
-                  <h1 class="title">Opposing/Opposed Skill Attempt</h1>
-
-                  <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
-
-                </section> <!-- skill-attempt-opposed -->
-
-
-                <!--{{!
-                  #
-                  #  
-                  #
-                }}-->
-                <section id="skill-attempt-unopposed" class="section">
-                  <h1 class="title">Unopposed Skill Attempt</h1>
-
-                  <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
-
-                </section> <!-- skill-attempt-unopposed -->
-
-
-                <!--{{!
-                  #
-                  #  Combining Skills
-                  #
-                }}-->
-                <section id="skill-attempt-combining-skills" class="section">
-                  <h1 class="title">Combining Skills</h1>
-
-                  <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
-                </section> <!-- skill-attempt-combining-skills -->
-
-
-
-                <!--{{!
-                  #
-                  #  Teamwork
-                  #
-                }}-->
-                <section id="skill-attempt-teamwork" class="section">
-                  <h1 class="title">Teamwork</h1>
-
-                  <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
-                </section> <!-- skill-attempt-teamwork -->
-
-              </section> <!-- skill-attempt -->
-
-
-              <!--{{!
-                #
-                #  Skill Acquirement
-                #
-              }}-->
-              <section id="getting-skills" class="section">
-                <h1 class="title">Skill Acquirement</h1>
-
-                <p>Skills are acquired during the character creation process and while playing the character.</p>
-
-
-
-                <!--{{!
-                  #
-                  #  Acquirement During Character Creation
-                  #
-                }}-->
-                <section id="getting-skills-character-creation" class="section">
-                  <h1 class="title">Acquirement During Character Creation</h1>
-
-                  <p>A character's fundamental set of skills are acquired through the early adolescent phase of the character creation process.  Fundamental skills are improved and new skills are acquired through the later adolescent phase of the character creation process.  Depending on the setting, groups of skills can be acquired during the apprenticeship and advanced education phase of the character creation process.</p>
-
-                </section> <!-- getting-skills-character-creation -->
-
-
-
-                <!--{{!
-                  #
-                  #  Acquirement During Character Play
-                  #
-                }}-->
-                <section id="getting-skills-character-play" class="section">
-                  <h1 class="title">Acquirement During Character Play</h1>
-
-                  <p>Skills are acquired as the character is played.  General Advancement Points are used to <i>purchase</i> skills.</p>
-                </section> <!-- getting-skills-character-play -->
-
-              </section> <!-- getting-skills -->
-
-
-
-              <!--{{!
-                #
-                #  Skill Improvement
-                #
-              }}-->
-              <section id="skill-improvement" class="section">
-                <h1 class="title">Skill Improvement</h1>
-
-                <!--{{!
-                  #
-                  #  Skill Level Pool Advancement
-                  #
-                }}-->
-                <section id="skill-lp-advancement">
-                  <h1 class="title">Skill Level Pool Advancement</h1>
-
-                  <table id="table-standard-skill-lp-die-ap-cost" class="table table-bordered table-condensed">
-                    <caption>Standard Skill Level Pool Die Advancement Point Costs</caption>
-                    <thead>
-                      <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>20</td></tr>
-                      <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>30</td></tr>
-                      <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>45</td></tr>
-                      <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>60</td></tr>
-                    </tbody>
-                  </table>
-
-                <figure id="skill-lp-advancement-example-purchase-additional-die">
-                  <figcaption>Skill Level Pool Advancement Example: Purchasing an additional die</figcaption>
-                  <div class="panel panel-example">
-                    <div class="panel-body">
-                      <p>Sally, Jill's character, has a <code class="lp">1:d10</code> <a href="lp">LP</a> for <i>Swimming</i> which means that Sally can barely swim.  Jill has earned <i>20</i> <a href="#gap">GAP</a> for role-playing and for an exceptionally good bad pun while taking down a drug dealer.  And Jill has <i>4</i> <a href="#sap">SAP</a> for swimming, since Sally had been thrown into the water next to the city harbor and Jill epically failed the Sally's <i>Swimming</i> skill attempt roll (see <a href="#table-sap-gain-conditions"><span data-text-ref="#table-sap-gain-conditions caption">Specific Advancement Points Gain Conditions</span></a>).  So Jill has a total of <i>24</i> <a href="#ap">advancement points</a> that she can spend to improve Sally's swimming skill.  Jill consults the <i><a href="#table-standard-skill-lp-die-ap-cost"><span data-text-ref="#table-standard-skill-lp-die-ap-cost caption">Standard Skill Level Pool Die Advancement Point Costs</span></a></i> table.  Jill does not have enough advancement points to improve her existing <code class="lp">1:d10</code>, so she decides to spend <i>4</i> of her <i>Swimming</i> SAP and <i>16</i> of her GAP to add another <span class="d">d10</span>.  Sally now has a <code class="lp">2:d10</code> LP for <i>Swimming</i>.</p>
-                    </div>
-                  </div>
-                </figure>
-
-
-                </section> <!-- skill-lp-advancement -->
-
-
-                <!--{{!
-                  #
-                  #  
-                  #
-                }}-->
-                <section id="skill-related-phys-attrs-lp-advancement" class="section">
-                  <h1 class="title">Related Physical Attribute Level Pool Advancement</h1>
-                  <p>See <a href="#phys-attrs-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
-
-                </section> <!-- skill-related-phys-attrs-lp-advancement -->
-
-              </section> <!-- skill-improvement -->
-
-            </section> <!-- skill-mech -->
-
-
-
-
-
-
-            <!--{{!
-              #
-              #  Physical Attribute Mechanics
-              #
-            }}-->
-            <section id="phys-attr-mech" class="chapter numbered-section">
-              <h1 class="title">Physical Attribute Mechanics</h1>
-
-              <p>The core physical attributes are:</p>
-
-              <dl class="dl-horizontal">
-                <dt><span id="phys-attr-mst">Mental Strength</span></dt>
-                <dd>represents the character's intelligence, learning capacity, and overall mental capability. <br/>Abbreviated as <i>mSt</i>.</dd>
-
-                <dt><span id="phys-attr-men">Mental Endurance</span></dt>
-                <dd>represents the character's will power and mental focus and stamina. <br/>Abbreviated as <i>mEn</i>.</dd>
-
-                <dt><span id="phys-attr-mag">Mental Agility</span></dt>
-                <dd>represents the character's speed of memory recall, the speed at which learning occurs, and the level of complexity of new topics that can be learned. <br/>Abbreviated as <i>mAg</i>.</dd>
-
-                <dt><span id="phys-attr-bst">Body Strength</span></dt>
-                <dd>represents the character's brawn, hardiness, durability, and muscle strength. <br/>Abbreviated as <i>bSt</i>.</dd>
-
-                <dt><span id="phys-attr-ben">Body Endurance</span></dt>
-                <dd>represents the character's fortitude and stamina. <br/>Abbreviated as <i>bEn</i>.</dd>
-
-                <dt><span id="phys-attr-bag">Body Agility</span></dt>
-                <dd>represents the character's balance, dexterity, and nimbleness. <br/>Abbreviated as <i>bAg</i>.</dd>
-
-              </dl>
-
-
-
-              <!--{{!
-                #
-                #  Physical Attribute Level Pool
-                #
-              }}-->
-              <section id="phys-attrs-lp" class="section">
-                <h1 class="title">Attribute Level Pool</h1>
-                <p>Similar to skills, <a href="#lp">level pools</a> are used as a measure of a core physical attribute.</p>
-              </section>
-
-
-
-              <!--{{!
-                #
-                #  Physical Attribute Level Pool Advancement
-                #
-              }}-->
-              <section id="phys-attrs-lp-advancement" class="section">
-                <h1 class="title">Attribute Level Pool Advancement</h1>
-
-                <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
-
-                <table id="table-phys-attr-lp-die-ap-cost" class="table table-bordered table-condensed">
-                  <caption>Physical Attribute Level Pool Die Advancement Point Cost Table</caption>
-                  <thead>
-                    <tr><th>From</th> <th>To</th> <th>Advancement Point Cost</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td><span class="d">None</span></td> <td><span class="d">d10</span></td>  <td>40</td></tr>
-                    <tr><td><span class="d">d10</span></td>  <td><span class="d">d8</span></td>   <td>60</td></tr>
-                    <tr><td><span class="d">d8</span></td>   <td><span class="d">d6</span></td>   <td>90</td></tr>
-                    <tr><td><span class="d">d6</span></td>   <td><span class="d">d4</span></td>   <td>120</td></tr>
-                  </tbody>
-                </table>
-
-              </section> <!-- phys-attrs-lp-advancement -->
-
-            </section> <!-- phys-attr-mech -->
-
-
-            <!--{{!
-              #
-              #  Health and Damage
-              #
-            }}-->
-            <section id="hnd-mech" class="chapter numbered-section">
-              <h1 class="title">Health and Damage Mechanics</h1>
-
-              <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
-              
-              
-
-              <!--{{!
-                #
-                #  Calculating Health Points
-                #
-              }}-->
-              <section id="hnd-hp" class="section">
-                <h1 class="title">Health Points</h1>
                 
-                <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
-              
+  
                 <!--{{!
                   #
                   #  Calculating Health Points
                   #
                 }}-->
-                <section id="hnd-hp-calc" class="section">
-                  <h1 class="title">Calculating Health Points</h1>
+                <section id="hnd-hp" class="section">
+                  <h1 class="title">Health Points</h1>
                   
-                  <p>The following describes how to calculate a character's health points.</p>
-  
-                  <ol>
-                    <li>Find the <i>Level Pool Die to Health Points</i> table that is appropriate for the character's species, race, culture, and age.</li>
-                    <li>For each die in the character's <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> attribute level pools:
-                      <ol>
-                        <li>Look up the Health Point value for the type of die in the table, and</li>
-                        <li>add the value to the character's Health Point total.</li>
-                      </ol>
-                    </li>
-                  </ol>
-                  
-                  <p>The following table is an example:</p>
-  
-                  <table id="adult-human-lp-die-to-hp-table" class="table table-bordered table-condensed">
-                    <caption>Adult Human Level Pool Die to Health Points Table</caption>
-                    <thead>
-                      <tr><th>Die</th> <th>Health Points</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
-                      <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
-                      <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
-                      <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
-                    </tbody>
-                  </table>
-  
-                  <figure id="hnd-hp-calc-examples">
-                    <figcaption>Health Point Calculation Example</figcaption>
-                    <div class="panel panel-example">
-                      <div class="panel-body">
-  
-                        <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
-                           mEn:  <code class="lp">2:d10</code><br/>
-                           mAg:  <code class="lp">3:d10</code><br/>
-                           bSt:  <code class="lp">2:d6|2:d10</code><br/>
-                           bEn:  <code class="lp">3:d6|2:d10</code><br/>
-                           bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
-  
-                        <p>mSt: (1 * 6) + (1 * 4) = 10
-                           mEn: 2 * 4 = 8
-                           mAg: 3 * 4 = 12
-                           bSt: (2 * 9) + (2 * 4) = 26
-                           bEn: (3 * 9) + (2 * 4) = 35
-                           bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
-  
-                        <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                  <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
+                
+                  <!--{{!
+                    #
+                    #  Calculating Health Points
+                    #
+                  }}-->
+                  <section id="hnd-hp-calc" class="section">
+                    <h1 class="title">Calculating Health Points</h1>
+                    
+                    <p>The following describes how to calculate a character's health points.</p>
+    
+                    <ol>
+                      <li>Find the <i>Level Pool Die to Health Points</i> table that is appropriate for the character's species, race, culture, and age.</li>
+                      <li>For each die in the character's <i>mSt</i>, <i>mEn</i>, <i>mAg</i>, <i>bSt</i>, <i>bEn</i>, and <i>bAg</i> attribute level pools:
+                        <ol>
+                          <li>Look up the Health Point value for the type of die in the table, and</li>
+                          <li>add the value to the character's Health Point total.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                    
+                    <p>The following table is an example:</p>
+    
+                    <table id="adult-human-lp-die-to-hp-table" class="table table-bordered table-condensed">
+                      <caption>Adult Human Level Pool Die to Health Points Table</caption>
+                      <thead>
+                        <tr><th>Die</th> <th>Health Points</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><span class="d">d10</span></td>   <td>4</td></tr>
+                        <tr><td><span class="d">d8</span></td>    <td>6</td></tr>
+                        <tr><td><span class="d">d6</span></td>    <td>9</td></tr>
+                        <tr><td><span class="d">d4</span></td>   <td>12</td></tr>
+                      </tbody>
+                    </table>
+    
+                    <figure id="hnd-hp-calc-examples">
+                      <figcaption>Health Point Calculation Example</figcaption>
+                      <div class="panel panel-example">
+                        <div class="panel-body">
+    
+                          <p>mSt:  <code class="lp">1:d8|1:d10</code><br/>
+                             mEn:  <code class="lp">2:d10</code><br/>
+                             mAg:  <code class="lp">3:d10</code><br/>
+                             bSt:  <code class="lp">2:d6|2:d10</code><br/>
+                             bEn:  <code class="lp">3:d6|2:d10</code><br/>
+                             bAg:  <code class="lp">1:d4|2:d6|2:d10</code><br/></p>
+    
+                          <p>mSt: (1 * 6) + (1 * 4) = 10
+                             mEn: 2 * 4 = 8
+                             mAg: 3 * 4 = 12
+                             bSt: (2 * 9) + (2 * 4) = 26
+                             bEn: (3 * 9) + (2 * 4) = 35
+                             bAg: (1 * 12) + (2 * 9) + (2 * 4) = 38
+    
+                          <p>10 + 8 + 12 +26 + 35 + 38 = 129 Health Points<br/></p>
+                        </div>
                       </div>
-                    </div>
-                  </figure>
+                    </figure>
+    
+                  </section> <!-- hnd-hp-calc -->
+                
+                </section> <!-- hnd-hp -->
+                
+                <!--{{!
+                  #
+                  #  Injuries
+                  #
+                }}-->
+                <section id="hnd-injuries" class="section">
+                  <h1 class="title">Injuries</h1>
+                
+                  <p></p>
+                </section> <!-- hnd-injuries -->
+                
+                
+                <!--{{!
+                  #
+                  #  Disabilities
+                  #
+                }}-->
+                <section id="hnd-disabilities" class="section">
+                  <h1 class="title">Disabilites</h1>
+                  
+                  
+                  <p>A disability that impairs a character are:</p>
+                  
+                  <ul>
+                    <li><i>temporary</i> or <i>permanent</i>,</li>
+                    <li>can be classified <i>mental</i> or <i>physical</i>, and</li>
+                    <li>rated as <i>moderate</i>, <i>major</i>, or <i>severe</i>.</li>
+                  </ul>
+                  
+                  
+                  <p>A temporary disability is a disability that will eventually go away.  The duration of recovery time is measured in years.</p>
+                  
+                  <p>A disability can also be rated as <i>minor</i>, but it does not impair the character.  A minor disability, as it pertains to the game, is considered to be character flavoring.</p>
+                  
+                  <p>Disabilities and Health Points are separate.  A character can be disabled and healthy.</p>
+                
+                </section> <!-- hnd-disabilities -->
+                
+                
+                <!--{{!
+                  #
+                  #  Damage
+                  #
+                }}-->
+                <section id="hnd-damage" class="section">
+                  <h1 class="title">Damage</h1>
+                  
+                  <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
+                  
+                </section>
   
-                </section> <!-- hnd-hp-calc -->
-              
-              </section> <!-- hnd-hp -->
-              
-              <!--{{!
-                #
-                #  Injuries
-                #
-              }}-->
-              <section id="hnd-injuries" class="section">
-                <h1 class="title">Injuries</h1>
-              
-                <p></p>
-              </section> <!-- hnd-injuries -->
-              
-              
-              <!--{{!
-                #
-                #  Disabilities
-                #
-              }}-->
-              <section id="hnd-disabilities" class="section">
-                <h1 class="title">Disabilites</h1>
-                
-                
-                <p>A disability that impairs a character are:</p>
-                
-                <ul>
-                  <li><i>temporary</i> or <i>permanent</i>,</li>
-                  <li>can be classified <i>mental</i> or <i>physical</i>, and</li>
-                  <li>rated as <i>moderate</i>, <i>major</i>, or <i>severe</i>.</li>
-                </ul>
-                
-                
-                <p>A temporary disability is a disability that will eventually go away.  The duration of recovery time is measured in years.</p>
-                
-                <p>A disability can also be rated as <i>minor</i>, but it does not impair the character.  A minor disability, as it pertains to the game, is considered to be character flavoring.</p>
-                
-                <p>Disabilities and Health Points are separate.  A character can be disabled and healthy.</p>
-              
-              </section> <!-- hnd-disabilities -->
-              
-              
-              <!--{{!
-                #
-                #  Damage
-                #
-              }}-->
-              <section id="hnd-damage" class="section">
-                <h1 class="title">Damage</h1>
-                
-                <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
-                
-              </section>
+  
+              </section> <!-- hnd-mech -->
 
-
-            </section> <!-- hnd-mech -->
-
+            </section> <!-- character-mech -->
 
             <!--{{!
               #
