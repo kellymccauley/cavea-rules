@@ -156,12 +156,13 @@
 
 
 
+
             <!--{{!
               #
               #  Rules Summary
               #
             }}-->
-            <section id="rules-summary" class="chapter numbered-section">
+            <section id="rules-summary" class="division numbered-section">
               <h1 class="title">Rules Summary</h1>
 
               <dl class="dl-horizontal">
@@ -243,12 +244,15 @@
             </section>
 
 
+
+
+
             <!--{{!
               #
               #  Basic Mechanics
               #
             }}-->
-            <section id="basic-mech" class="chapter numbered-section">
+            <section id="basic-mech" class="division numbered-section">
               <h1 class="title">Basic Mechanics</h1>
 
 
@@ -257,7 +261,7 @@
                 #  People
                 #
               }}-->
-              <section id="people" class="section">
+              <section id="people" class="chapter numbered-section">
                 <h1 class="title">People</h1>
                 
                 <p><span id="rule-people-requirements" class="rule rule-primary">At least two people are needed to play Cavea.</span></p>
@@ -279,12 +283,17 @@
                 
               </section><!-- people -->
 
+
+
+
+
+
               <!--{{!
                 #
                 #  Dice
                 #
               }}-->
-              <section id="dice" class="section">
+              <section id="dice" class="chapter numbered-section">
                 <h1 class="title">Dice</h1>
 
                 <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <span class="d">dN</span> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
@@ -308,12 +317,16 @@
 
               </section> <!-- dice -->
               
+              
+              
+              
+              
               <!--{{!
                 #
                 #  Level Pool
                 #
               }}-->
-              <section id="lp" class="section">
+              <section id="lp" class="chapter numbered-section">
                 <h1 class="title">Level Pool</h1>
 
                 <div id="rule-lp-is" class="rule">
@@ -350,7 +363,7 @@
                   </div>
                 </figure>
 
-                <p>(<b>Technical:</b> See <a href="ebnf-grammar.txt">Level Pool Notation</a> for the formal notation specification).</p>
+                
 
 
                 <!--{{!
@@ -468,7 +481,7 @@
               #  Character Mechanics
               #
             }}-->
-            <section id="character-mech" class="chapter numbered-section">
+            <section id="character-mech" class="division numbered-section">
               <h1 class="title">Character Mechanics</h1>
               
               <p>Characters in Cavea serve the same purpose as characters played by actors and actresses in a movie, show, or play; characters give stories a reason to exist, a purpose, and a meaning.  The players are the <i>actors</i>; technically they are improvisational actors.  They, along with the game master, form the audience.</p>
@@ -480,7 +493,7 @@
                 #  Advancement Points
                 #
               }}-->
-              <section id="ap" class="section">
+              <section id="ap" class="chapter numbered-section">
                 <h1 class="title">Advancement Points</h1>
 
                 <p><span id="rule-ap" class="rule rule-primary">Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to improve a known skill, and improve a character's core physical attributes.</span><p>
@@ -561,7 +574,7 @@
                 #  Physical Characteristics and Attribute Mechanics
                 #
               }}-->
-              <section id="phys-char-attr-mech" class="section numbered-section">
+              <section id="phys-char-attr-mech" class="chapter numbered-section">
                 <h1 class="title">Physical Characteristic and Attribute Mechanics</h1>
                 
                 <p>A Character has physical characteristics and attributes.  In Cavea, a distinction is made between a characteristic and an attribute.  <span id="rule-phys-char">A physical characteristic is a non-measurable, distinguishing quality, aspect, or feature.</span>  <span id="rule-phys-attr">A physical attribute is a measurable, distinguishing quality, aspect, or feature.</span></p>
@@ -691,12 +704,14 @@
   
 
 
+
+
               <!--{{!
                 #
                 #  Skill Mechanics
                 #
               }}-->
-              <section id="skill-mech" class="section numbered-section">
+              <section id="skill-mech" class="chapter numbered-section">
                 <h1 class="title">Skill Mechanics</h1>
   
   
@@ -755,20 +770,21 @@
                     
                     <dt id="skill-phys-attr">Related Physical Attributes</dt>
                     <dd>
-                      <p>A skill's related physical attributes are the character's core physical attributes that are impacted by the use of the skill.</p>
+                      <p>A skill's related physical attributes are the character's core physical attributes that can be affected by the use of the skill.  For example, frequent use of the <i>Endurance Running</i> will allow the player to spend <a href="#sap" class="xref">SAP</a> to improve the character's <a href="#phys-attr-ben" class="xref" data-no-relabel="true">body endurance</a> attribute.</p>
                       
                       <p>The set physical attributes that a skill can be potentially related to:</p>
-                      <ul class="list-unstyled">
-                        <li><a href="#phys-attr-mst"><i>Mental Strength</i></a></li>
-                        <li><a href="#phys-attr-men"><i>Mental Endurance</i></a></li>
-                        <li><a href="#phys-attr-mag"><i>Mental Agility</i></a></li>
-                        <li><a href="#phys-attr-bst"><i>Body Strength</i></a></li>
-                        <li><a href="#phys-attr-ben"><i>Body Endurance</i></a></li>
-                        <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
+                      <ul>
+                        <li><a href="#phys-attr-mst" class="xref">Mental Strength</a></li>
+                        <li><a href="#phys-attr-men" class="xref">Mental Endurance</a></li>
+                        <li><a href="#phys-attr-mag" class="xref">Mental Agility</a></li>
+                        <li><a href="#phys-attr-bst" class="xref">Body Strength</a></li>
+                        <li><a href="#phys-attr-ben" class="xref">Body Endurance</a></li>
+                        <li><a href="#phys-attr-bag" class="xref">Body Agility</a></li>
                       </ul>
                     </dd>
                     
                     <dt id="skill-spec-req">Specialization Requirements</dt>
+                    <dd><p>Some skills have generic names and require a specialization of the skill to be chosen.  The <i>Play Musical Instrument</i> skill, for example, requires the player to choose the type of instrument the character will have the ability to play.</p></dd>
                     
                     <dt id="skill-prereq">Prerequisites</dt>
                     
@@ -823,7 +839,7 @@
                     #
                     #  Related Physical Attributes
                     #
-                  }}-->
+                  
                   <section id="skill-phys-attr" class="section">
                     <h1 class="title">Related Physical Attributes</h1>
   
@@ -837,7 +853,8 @@
                       <li><a href="#phys-attr-bag"><i>Body Agility</i></a></li>
                     </ul>
   
-                  </section> <!-- skill-phys-attr -->
+                  </section>
+                  }}--><!-- skill-phys-attr -->
   
   
                   <!--{{!
@@ -1257,10 +1274,63 @@
               #  Equipment Mechanics
               #
             }}-->
-            <section id="equipment-mech" class="chapter numbered-section">
+            <section id="equipment-mech" class="division numbered-section">
               <h1 class="title">Equipment Mechanics</h1>
  
             </section>
+
+
+            <!--{{!
+              #
+              #  Developer Technical Information
+              #
+            }}-->
+            <section id="dev-technical-information" class="appendix lettered-section">
+              <h1 class="title">Technical Information</h1>
+              
+              <p>This appendix contains the technical information and specifications needed by software developers who want to create Cavea related applications.  It does not contain rules that are required for playing Cavea and can be skipped by both players and game masters.</p>
+              
+              <!--{{!
+                #
+                #  Formal Notation Grammar
+                #
+              }}-->
+              <section id="dev-formal-notation-grammar" class="section numbered-section">
+                <h1 class="title">Notation Grammar</h1>
+                
+                <p>Some written or printed terms, such as dice and level pools, have a precise form of notation.  The intent of these precise forms is to remove the possibility of ambiguities when displaying the term in visual form.  We use the <a href="http://en.wikipedia.org/wiki/Ebnf">Extended Backus-Naur Form</a> to define the notation grammar.</p>
+
+                <table class="table table-bordered table-condensed">
+                  <caption>Formal Notation Grammar Specifications</caption>
+                  <tbody>
+                    <tr><th>Die</th><td>See <a href="ebnf-grammar.txt">(* Dice - d *)</a> section.</td></tr>
+                    <tr><th>Level Pool</th><td>See <a href="ebnf-grammar.txt">(* Level Pool Notation - lp *)</a> section.</td></tr>
+                  </tbody>
+                </table>
+
+              </section> <!-- dev-formal-notation-grammar -->
+              
+              
+              <!--{{!
+                #
+                #  Character Data Specification
+                #
+              }}-->
+              <section id="dev-character-data-specification" class="section numbered-section">
+                <h1 class="title">Character Data Specification</h1>
+                
+                
+                
+                
+                
+                
+              </section>
+              
+            </section> <!-- dev-technical-information -->
+
+
+
+
 
 
 
