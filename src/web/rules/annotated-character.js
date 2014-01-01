@@ -7,8 +7,11 @@ var
 /**
  * A Cavea character.
  */
-function CaveaCharacter(name, mSt, mEn, mAg, bSt, bEn, bAg, gap) {
+function CaveaCharacter(name, mSt, mEn, mAg, bSt, bEn, bAg, unspentGAP) {
   this.name = name;
+  this.species = '';
+  this.culture = '';
+  this.profession = '';
   
   /** @member {CorePhysicalAttribute} mSt Mental strength. */
   this.mSt = mSt || new CorePhysicalAttribute('Mental Strength', 'mSt', 0, new LevelPool());
@@ -28,8 +31,8 @@ function CaveaCharacter(name, mSt, mEn, mAg, bSt, bEn, bAg, gap) {
   /** @member {CorePhysicalAttribute} bAg Body agility. */
   this.bAg = bAg || new CorePhysicalAttribute('Body Agility', 'bAg', 0, new LevelPool());
 
-  /** @member {integer} General advancement points. */
-  this.gap = gap || 0;
+  /** @member {integer} Unspent general advancement points. */
+  this.unspentGAP = unspentGAP || 0;
   
 }
 
