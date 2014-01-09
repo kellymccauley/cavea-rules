@@ -37,6 +37,33 @@
               <p id="book-version" class="version">{{{rots.version}}}<p>
               <p id="book-last-modified-ts" class="last-modified-ts">{{{ts.human}}} ({{{ts.utc}}})<p>
               <p id="book-license" class="license"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<p>
+              
+              <div id="book-editing-comments">
+                <p>The edit state of a section is stored in the <code>data-edit-state</code> element attribute.  A section's edit state can be one of:</p>
+                <dl>
+                  <dt>edit_in_progress</dt>
+                  <dd>The section is being edited and may frequently change.</dd>
+                  
+                  <dt>ready_for_proofread</dt>
+                  <dd>The section is ready for proofreading or is in the process of being proofread.</dd>
+                  
+                  <dt>proofed</dt>
+                  <dd>The section has been proofread.</dd>
+                </dl>
+                
+                <p>If the <code>data-edit-state</code> attribute is missing, the the edit state is assumed to be <code>edit_in_progress</code>.</p>
+                
+                <p>The state of a rule is stored in the <code>data-rule-state</code> attribute of the element that encloses the explicit rule statement.  A rule state can be one of:</p>
+                
+                <dl class="dl-horizontal">
+                  <dt>deprecated</dt><dd>The rule is known to be problematic and should not be used.</dd>
+                  <dt>experimental</dt><dd>The rule is new, in development, and may change.</dd>
+                  <dt>unstable</dt><dd>The rule is in the process of being play tested and may still change.</dd>
+                  <dt>stable</dt><dd>The rule has been thoroughly play tested and is recognizes as a canonical rule.  Minor tweaks may still occur.</dd>
+                  <dt>frozen</dt><dd>The rule is in wide use, is critical to maintaining game balance and/or functionality.</dd>
+                </dl>
+                
+              </div>
 
             </div>
 
@@ -137,7 +164,7 @@
               #  Preface
               #
             }}-->
-            <section id="preface" class="preface">
+            <section id="preface" class="preface" data-edit-state="edit_in_progress">
               <h1 class="title">Preface</h1>
 
               <p>Every game needs rules.  Rules lay out the methods, boundaries, and parameters that keep the game play consistent and reasonably fair.  Who creates the rules?  The game designer.  Stories also have rules.  Those rules, as determined by the story maker, keeps the story's world and characters that interact with that world behaving consistently.</p>
@@ -162,7 +189,7 @@
               #  Rules Summary
               #
             }}-->
-            <section id="rules-summary" class="division numbered-section">
+            <section id="rules-summary" class="division numbered-section" class="preface" data-edit-state="edit_in_progress">
               <h1 class="title">Rules Summary</h1>
 
               <dl class="dl-horizontal">
@@ -208,7 +235,7 @@
                   <p>Compact Example: <code class="lp">0|1|0|4|+2</code> - one <span class="d">d6</span>, four <span class="d">d10</span>s, and a results modifier of <i>+2</i>.</p>
                 </dd>
 
-                <dt><a href="#skill-lp">Skill LP</a></dt>
+                <dt><a href="#skill-attr-lp">Skill LP</a></dt>
                 <dd>A level pool that is the measurement of a character's expertise in a skill.</dd>
 
                 <dt><a href="#phys-attr-core-lp">Physical Attribute LP</a></dt>
@@ -231,7 +258,7 @@
                 <dt><a href="#rule-gap">GAP</a></dt>
                 <dd>
                   <p><a href="#gap">General Advancement Points</a>.</p>
-                  <p>Used to purchase new skills, to improve <a href="#skill-lp">skill level pools</a>, and to improve <a href="#phys-attr-core-lp">core physical attribute level pools</a>.</p>
+                  <p>Used to purchase new skills, to improve <a href="#skill-attr-lp">skill level pools</a>, and to improve <a href="#phys-attr-core-lp">core physical attribute level pools</a>.</p>
                 </dd>
                 
                 <dt><a href="#rule-sap">SAP</a></dt>
@@ -246,6 +273,9 @@
                 }}-->
 
               </dl>
+              
+              
+              {{! FIXME: Add the rest of the core rules, then pare the summary down to one page.}}
 
             </section>
 
@@ -267,7 +297,7 @@
                 #  People
                 #
               }}-->
-              <section id="people" class="chapter numbered-section">
+              <section id="people" class="chapter numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">People</h1>
                 
                 <p><span id="rule-people-requirements" class="rule rule-primary">At least two people are needed to play Cavea.</span></p>
@@ -299,7 +329,7 @@
                 #  Dice
                 #
               }}-->
-              <section id="dice" class="chapter numbered-section">
+              <section id="dice" class="chapter numbered-section" data-edit-state="ready_for_proofread">
                 <h1 class="title">Dice</h1>
 
                 <p>Polyhedral dice are an essential part of the basic mechanics of Cavea's rules.  Cavea uses a die notation that is common amongst other role-playing games: <span class="d">dN</span> where <i>d</i> means a single die with <i>N</i> number of sides.</p>
@@ -332,14 +362,14 @@
                 #  Level Pool
                 #
               }}-->
-              <section id="lp" class="chapter numbered-section">
+              <section id="lp" class="chapter numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Level Pool</h1>
 
                 <div id="rule-lp-is" class="rule">
                   <p>A <em>level pool</em> (LP) is:</p>
 
                   <ul>
-                    <li><a href="#skill-lp">a measurement of a character's expertise in a skill</a> or</li>
+                    <li><a href="#skill-attr-lp">a measurement of a character's expertise in a skill</a> or</li>
                     <li><a href="#phys-attr-core-lp">a measurement of a character's physical attribute</a>.</li>
                   </ul>
 
@@ -377,7 +407,7 @@
                   #  Rolling a Level Pool
                   #
                 }}-->
-                <section id="rolling-lp" class="section">
+                <section id="rolling-lp" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Rolling a Level Pool</h1>
 
                   <div id="rule-rolling-lp" class="rule rule-primary">
@@ -469,7 +499,7 @@
                   #  Improving a Level Pool
                   #
                 }}-->
-                <section id="improving-lp" class="section">
+                <section id="improving-lp" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Improving a Level Pool</h1>
 
                   <p>See <a href="#skill-lp-advancement" class="xref" data-relabel="true">Skill Level Pool Advancement</a>, <a href="#phys-attr-core-lp-advancement"  class="xref" data-relabel="true">Physical Attribute Level Pool Advancement</a>, <a href="#ap"  class="xref" data-relabel="true">Advancement Points</a></p>
@@ -487,7 +517,7 @@
               #  Character Mechanics
               #
             }}-->
-            <section id="character-mech" class="division numbered-section">
+            <section id="character-mech" class="division numbered-section" data-edit-state="edit_in_progress">
               <h1 class="title">Character Mechanics</h1>
               
               <p>Characters in Cavea serve the same purpose as characters played by actors and actresses in a movie, show, or play; characters give stories a reason to exist, a purpose, and a meaning.  The players are the <i>actors</i> and a more akin to improvisational actors.  They, along with the game master, form the audience.</p>
@@ -499,7 +529,7 @@
                 #  Advancement Points
                 #
               }}-->
-              <section id="ap" class="chapter numbered-section">
+              <section id="ap" class="chapter numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Advancement Points</h1>
 
                 <p><span id="rule-ap" class="rule rule-primary">Advancement Points (AP) are the currency used to <em>purchase</em> new skills, to improve a known skill, and improve a character's core physical attributes.</span><p>
@@ -513,10 +543,10 @@
                   #  General Advancement Points
                   #
                 }}-->
-                <section id="gap" class="section">
+                <section id="gap" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">General Advancement Points</h1>
 
-                  <p><span id="rule-gap" class="rule rule-primary">General Advancement Points (GAP) can be used to learn new skills, to increase <a href="#skill-lp" class="xref">skill level pools</a> and <a href="#phys-attr-core-lp" class="xref">physical attribute level pools</a></span>.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
+                  <p><span id="rule-gap" class="rule rule-primary">General Advancement Points (GAP) can be used to learn new skills, to increase <a href="#skill-attr-lp" class="xref">skill level pools</a> and <a href="#phys-attr-core-lp" class="xref">physical attribute level pools</a></span>.  The game master gives out General Advancement Points as a reward.  Typically for good role-playing, accomplishing goals, and anything else that makes the game fun.  The game master <b>CANNOT</b> take away GAP from a player as a punishment.</p>
                  
                   <blockquote class="editor-comment">And if they do, then you need to seriously think about playing with a different game master. <small>Kelly</small></blockquote>
                 </section> <!-- gap -->
@@ -528,7 +558,7 @@
                   #  Specific Advancement Points
                   #
                 }}-->
-                <section id="sap" class="section">
+                <section id="sap" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Specific Advancement Points</h1>
 
                   <p><span id="rule-sap" class="rule rule-primary">Specific Advancement Points (SAP) can only be used to increase the level pool of the skill or to increase the level pool of one of the <a href="#phys-attr-mech" class="xref">physical attributes</a> related to the skill and are gained through either <a href="#sap-trial-and-error-method">trial and error</a> or spending time with a <a href="#sap-mentor-teacher-method">mentor or teacher</a>.</span></p>
@@ -538,7 +568,7 @@
                     #  Trial and Error Method
                     #
                   }}-->
-                  <section id="sap-trial-and-error-method" class="section">
+                  <section id="sap-trial-and-error-method" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Trial and Error Method</h1>
                                    
                     <p>SAP for a skill can be gained by using that skill.  Certain die results from a <a href="#skill-attempt" class="xref">skill attempt</a> will indicate that an advancement point was gained specifically for that skill.  The following table describes the die results from a skill attempt that indicate when Specific Advancement Points are gained:</p> 
@@ -577,7 +607,7 @@
                     #  Mentor/Teacher Method
                     #
                   }}-->
-                  <section id="sap-mentor-teacher-method" class="section">
+                  <section id="sap-mentor-teacher-method" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Mentor/Teacher Method</h1>
                     
                     <p>SAP can be gained by spending time being trained by a mentor or teacher in a skill.  Suggested guideline for a skill with a <a href="#skill-lp-advancement">standard die advancement cost progression</a>:  1 SAP per 6 hours of training.  No more than 30 total training hours per week.</p>
@@ -600,7 +630,7 @@
                 #  Physical Characteristics and Attribute Mechanics
                 #
               }}-->
-              <section id="phys-char-attr-mech" class="chapter numbered-section">
+              <section id="phys-char-attr-mech" class="chapter numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Physical Characteristic and Attribute Mechanics</h1>
                 
                 <p>A Character has physical characteristics and attributes.  In Cavea, a distinction is made between a characteristic and an attribute.  <span id="rule-phys-char">A physical characteristic is a non-measurable, distinguishing quality, aspect, or feature.</span>  <span id="rule-phys-attr">A physical attribute is a measurable, distinguishing quality, aspect, or feature.</span></p>
@@ -610,7 +640,7 @@
                   #  Physical Characteristic Mechanics
                   #
                 }}-->
-                <section id="phys-char-mech" class="section numbered-section">
+                <section id="phys-char-mech" class="section numbered-section" data-edit-state="edit_in_progress">
                   <h1 class="title">Physical Characteristics</h1>
                   
                   <p>Some physical characteristics add flavor to a character and others may impart bonuses or inflict penalties.  Most characteristics are optional.  Non-optional characteristics will be noted in any Cavea story universe or story settings guides.  The game master may also decide which characteristics are required for the story setting.</p>
@@ -647,7 +677,7 @@
                   #  Physical Attribute Mechanics
                   #
                 }}-->
-                <section id="phys-attr-mech" class="section numbered-section">
+                <section id="phys-attr-mech" class="section numbered-section" data-edit-state="edit_in_progress">
                   <h1 class="title">Physical Attributes</h1>
                   
                   
@@ -657,7 +687,7 @@
                     #  Physical Attribute Mechanics
                     #
                   }}-->
-                  <section id="phys-attr-core" class="section numbered-section">
+                  <section id="phys-attr-core" class="section numbered-section" data-edit-state="edit_in_progress">
                     <h1 class="title">Core Attributes</h1>
                     
                     <p>The core physical attributes are:</p>
@@ -690,7 +720,7 @@
                       #  Physical Attribute Level Pool
                       #
                     }}-->
-                    <section id="phys-attr-core-lp" class="section">
+                    <section id="phys-attr-core-lp" class="section" data-edit-state="edit_in_progress">
                       <h1 class="title">Attribute Level Pool</h1>
                       <p>Similar to skills, a <a href="#lp">level pool</a> is used as a measure of a core physical attribute.</p>
                     </section>
@@ -702,7 +732,7 @@
                       #  Physical Attribute Level Pool Advancement
                       #
                     }}-->
-                    <section id="phys-attr-core-lp-advancement" class="section">
+                    <section id="phys-attr-core-lp-advancement" class="section" data-edit-state="edit_in_progress">
                       <h1 class="title">Attribute Level Pool Advancement</h1>
       
                       <p>At the time of character creation, all physical attributes start out with a <code class="lp">1:d10</code> level pool for free.</p>
@@ -737,7 +767,7 @@
                 #  Skill Mechanics
                 #
               }}-->
-              <section id="skill-mech" class="chapter numbered-section">
+              <section id="skill-mech" class="chapter numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Skill Mechanics</h1>
   
   
@@ -746,7 +776,7 @@
                   #  Skill Attributes
                   #
                 }}-->
-                <section id="skill-attr" class="section">
+                <section id="skill-attr" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Skill Attributes</h1>
 
                   
@@ -757,7 +787,7 @@
                     <dt>Description</dt>
                     <dd><p>The information and details about the skill.</p></dd>
                     
-                    <dt id="skill-lp">Level Pool</dt>
+                    <dt id="skill-attr-lp">Level Pool</dt>
                     <dd><p>A skill's <a href="#lp">level pool</a> is the measurement of expertise a character has in that skill.</p>
   
   
@@ -775,7 +805,7 @@
                       </figure>  
                     </dd>
                     
-                    <dt id="skill-phys-attr">Related Physical Attributes</dt>
+                    <dt id="skill-attr-phys-attr">Related Physical Attributes</dt>
                     <dd><p>A skill's related physical attributes are the character's core physical attributes that can be affected by the use of the skill.  For example, frequent use of the <i>Endurance Running</i> will allow the player to spend <a href="#sap" class="xref" data-relabel="true">SAP</a> to improve the character's <a href="#phys-attr-ben" class="xref">body endurance</a> attribute.</p>
                       
                       <p>The set physical attributes that a skill can be potentially related to:</p>
@@ -789,25 +819,28 @@
                       </ul>
                     </dd>
                     
-                    <dt id="skill-spec-req">Specialization Requirements</dt>
+                    <dt id="skill-attr-spec-req">Specialization Requirements</dt>
                     <dd><p>Some skills are categorical and encompass a broad scope of knowledge.  Categorical type skills require a specialization of the skill to be chosen.  For example, the <i>Ground Vehicle Piloting</i> skill is a skill that requires a specialization by vehicle category be chosen: animal drawn cart, personal vehicles, construction equipment, goblin spring hopper, and etc...</p>
                     
                       <p>Other skills are general, giving a character a general level of confidence in the skill's field of knowledge and specialization is optional.  For example, the <i>Music</i> skill will let a character read and critically listen to music. To sing at a professional level, a specialization in singing would need to be chosen.  To play a musical instrument, a specialization is a musical instrument category would need to be chosen.  <span id="rule-no-gen-req-for-spec" class="rule">Having a level pool in a general skill is not a requirement for choosing a specialization.</span></p></dd>
                     
                     
-                    <dt id="skill-prereq">Prerequisites</dt>
-                    <dd><p>Attributes and skills can be prerequisites for other skills.  A skill can one or more prerequisites.  If a skill has prerequisites, those prerequisites must be satisfied before the skill can be <i>purchased</i> with advancement points.</p></dd>
+                    <dt id="skill-attr-prereq">Prerequisites</dt>
+                    <dd><p>Attributes and skills can be prerequisites for other skills.  A skill can one or more prerequisites.  If a skill has prerequisites, those prerequisites must be satisfied before the skill can be <i>purchased</i> with advancement points.  See <a href="#skill-attempt-combined-to-enhance" class="xref" data-relabel="true">Combined To Enhance</a> in the <a href="#skill-attempt">Skill Attempt</a> section for prerequisite skill usage limitations.</p></dd>
                     
                     
-                    <dt id="skill-alt-skill-or-attr">Alternative Skills and Attributes</dt>
+                    <dt id="skill-attr-alt-skill-or-attr">Alternative Skills and Attributes</dt>
                     <dd><p>A skill may have an alternative skill and/or attribute.  The alternative's level pool with any stated results modifier can be used as the level pool when performing a skill attempt.  Any SAP gained in this manner goes to the skill and not the alternative.  This is the trial and error method of learning.</p></dd>
                     
+                    <dt id="skill-attr-enhances-other"></dt>
+                    <dd><p>{{! FIXME }}</p></dd>
                     
-                    <dt id="skill-init-learning-cost">Initial Advancement Cost</dt>
+                    
+                    <dt id="skill-attr-init-learning-cost">Initial Advancement Cost</dt>
                     <dd><p>A skill may be very difficult to extremely difficult to initially learn and will have an additional advancement point cost to gain the first die in the level pool.</p></dd>
                     
                     
-                    <dt id="skill-init-learning-methods">Initial Learning Methods</dt>
+                    <dt id="skill-attr-init-learning-methods">Initial Learning Methods</dt>
                     <dd><p>The two main methods of learning new skills are:</p>
                     <ul>
                       <li><a href="#sap-trial-and-error-method" class="xref">Trial and Error</a></li>
@@ -817,7 +850,7 @@
                     <p>One or both of the above will be specified.</p></dd>
                     
                     
-                    <dt id="skill-improvement-methods">Improvement Methods</dt>
+                    <dt id="skill-attr-improvement-methods">Improvement Methods</dt>
                     <dd><p>The two main methods of improving skills are:</p>
                     <ul>
                       <li><a href="#sap-trial-and-error-method" class="xref">Trial and Error</a></li>
@@ -827,12 +860,12 @@
                     <p>One or both of the above will be specified.</p></dd>
                     
                     
-                    <dt id="skill-die-ap-cost-progression">Die Advancement Point Cost Progression</dt>
+                    <dt id="skill-attr-die-ap-cost-progression">Die Advancement Point Cost Progression</dt>
                     <dd></dd>
                     
-                    <dt id="skill-categorizations">Categorizations</dt>
+                    <dt id="skill-attr-categorizations">Categorizations</dt>
                     
-                    <dt id="skill-genre-aspects">Genre Aspects</dt>
+                    <dt id="skill-attr-genre-aspects">Genre Aspects</dt>
                   </dl>
   
                 </section> <!-- skill-attr -->
@@ -844,10 +877,10 @@
                   #  Skill Attempt
                   #
                 }}-->
-                <section id="skill-attempt" class="section">
+                <section id="skill-attempt" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Skill Attempt</h1>
   
-                  <p>A gamer <a href="#rolling-lp">rolls the skill's level pool</a> when attempting to use the skill.  The gamer then adds up all of the <i>1</i>s, and adds and/or subtracts any relevant modifiers.</p>
+                  <p>When a person playing a character wants to <i>use</i> a particular skill, in the simplest form, the player <a href="#rolling-lp" class="xref">rolls the skill's level pool</a>, adds up all of the <i>1</i>s, adds and/or subtracts the level pool's result modifier, and adds and/or subtracts any relevant situational modifiers forming a skill attempt result.  The skill attempt result is then compared with some other value.  If the skill attempt result is greater than the other value, then the skill attempt was successful.</p>
   
   
   
@@ -856,9 +889,11 @@
                     #  Opposing/Opposed Skill Attempt
                     #
                   }}-->
-                  <section id="skill-attempt-opposed" class="section">
+                  <section id="skill-attempt-opposed" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Opposing/Opposed Skill Attempt</h1>
   
+                    <p>The intended actions of two or more characters may come into direct conflict with each other.  An obvious example is when one character attacks another character.  The attacking character wants to inflict damage on the opponent.  The opponent wants to defend against receiving any damage.  Another example</p>
+                    
                     <p>If the skill attempt is opposing/is opposed by a skill attempt by a separate entity then the total result is compared with the opposing/opposed total result.  The highest result wins.  The difference between the highest and lowest total results may dictate the type and/or scale of the results.  E.g. Defending against a sword attack with a small shield.</p>
   
                   </section> <!-- skill-attempt-opposed -->
@@ -869,7 +904,7 @@
                     #  
                     #
                   }}-->
-                  <section id="skill-attempt-unopposed" class="section">
+                  <section id="skill-attempt-unopposed" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Unopposed Skill Attempt</h1>
   
                     <p>If the skill attempt is unopposed then the GM compares the total result with a predetermined target number.  If the total result is higher than or equal to the target number then the skill attempt is successful.  If the total result is lower than the target number then the skill attempt failed.  The difference between the total result and the target number may dictate the type and/or scale of the success or failure.</p>
@@ -882,24 +917,74 @@
                     #  Combining Skills
                     #
                   }}-->
-                  <section id="skill-attempt-combining-skills" class="section">
+                  <section id="skill-attempt-combining-skills" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Combining Skills</h1>
-  
-                    <p>The GM may decide that more the one skill is needed to accomplish a single task.  To combine multiple skills, the level pools for the each skill are rolled and all of the <i>1</i>s are added together forming a single result.</p>
+                    
+                    <p>In the real world, multiple skills are needed to successfully perform any significantly complex task.  Cavea has three flavors of skill combinations: <a href="#skill-attempt-combined-to-enhance">combined to enhance</a>, <a href="#skill-attempt-combined-with">combined with</a>, and <a href="#skill-attempt-teamwork">teamwork</a>.</p>
+                    
+                    <!--{{!
+                      #
+                      #  Combined to Enhance
+                      #
+                    }}-->
+                    <section id="skill-attempt-combined-to-enhance" class="section" data-edit-state="edit_in_progress">
+                      <h1 class="title">Combined to Enhance</h1>
+                    
+                      <p>Sometimes, during a skill attempt, a skill may be enhanced by one or more additional skills.  A skill that can be enhanced is called an enhance-able skill.  A skill that can enhance another skill is called an enhancive skill.  When enhancing a skill with enhancive skills is applicable, the ultimate decision whether or not to apply the enhancive skills during a skill attempt is always at the discretion of the person playing the character.</p>
+                      
+                      <p>An enhance-able skill may also be an enhancive skill.  If a skill is both enhance-able and enhancive, when it is used as an enhancive skill it, in and of itself, may not be further enhanced.</p>
+                      
+                      <p>An enhance-able skill should specify, in its description, the applicable enhancive skills.</p>
+                      
+                      <p>An enhancive skill should specify the enhance-able skills that it applies to and the conditions when the enhancement applies.</p>
+                      
+                      <p>Unless explicitly stated by the rules or by the game master, <span id="rule-skill-attempt-no-prereq-combined-to-enhance"><a href="#skill-attr-prereq">prerequisite skills</a> may not be combined to enhance the skill during skill attempts.</span></p>
+                      
+                      <p>To combine one or more enhancive skills to enhance a skill during a skill attempt:</p>
+                      <ol>
+                        <li>Roll the level pools of the skill and the enhancive skills.</li>
+                        <li>Add up all of the <i>1</i>s forming a single subtotal.</li>
+                        <li>For each enhancive skill used, subtract <i>1</i> from the subtotal.</li>
+                        <li>Use the resulting total as the skill attempt's result.</li>
+                      </ol>
+                                            
+                      {{! FIXME <p>In many martial arts movies, acrobatics  </p> }}
+
+
+                    </section> <!-- skill-attempt-combined-with -->
+                    
+                    <!--{{!
+                      #
+                      #  Combined With
+                      #
+                    }}-->
+                    <section id="skill-attempt-combined-with" class="section" data-edit-state="edit_in_progress">
+                      <h1 class="title">Combined With</h1>
+                    
+                      <p>A game master may decide that two or more skills are needed to accomplish a single complex task.  To combine multiple skills into a single skill attempt, the level pools for the each of the specified skills are rolled and all of the <i>1</i>s are added together forming a single result.</p>
+                      
+                      <p>For example, using a whitewater kayak to run an unfamiliar large class V rapid, which is difficult and extremely dangerous, requires both the <i>Small Boat Control: Whitewater Kayak</i> specialized skill and the <i>Nautical Navigation: Streams and Rivers</i> specialized skill.</p>
+
+
+                    </section> <!-- skill-attempt-combined-with -->
+                    
+                    <!--{{!
+                      #
+                      #  Teamwork
+                      #
+                    }}-->
+                    <section id="skill-attempt-teamwork" class="section" data-edit-state="edit_in_progress">
+                      <h1 class="title">Teamwork</h1>
+    
+                      <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
+                    </section> <!-- skill-attempt-teamwork -->
+                      
+                    
                   </section> <!-- skill-attempt-combining-skills -->
   
   
   
-                  <!--{{!
-                    #
-                    #  Teamwork
-                    #
-                  }}-->
-                  <section id="skill-attempt-teamwork" class="section">
-                    <h1 class="title">Teamwork</h1>
-  
-                    <p>Similar to <a href="#skill-attempt-combining-skills">combining skills</a>, the GM may decide that teamwork is needed to accomplish a single task.  To attempt a skill as a team, each gamer rolls the level pool for their character's skill and all of the <i>1</i>s are added together forming a single result.</p>
-                  </section> <!-- skill-attempt-teamwork -->
+
   
                 </section> <!-- skill-attempt -->
   
@@ -912,7 +997,7 @@
                   #  Skill Acquirement and Improvement
                   #
                 }}-->
-                <section id="skill-acquirement-and-improvement" class="section">
+                <section id="skill-acquirement-and-improvement" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Skill Aquirement and Improvement</h1>
 
                   <p>As mentioned in the <a href="#ap" class="xref" data-relabel="true">Advancement Points</a> section, advancement points are used to <i>purchase</i> new skills and to improve existing skills.</p>
@@ -929,7 +1014,7 @@
                     #  Skill Level Pool Advancement
                     #
                   }}-->
-                  <section id="skill-lp-advancement">
+                  <section id="skill-lp-advancement" data-edit-state="edit_in_progress">
                     <h1 class="title">Skill Level Pool Advancement</h1>
                     
                     <p>All skills follow some form of level pool die advancement point cost progression.  Most skills, though, follow the standard progression.</p>
@@ -994,7 +1079,7 @@
                     #  
                     #
                   }}-->
-                  <section id="skill-related-phys-attr-core-lp-advancement" class="section">
+                  <section id="skill-related-phys-attr-core-lp-advancement" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Related Physical Attribute Level Pool Advancement</h1>
                     <p>See <a href="#phys-attr-core-lp-advancement">Physical Attribute Level Pool Advancement</a></p>
   
@@ -1017,7 +1102,7 @@
                 #  Health and Damage
                 #
               }}-->
-              <section id="hnd-mech" class="section numbered-section">
+              <section id="hnd-mech" class="section numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Health and Damage Mechanics</h1>
   
                 <p>In some stories, a character's life is rough. This can be especially true for a player's character.  As in real life, a character can be healthy, invigorated, fatigued, sick, roughed up, disabled, or on the brink of death.  A character's well being is tracked in the following ways: <i>Health Points</i>, <i>Injuries</i>, and <i>Disabilities</i>.</p>
@@ -1029,7 +1114,7 @@
                   #  Calculating Health Points
                   #
                 }}-->
-                <section id="hnd-hp" class="section">
+                <section id="hnd-hp" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Health Points</h1>
                   
                   <p>Health Points (HP) is a measure of a character's health, well being, and level of exhaustion.  When a character's Health Points reaches <i>0</i> that character dies; croaked&mdash;kaput&mdash;goner&mdash;bye bye&mdash;"I get his boots!"&mdash;kind of dead.</p>
@@ -1039,7 +1124,7 @@
                     #  Calculating Health Points
                     #
                   }}-->
-                  <section id="hnd-hp-calc" class="section">
+                  <section id="hnd-hp-calc" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Calculating Health Points</h1>
                     
                     <p>The following describes how to calculate a character's health points.</p>
@@ -1102,10 +1187,10 @@
                   #  Injuries
                   #
                 }}-->
-                <section id="hnd-injuries" class="section">
+                <section id="hnd-injuries" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Injuries</h1>
                 
-                  <p></p>
+                  {{! <p>FIXME</p> }}
                 </section> <!-- hnd-injuries -->
                 
                 
@@ -1114,7 +1199,7 @@
                   #  Disabilities
                   #
                 }}-->
-                <section id="hnd-disabilities" class="section">
+                <section id="hnd-disabilities" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Disabilities</h1>
                   
                   
@@ -1141,7 +1226,7 @@
                   #  Damage
                   #
                 }}-->
-                <section id="hnd-damage" class="section">
+                <section id="hnd-damage" class="section" data-edit-state="edit_in_progress">
                   <h1 class="title">Damage</h1>
                   
                   <p>Damage happens. A hero may get shot at, beaten up, fall out of a tree, stabbed with a sword, hit with a car, dropped out of an airplane, or vented out an airlock. An adventurer falls into a spiked pit, gets chewed on by pirañas, eats an under cooked chicken leg from a road side vendor, or gets blasted by the acid spray of a gorganuan marsh dragon.</p>
@@ -1154,7 +1239,7 @@
                     #  Damage Types
                     #
                   }}-->
-                  <section id="hnd-damage-types" class="section">
+                  <section id="hnd-damage-types" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Damage Type</h1>
  
                     <dl>
@@ -1187,7 +1272,7 @@
                     #  Damage Dice
                     #
                   }}-->
-                  <section id="hnd-damage-dice" class="section">
+                  <section id="hnd-damage-dice" class="section" data-edit-state="edit_in_progress">
                     <h1 class="title">Damage Dice</h1>
 
                     <p>Damage dice is the measure of the potential amount of damage than can be dealt.  The amount of damage dealt differs depending on the game's genre and style.  To represent the different damage styles, either the setting/universe book or the game master will specify the die type used for damage.  The type of damage die can be one of: <span class="d">d4</span>, <span class="d">d6</span>, <span class="d">d8</span>, or <span class="d">d10</span>.  Once chosen for a game or campaign, the type of damage die should not be changed unless the game master and all players agree to make the change.</p>
@@ -1208,7 +1293,7 @@
               #  Equipment Mechanics
               #
             }}-->
-            <section id="equipment-mech" class="division numbered-section">
+            <section id="equipment-mech" class="division numbered-section" data-edit-state="edit_in_progress">
               <h1 class="title">Equipment Mechanics</h1>
  
               <!--{{!
@@ -1216,7 +1301,7 @@
                 #  Armor
                 #
               }}-->
-              <section id="em-armor" class="section">
+              <section id="em-armor" class="section" data-edit-state="edit_in_progress">
                 <h1 class="title">Armor</h1>
 
                 <p>Armor absorbs damage points.  Similar to health points, armor has a set number of armor points that are depleted as damage is absorbed.</p>
@@ -1231,7 +1316,7 @@
               #  Developer Technical Information
               #
             }}-->
-            <section id="dev-technical-information" class="appendix lettered-section">
+            <section id="dev-technical-information" class="appendix lettered-section" data-edit-state="edit_in_progress">
               <h1 class="title">Technical Information</h1>
               
               <p>This appendix contains the technical information and specifications needed by software developers who want to create Cavea related applications.  It does not contain rules that are required for playing Cavea and can be skipped by both players and game masters.</p>
@@ -1241,7 +1326,7 @@
                 #  Formal Notation Grammar
                 #
               }}-->
-              <section id="dev-formal-notation-grammar" class="section numbered-section">
+              <section id="dev-formal-notation-grammar" class="section numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Notation Grammar</h1>
                 
                 <p>Some written or printed terms, such as dice and level pools, have a precise form of notation.  The intent of these precise forms is to remove the possibility of ambiguities when displaying the term in visual form.  We use the <a href="http://en.wikipedia.org/wiki/Ebnf">Extended Backus-Naur Form</a> to define the notation grammar.</p>
@@ -1262,7 +1347,7 @@
                 #  Character Data Specification
                 #
               }}-->
-              <section id="dev-character-data-specification" class="section numbered-section">
+              <section id="dev-character-data-specification" class="section numbered-section" data-edit-state="edit_in_progress">
                 <h1 class="title">Character Data Specification</h1>
                 
                 For now, see <a href="annotated-character.js">annotated-character.js</a>.                
@@ -1281,7 +1366,7 @@
               #  Glossary
               #
             }}-->
-            <section id="glossary" class="glossary">
+            <section id="glossary" class="glossary" data-edit-state="edit_in_progress">
               <h1 class="title">Glossary</h1>
 
               <!-- FIXME
