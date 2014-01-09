@@ -341,7 +341,7 @@ function createTOC(output) {
 
   $main = $('#book');
 
-  maxDepth = $main.data('maxSectionNumberingDepth');
+  maxDepth = $main.data('maxTocDepth');
   if (!maxDepth) {
     maxDepth = 3;
   }
