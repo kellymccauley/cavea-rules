@@ -3,6 +3,9 @@
 The following are topics that need to be designed, written, and tested in [Cavea: Rules of the Stage](./index.html).
 
 ## Character
+  - [ ] Learning Methods
+    - [ ] Trial and Error
+    - [ ] Mentor/Teacher
   - [ ] Unassisted Movement
     - [ ] Walking
     - [ ] Running
