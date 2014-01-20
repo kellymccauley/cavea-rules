@@ -187,7 +187,9 @@ taskSets['rots:proc-templates'] = {
 
         out = createSectionNumbers(output);
         out = createTOC(out);
+        out = createLOR(out);
         out = createLOF(out);
+        out = createLOE(out);
         out = createLOT(out);
 
         return out;
@@ -403,6 +405,48 @@ function tocify($, $section, toc, depth, maxDepth) {
 
 }
 
+function createLOR(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , $figures
+    , lof
+    , $lofContent
+    , idx = 0
+  ;
+
+  lof = ['<ul>'];
+
+  $figures = $('main figure.rule');
+  $figures.each(function() {
+    'use strict';
+    var $figure = $(this)
+      , $figCap
+    ;
+
+    lof.push('<li><a href="#');
+    lof.push($figure.attr('id'));
+    lof.push('">');
+
+    $figure.attr('data-figure-number', ++idx);
+    $figCap = $figure.children('figcaption').each(function() {
+      var $fc = $(this);
+      $fc.prepend('Rule <span class="figure-number">' + idx + '</span> - ');
+      lof.push($fc.html());
+    });
+
+    lof.push('</a></li>');
+  });
+
+  lof.push('</ul>');
+
+  $('#lor-content').html(lof.join(''));
+
+  return $.html();
+}
+
+
+
 function createLOF(output) {
   'use strict';
   var $ = cheerio.load(output)
@@ -415,7 +459,7 @@ function createLOF(output) {
 
   lof = ['<ul>'];
 
-  $figures = $('main figure');
+  $figures = $('main figure.figure');
   $figures.each(function() {
     'use strict';
     var $figure = $(this)
@@ -442,6 +486,47 @@ function createLOF(output) {
 
   return $.html();
 }
+
+function createLOE(output) {
+  'use strict';
+  var $ = cheerio.load(output)
+    , $main
+    , $figures
+    , lof
+    , $lofContent
+    , idx = 0
+  ;
+
+  lof = ['<ul>'];
+
+  $figures = $('main .figure-example');
+  $figures.each(function() {
+    'use strict';
+    var $figure = $(this)
+      , $figCap
+    ;
+
+    lof.push('<li><a href="#');
+    lof.push($figure.attr('id'));
+    lof.push('">');
+
+    $figure.attr('data-figure-number', ++idx);
+    $figCap = $figure.children('figcaption').each(function() {
+      var $fc = $(this);
+      $fc.prepend('Example <span class="figure-number">' + idx + '</span> - ');
+      lof.push($fc.html());
+    });
+
+    lof.push('</a></li>');
+  });
+
+  lof.push('</ul>');
+
+  $('#loe-content').html(lof.join(''));
+
+  return $.html();
+}
+
 
 function createLOT(output) {
   'use strict';
