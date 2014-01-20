@@ -39,6 +39,7 @@
               <p id="book-license" class="license"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="http://caveagames.org/rules">Cavea: Rules of the Stage</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://99kayaks.com/us#us-kelly-mccauley" property="cc:attributionName" rel="cc:attributionURL">Kelly A. McCauley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<p>
               
               <div id="book-editing-comments">
+                <!--{{! Only for development.  Will not be included in the final output. -->
                 <p>The edit state of a section is stored in the <code>data-edit-state</code> element attribute.  A section's edit state can be one of:</p>
                 <dl>
                   <dt>edit_in_progress</dt>
@@ -51,7 +52,7 @@
                   <dd>The section has been proofread.</dd>
                 </dl>
                 
-                <p>If the <code>data-edit-state</code> attribute is missing, the the edit state is assumed to be <code>edit_in_progress</code>.</p>
+                <p>If the <code>data-edit-state</code> attribute is missing, the edit state is assumed to be <code>edit_in_progress</code>.</p>
                 
                 <p>The state of a rule is stored in the <code>data-rule-state</code> attribute of the element that encloses the explicit rule statement.  A rule state can be one of:</p>
                 
@@ -62,7 +63,7 @@
                   <dt>stable</dt><dd>The rule has been thoroughly play tested and is recognizes as a canonical rule.  Minor tweaks may still occur.</dd>
                   <dt>frozen</dt><dd>The rule is in wide use, is critical to maintaining game balance and/or functionality.</dd>
                 </dl>
-                
+                <!--}}-->
               </div>
 
             </div>
