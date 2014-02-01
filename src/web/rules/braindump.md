@@ -40,4 +40,5 @@ Let _p<sub>1</sub>_ be a specialization of _P_.
 * _p<sub>1</sub>_ is always combined to enhance _P_.
   * _p<sub>1</sub>_ has situation specific conditions that must apply before it may be used to enhance _P_.
   
-  
+* * *
+
