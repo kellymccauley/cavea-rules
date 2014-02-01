@@ -500,16 +500,30 @@
 
                       <ol>
                         <li>Gather and roll all of the dice that compose the level pool.</li>
-                        <li>Add up all of the <i>1</i>s for an unmodified total.</li>
-                        <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
+                        <li id="rolling-lp-epic-fail-steps">If the highest face on each die is rolled, then an epic failure occurs:
+                          <ol>
+                            <li>The <var>unmodified total</var> is <i>0</i></li>
+                            <li>Subtract <i>1</i> from the <var>unmodified total</var> for each die rolled.</li>
+                            <li>Add and/or subtract any relevant modifiers to/from the <var>unmodified total</var> for the <var>final result</var>.</li>
+                            <li>The game master consults the skill's or physical attribute's <a href="#FIXME" class="xref">Epic Failure Table</a> for the story's setting and gives the appropriate result/response.</li>
+                          </ol>
+                        </li>
+                        <li>If one or more <i>1</i>s are rolled, then:
+                          <ol>
+                            <li>Add up all of the <i>1</i>s that were roll for an <var>unmodified total</var>.</li>
+                            <li>Add and/or subtract any relevant modifiers to/from the unmodified total for the final result.</li>
+                            <li>If the total result is less than <i>0</i>, then the game master consults the skill's or physical attribute's <a href="#FIXME" class="xref">Failure Table</a> for the story's setting and gives the appropriate result/response.</li>
+                          </ol>
+                        </li>
                       </ol>
                     </div>
                   </figure>
 
                   <p>The final result from rolling a level pool is used to determine success or failure.  Typically, the higher the final result the better.</p>
-            
+                  
+                  
                   <figure id="rolling-lp-examples" class="figure-example">
-                    <figcaption>Rolling Level Pools Example</figcaption>
+                    <figcaption>Rolling Level Pool Examples</figcaption>
                     <div class="panel panel-example">
                       <div class="panel-body">
                         <p>Alice is the game master.  Jill is playing a character named Sally.  Sally is a rookie police officer and is nearly at the end of a long foot chase.  She has the running suspect, Bruno, right at her finger tips.</p>
