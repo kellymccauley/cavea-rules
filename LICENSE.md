@@ -2,7 +2,7 @@
 
 Unless otherwise noted:
 
-Copyright 2013 Kelly A. McCauley
+Copyright 2014 Kelly A. McCauley
 
 [Cavea: Rules of the Stage](http://caveagames.org) by [Kelly A. McCauley](href="http://99kayaks.com/us#us-kelly-mccauley") is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/deed.en_US.
 
