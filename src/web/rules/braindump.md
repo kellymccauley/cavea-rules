@@ -68,46 +68,9 @@ A mettle check is a combined LP roll of mSt, mEn, bSt, and bEn plus/minus age mo
 
 * * *
 
-# Damage and Injury
+# Damage and Injury (Take 1)
 
-## Damage
-
-To calculate how much damage a character can take before dying:
-
-<ul>
-  <li>For each core physical attribute:
-    <ul>
-      <li>For each die in the attribute's level pool:
-        <ol>
-          <li>Look up the number of damage.</li>
-          <li>Add that number to the total amount of damage the character can take.</li>
-        </ol>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-
-    Die
-    Type   Damage
-    ----   ------
-    d4     8
-    d6     4
-    d8     2
-    d10    1
-
-Example:
-
-    mSt (0, 0, 0, 7)    =  7 damage
-    mEn (0, 0, 3, 2)    =  8 damage
-    mAg (1, 0, 0, 4)    = 12 damage
-    bSt (2, 0, 0, 1)    = 17 damage
-    bEn (2, 0, 0, 2)    = 18 damage
-    bAg (1, 1, 1, 1)    = 15 damage
-                          ---------
-                          77 damage
-
-## Injury
+## ~~Injury~~
 
 
 
@@ -142,49 +105,8 @@ Note:
 [1] Species Specific
 [2] Injury Rating
 
-### Damage Rating
 
-    Suc.
-    Rslt.  DR 0  DR 1  DR 1  DR 1  DR 1  DR 1  DR 1
-    -----  ----  ----  ----  ----  ----  ----  ----
-      1
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-     10
-
-
-
-# Damage and Injury (take 2)
-
-* head
-* neck
-* front
-    * chest
-    * abdomen
-    * pelvic region
-* back
-    * upper back
-    * lumbar region
-* left side
-    * upper arm
-    * lower arm
-    * hand
-    * upper leg
-    * lower leg
-    * foot
-* right side
-    * upper arm
-    * lower arm
-    * hand
-    * upper leg
-    * lower leg
-    * foot
+# Damage and Injury (Take 2)
 
 
 
